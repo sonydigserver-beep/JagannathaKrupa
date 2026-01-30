@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JagannathaKrupa - Home</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <!-- Topbar -->
+    <div class="topbar py-2 d-none d-lg-block">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between gap-3">
+                <div class="topbar-left small">
+                    <span class="me-3"><i class="bi bi-telephone me-1"></i> +91 00000 00000</span>
+                    <span><i class="bi bi-envelope me-1"></i> support@example.com</span>
+                </div>
+                <div class="topbar-right d-flex align-items-center gap-3 small">
+                    <a class="topbar-link" href="#">Tracking Order</a>
+                    <a class="topbar-link" href="#">My Account</a>
+                    <div class="d-flex align-items-center gap-2">
+                        <a class="topbar-icon" href="#"><i class="bi bi-facebook"></i></a>
+                        <a class="topbar-icon" href="#"><i class="bi bi-instagram"></i></a>
+                        <a class="topbar-icon" href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header sticky-top">
+        <nav class="navbar navbar-expand-lg bg-white border-bottom py-3">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                    <span class="brand-mark">J</span>
+                    <span class="brand-text">Jagannatha<span class="brand-accent">Krupa</span></span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav mx-lg-auto mb-2 mb-lg-0 gap-lg-2">
+                        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Pages</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    </ul>
+
+                    <div class="d-flex align-items-center gap-2">
+                        <div class="header-search d-none d-lg-flex">
+                            <i class="bi bi-search"></i>
+                            <input class="form-control form-control-sm" type="text" placeholder="Search..." />
+                        </div>
+
+                        <a class="icon-btn" href="#" aria-label="Account"><i class="bi bi-person"></i></a>
+                        <a class="icon-btn" href="#" aria-label="Wishlist"><i class="bi bi-heart"></i></a>
+                        <a class="icon-btn position-relative" href="#" aria-label="Cart">
+                            <i class="bi bi-bag"></i>
+                            <span class="badge rounded-pill text-bg-dark icon-badge">2</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- content -->
+    <main class="py-3 py-lg-4">
+        <div class="container">
+
+            <!-- Stepper -->
+            <div class="jk-stepper mb-3 mb-lg-4">
+                <div class="jk-steps" id="checkoutSteps">
+                    <button class="jk-step is-active" type="button" data-step="1">
+                        <span class="jk-dot">1</span><span class="jk-label">Cart</span>
+                    </button>
+                    <button class="jk-step" type="button" data-step="2">
+                        <span class="jk-dot">2</span><span class="jk-label">Address</span>
+                    </button>
+                    <button class="jk-step" type="button" data-step="3">
+                        <span class="jk-dot">3</span><span class="jk-label">Payment</span>
+                    </button>
+                    <button class="jk-step" type="button" data-step="4">
+                        <span class="jk-dot">4</span><span class="jk-label">Summary</span>
+                    </button>
+                </div>
+
+                <div class="jk-progress">
+                    <div class="progress" style="height:8px;">
+                        <div class="progress-bar" id="checkoutProgress" style="width:0%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-3 g-lg-4">
+                <!-- LEFT -->
+                <div class="col-12 col-lg-8">
+
+                    <!-- STEP 1: CART -->
+                    <section class="step-pane" data-step="1">
+                        <div class="section-title">Product Details</div>
+
+                        <div class="card-soft p-0 overflow-hidden">
+                            <div class="p-3">
+                                <div class="d-flex align-items-start justify-content-between gap-2">
+                                    <div class="d-flex gap-3">
+                                        <div class="p-thumb">
+                                            <img src="https://picsum.photos/seed/cartp/120/120" alt="">
+                                        </div>
+                                        <div>
+                                            <div class="p-name">
+                                                Mahadeva Camphor- (100 Gram, Bhimseni) 100% Pure...
+                                            </div>
+                                            <div class="p-price mt-1">₹171</div>
+
+                                            <div class="small text-muted mt-2">
+                                                Size: Free Size &nbsp;·&nbsp; Qty:
+                                                <span class="qty-wrap">
+                                                    <button class="qty-btn" type="button" data-qty="-1">−</button>
+                                                    <span id="qtyVal">2</span>
+                                                    <button class="qty-btn" type="button" data-qty="+1">+</button>
+                                                </span>
+                                            </div>
+
+                                            <button class="link-danger-lite mt-2" type="button" id="removeItemBtn">
+                                                <i class="bi bi-x-lg me-1"></i> REMOVE
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <button class="link-brand" type="button">EDIT</button>
+                                </div>
+                            </div>
+
+                            <div class="line"></div>
+
+                            <div class="p-3 d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                <div class="small text-muted">Sold by: AYM Creatives</div>
+                                <div class="small text-muted">Free Delivery</div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- STEP 2: ADDRESS -->
+                    <section class="step-pane d-none" data-step="2">
+                        <div class="d-flex align-items-center justify-content-between gap-2">
+                            <div class="section-title mb-0">Select Delivery Address</div>
+                            <button class="link-brand" type="button">+ ADD NEW ADDRESS</button>
+                        </div>
+
+                        <div class="card-soft p-3 mt-2 address-card is-selected">
+                            <div class="d-flex align-items-start justify-content-between gap-2">
+                                <div class="d-flex gap-2">
+                                    <input class="form-check-input mt-1" type="radio" name="addr" checked>
+                                    <div>
+                                        <div class="fw-bold">Sadasiva Acharya</div>
+                                        <div class="text-muted small mt-1">
+                                            plot no 9,, rode no 6 / jagannath nagar, bhubaneswar, Odisha - 751010
+                                        </div>
+                                        <div class="text-muted small mt-2">7381315553</div>
+                                    </div>
+                                </div>
+                                <button class="link-brand" type="button">EDIT</button>
+                            </div>
+
+                            <button class="btn btn-brand w-100 mt-3" type="button" id="deliverHereBtn">
+                                Deliver to this Address
+                            </button>
+                        </div>
+                    </section>
+
+                    <!-- STEP 3: PAYMENT -->
+                    <section class="step-pane d-none" data-step="3">
+                        <div class="section-title">Select Payment Method</div>
+
+                        <div class="pay-list">
+                            <label class="pay-item is-selected">
+                                <input type="radio" name="pay" checked>
+                                <div class="pay-main">
+                                    <div class="pay-left">
+                                        <div class="pay-amount">₹342</div>
+                                        <div class="pay-name">Cash on Delivery <span class="ms-1">💵</span></div>
+                                    </div>
+                                    <div class="pay-right">
+                                        <span class="pay-check"><i class="bi bi-check-lg"></i></span>
+                                    </div>
+                                </div>
+                            </label>
+
+                            <label class="pay-item">
+                                <input type="radio" name="pay">
+                                <div class="pay-main">
+                                    <div class="pay-left">
+                                        <div class="small text-muted text-decoration-line-through">₹342</div>
+                                        <div class="pay-amount text-success">₹306 <span class="pay-save">Save ₹36</span>
+                                        </div>
+                                        <div class="pay-name">Pay Online <span class="ms-1">🟣</span></div>
+                                    </div>
+                                    <div class="pay-right">
+                                        <span class="pay-radio"></span>
+                                    </div>
+                                </div>
+                                <div class="pay-foot">
+                                    <span class="small text-muted"><i
+                                            class="bi bi-patch-check-fill me-1 text-success"></i> Extra discount with
+                                        bank offers</span>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="card-soft p-3 mt-3">
+                            <div class="d-flex align-items-center justify-content-between gap-2">
+                                <div>
+                                    <div class="fw-bold">Reselling the order?</div>
+                                    <div class="small text-muted">Click on "Yes" to add Final Price</div>
+                                </div>
+
+                                <div class="segmented">
+                                    <button class="seg-btn is-active" type="button" data-seg="no">No</button>
+                                    <button class="seg-btn" type="button" data-seg="yes">Yes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- STEP 4: SUMMARY -->
+                    <section class="step-pane d-none" data-step="4">
+                        <div class="section-title">Product Details</div>
+
+                        <div class="card-soft p-0 overflow-hidden">
+                            <div class="p-3 d-flex align-items-center gap-2">
+                                <i class="bi bi-truck"></i>
+                                <div class="fw-semibold">Estimated Delivery by Wednesday, 04th Feb</div>
+                            </div>
+
+                            <div class="line"></div>
+
+                            <div class="p-3">
+                                <div class="d-flex align-items-start justify-content-between gap-2">
+                                    <div class="d-flex gap-3">
+                                        <div class="p-thumb">
+                                            <img src="https://picsum.photos/seed/cartp/120/120" alt="">
+                                        </div>
+                                        <div>
+                                            <div class="p-name">
+                                                Mahadeva Camphor- (100 Gram, Bhimseni) 100% Pure...
+                                            </div>
+                                            <div class="p-price mt-1">₹171</div>
+                                            <div class="small text-muted mt-2">Size: Free Size &nbsp;·&nbsp; Qty: <span
+                                                    id="qtyVal2">2</span></div>
+                                        </div>
+                                    </div>
+                                    <button class="link-brand" type="button">EDIT</button>
+                                </div>
+                            </div>
+
+                            <div class="line"></div>
+
+                            <div class="p-3 d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                <div class="small text-muted">Sold by: AYM Creatives</div>
+                                <div class="small text-muted">Free Delivery</div>
+                            </div>
+                        </div>
+
+                        <div class="section-title mt-3">Delivery Address</div>
+                        <div class="card-soft p-3">
+                            <div class="d-flex align-items-start justify-content-between gap-2">
+                                <div>
+                                    <div class="fw-bold">Sadasiva Acharya</div>
+                                    <div class="text-muted small mt-1">
+                                        plot no 9,, rode no 6 / jagannath nagar, bhubaneswar, Odisha - 751010
+                                    </div>
+                                    <div class="text-muted small mt-2">7381315553</div>
+                                </div>
+                                <button class="link-brand" type="button">EDIT</button>
+                            </div>
+                        </div>
+
+                        <div class="section-title mt-3">Payment Mode</div>
+                        <div class="card-soft p-3 d-flex align-items-center justify-content-between">
+                            <div class="fw-semibold" id="payModeText">Cash on Delivery</div>
+                            <button class="link-brand" type="button">EDIT</button>
+                        </div>
+                    </section>
+
+                </div>
+
+                <!-- RIGHT -->
+                <div class="col-12 col-lg-4">
+                    <aside class="right-sticky">
+
+                        <div class="card-soft p-3">
+                            <div class="fw-bold">Price Details (<span id="itemsCount">1</span> Items)</div>
+
+                            <div class="line my-2"></div>
+
+                            <div class="d-flex align-items-center justify-content-between py-1">
+                                <div class="text-muted">Total Product Price</div>
+                                <div class="fw-semibold">+ ₹<span id="totalPrice">342</span></div>
+                            </div>
+
+                            <div class="line my-2"></div>
+
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="fw-bold">Order Total</div>
+                                <div class="fw-bold">₹<span id="orderTotal">342</span></div>
+                            </div>
+
+                            <div class="note mt-2" id="continueNote">
+                                Clicking on ‘Continue’ will not deduct any money
+                            </div>
+
+                            <button class="btn btn-brand w-100 mt-3" type="button" id="continueBtn">
+                                Continue
+                            </button>
+
+                            <!-- Optional safety banner like screenshot (replace src with your own file) -->
+                            <div class="safety mt-3 d-none" id="safetyBox">
+                                <div class="safety-inner">
+                                    <div class="fw-bold mb-1">Your Safety, Our Priority</div>
+                                    <div class="small text-muted mb-2">We make sure that your package is safe at every
+                                        point of contact.</div>
+                                    <img src="https://picsum.photos/seed/safety/700/240" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                    </aside>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <a class="navbar-brand d-inline-flex align-items-center gap-2 mb-2" href="#">
+                        <span class="brand-mark">J</span>
+                        <span class="brand-text">Jagannatha<span class="brand-accent">Krupa</span></span>
+                    </a>
+                    <p class="text-muted mb-3">
+                        Premium devotional products for daily worship and special occasions.
+                    </p>
+                    <div class="d-flex gap-2">
+                        <a class="footer-icon" href="#"><i class="bi bi-facebook"></i></a>
+                        <a class="footer-icon" href="#"><i class="bi bi-instagram"></i></a>
+                        <a class="footer-icon" href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-2">
+                    <h6 class="footer-title">Our Company</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-2">
+                    <h6 class="footer-title">Products</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">All Products</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Best Sellers</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4">
+                    <h6 class="footer-title">Contact us</h6>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="bi bi-geo-alt me-1"></i> Bhubaneswar, Odisha</a></li>
+                        <li><a href="#"><i class="bi bi-telephone me-1"></i> +91 00000 00000</a></li>
+                        <li><a href="#"><i class="bi bi-envelope me-1"></i> support@example.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="my-4">
+
+            <div
+                class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 small text-muted">
+                <div>© 2026 JagannathaKrupa. All rights reserved.</div>
+                <div class="d-flex align-items-center gap-3">
+                    <a class="text-muted" href="#">Privacy</a>
+                    <a class="text-muted" href="#">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

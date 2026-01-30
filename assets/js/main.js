@@ -358,3 +358,125 @@ document.addEventListener("click", (e) => {
   // reset whenever modal opens
   document.getElementById("imgModal")?.addEventListener("show.bs.modal", reset);
 })();
+
+
+// cart jsssss
+(() => {
+  const stepsWrap = document.getElementById("checkoutSteps");
+  const progress = document.getElementById("checkoutProgress");
+  const panes = [...document.querySelectorAll(".step-pane")];
+  const continueBtn = document.getElementById("continueBtn");
+  const continueNote = document.getElementById("continueNote");
+  const safetyBox = document.getElementById("safetyBox");
+
+  const qtyVal = document.getElementById("qtyVal");
+  const qtyVal2 = document.getElementById("qtyVal2");
+  const removeItemBtn = document.getElementById("removeItemBtn");
+
+  const deliverHereBtn = document.getElementById("deliverHereBtn");
+  const payModeText = document.getElementById("payModeText");
+
+  let current = 1;
+  let qty = 2;
+  let payMode = "Cash on Delivery";
+
+  const stepButtons = stepsWrap ? [...stepsWrap.querySelectorAll(".jk-step")] : [];
+
+  const setStep = (n) => {
+    current = Math.max(1, Math.min(4, n));
+
+    // show/hide panes
+    panes.forEach(p => {
+      const s = Number(p.getAttribute("data-step"));
+      p.classList.toggle("d-none", s !== current);
+    });
+
+    // stepper states
+    stepButtons.forEach(btn => {
+      const s = Number(btn.dataset.step);
+      btn.classList.toggle("is-active", s === current);
+      btn.classList.toggle("is-complete", s < current);
+    });
+
+    // progress 0/33/66/100
+    if (progress) {
+      const pct = ((current - 1) / (stepButtons.length - 1)) * 100;
+      progress.style.width = `${pct}%`;
+    }
+
+    // right CTA text changes
+    if (continueBtn) {
+      continueBtn.textContent = (current === 4) ? "Place Order" : "Continue";
+    }
+
+    // note + safety banner like screenshot (show on Cart + Payment)
+    if (continueNote) {
+      continueNote.classList.toggle("d-none", current === 4);
+    }
+    if (safetyBox) {
+      safetyBox.classList.toggle("d-none", !(current === 1 || current === 3));
+    }
+
+    // keep summary values synced
+    if (qtyVal2) qtyVal2.textContent = String(qty);
+    if (payModeText) payModeText.textContent = payMode;
+  };
+
+  // step click
+  stepsWrap?.addEventListener("click", (e) => {
+    const btn = e.target.closest(".jk-step");
+    if (!btn) return;
+    setStep(Number(btn.dataset.step));
+  });
+
+  // continue flow
+  continueBtn?.addEventListener("click", () => {
+    if (current < 4) setStep(current + 1);
+    else alert("Order placed (demo)!");
+  });
+
+  // qty controls
+  document.addEventListener("click", (e) => {
+    const b = e.target.closest("[data-qty]");
+    if (!b) return;
+
+    const dir = b.getAttribute("data-qty");
+    qty = Math.max(1, qty + (dir === "+1" ? 1 : -1));
+    if (qtyVal) qtyVal.textContent = String(qty);
+    if (qtyVal2) qtyVal2.textContent = String(qty);
+  });
+
+  // remove item (demo)
+  removeItemBtn?.addEventListener("click", () => {
+    alert("Removed (demo)");
+  });
+
+  // address: deliver here => next
+  deliverHereBtn?.addEventListener("click", () => setStep(3));
+
+  // payment selection visual + update pay mode
+  document.addEventListener("change", (e) => {
+    if (e.target && e.target.name === "pay") {
+      const items = [...document.querySelectorAll(".pay-item")];
+      items.forEach(x => x.classList.remove("is-selected"));
+
+      const label = e.target.closest(".pay-item");
+      label?.classList.add("is-selected");
+
+      // update mode text
+      payMode = label?.innerText.includes("Pay Online") ? "Pay Online" : "Cash on Delivery";
+      if (payModeText) payModeText.textContent = payMode;
+    }
+  });
+
+  // segmented toggle demo
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".seg-btn");
+    if (!btn) return;
+    btn.parentElement?.querySelectorAll(".seg-btn").forEach(b => b.classList.remove("is-active"));
+    btn.classList.add("is-active");
+  });
+
+  // init
+  setStep(1);
+})();
