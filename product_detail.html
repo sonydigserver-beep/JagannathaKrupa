@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JagannathaKrupa - Home</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <!-- Topbar -->
+    <div class="topbar py-2 d-none d-lg-block">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between gap-3">
+                <div class="topbar-left small">
+                    <span class="me-3"><i class="bi bi-telephone me-1"></i> +91 00000 00000</span>
+                    <span><i class="bi bi-envelope me-1"></i> support@example.com</span>
+                </div>
+                <div class="topbar-right d-flex align-items-center gap-3 small">
+                    <a class="topbar-link" href="#">Tracking Order</a>
+                    <a class="topbar-link" href="#">My Account</a>
+                    <div class="d-flex align-items-center gap-2">
+                        <a class="topbar-icon" href="#"><i class="bi bi-facebook"></i></a>
+                        <a class="topbar-icon" href="#"><i class="bi bi-instagram"></i></a>
+                        <a class="topbar-icon" href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header sticky-top">
+        <nav class="navbar navbar-expand-lg bg-white border-bottom py-2 py-lg-3">
+            <div class="container">
+
+                <!-- MOBILE TOP ROW -->
+                <div class="mobile-top d-flex d-lg-none w-100 align-items-center justify-content-between gap-2">
+
+                    <!-- Toggler => opens sidebar -->
+                    <!-- <button class="navbar-toggler m-0" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Open menu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button> -->
+                    <button class="navbar-toggler nav-toggler-mini" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Brand -->
+                    <a class="navbar-brand d-flex align-items-center gap-2 m-0 mobile-brand" href="#">
+                        <span class="brand-mark">J</span>
+                        <span class="brand-text text-truncate">Jagannatha<span class="brand-accent">Krupa</span></span>
+                    </a>
+
+                    <!-- Icons -->
+                    <div class="d-flex align-items-center gap-2 mobile-icons">
+                        <div class="dropdown ">
+                            <a class="icon-btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+
+                                <i class="bi bi-translate"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end language-dropdown">
+                                <li><a class="dropdown-item" href="#">En</a></li>
+                                <li><a class="dropdown-item" href="#">हिंदी</a></li>
+                                <li><a class="dropdown-item" href="#">ଓଡ଼ିଆ</a></li>
+                            </ul>
+                        </div>
+                        <a class="icon-btn position-relative" href="#" aria-label="Cart">
+                            <i class="bi bi-bag"></i>
+                            <span class="badge rounded-pill text-bg-dark icon-badge">2</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- DESKTOP HEADER (same as before) -->
+                <a class="navbar-brand d-none d-lg-flex align-items-center gap-2" href="#">
+                    <span class="brand-mark">J</span>
+                    <span class="brand-text">Jagannatha<span class="brand-accent">Krupa</span></span>
+                </a>
+
+                <div class="collapse navbar-collapse d-none d-lg-flex" id="desktopNav">
+                    <ul class="navbar-nav mx-lg-auto mb-2 mb-lg-0 gap-lg-2">
+                        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Pages</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    </ul>
+
+                    <div class="d-none d-lg-flex align-items-center gap-2">
+                        <div class="header-search d-none d-lg-flex">
+                            <i class="bi bi-search"></i>
+                            <input class="form-control form-control-sm" type="text" placeholder="Search..." />
+                        </div>
+
+                        <a class="icon-btn" href="#" aria-label="Account"><i class="bi bi-person"></i></a>
+                        <a class="icon-btn" href="#" aria-label="Wishlist"><i class="bi bi-heart"></i></a>
+                        <a class="icon-btn position-relative" href="#" aria-label="Cart">
+                            <i class="bi bi-bag"></i>
+                            <span class="badge rounded-pill text-bg-dark icon-badge">2</span>
+                        </a>
+                        <div class="dropdown ">
+                            <a class="icon-btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+
+                                <i class="bi bi-translate"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end language-dropdown">
+                                <li><a class="dropdown-item" href="#">En</a></li>
+                                <li><a class="dropdown-item" href="#">हिंदी</a></li>
+                                <li><a class="dropdown-item" href="#">ଓଡ଼ିଆ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- MOBILE SEARCH ROW -->
+            <div class="d-lg-none w-100 px-0">
+                <div class="container pt-2 pb-2">
+                    <form class="mobile-search" onsubmit="event.preventDefault();">
+                        <input type="text" class="mobile-search-input" placeholder="Search JagannathaKrupa..." />
+                        <button class="mobile-search-btn" type="submit" aria-label="Search">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <!-- OFFCANVAS SIDEBAR (mobile menu) -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body">
+                <nav class="mobile-menu">
+                    <a class="mobile-link active" href="#">Home</a>
+                    <a class="mobile-link" href="#">Products</a>
+                    <a class="mobile-link" href="#">Blog</a>
+                    <a class="mobile-link" href="#">Pages</a>
+                    <a class="mobile-link" href="#">Contact</a>
+                </nav>
+
+                <hr>
+
+                <div class="d-grid gap-2">
+                    <a href="#" class="btn btn-outline-dark btn-sm"><i class="bi bi-person me-1"></i> Account</a>
+                    <a href="#" class="btn btn-outline-dark btn-sm"><i class="bi bi-heart me-1"></i> Wishlist</a>
+                    <a href="#" class="btn btn-brand btn-sm"><i class="bi bi-bag me-1"></i> Cart</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- content -->
+    <main class="py-3 py-lg-4">
+        <div class="container">
+
+            <div class="row g-3 g-lg-4">
+                <!-- LEFT: Gallery -->
+                <div class="col-12 col-lg-5">
+
+                    <div class="card-soft p-2">
+                        <div class="gallery-wrap">
+
+                            <!-- Thumbs -->
+                            <div class="gallery-thumbs" id="galleryThumbs">
+                                <button class="thumb active" type="button"
+                                    data-src="https://picsum.photos/seed/pd1/1600/1200" aria-label="Image 1">
+                                    <img src="https://picsum.photos/seed/pd1/120/120" alt="">
+                                </button>
+                                <button class="thumb" type="button" data-src="https://picsum.photos/seed/pd2/1600/1200"
+                                    aria-label="Image 2">
+                                    <img src="https://picsum.photos/seed/pd2/120/120" alt="">
+                                </button>
+                                <button class="thumb" type="button" data-src="https://picsum.photos/seed/pd3/1600/1200"
+                                    aria-label="Image 3">
+                                    <img src="https://picsum.photos/seed/pd3/120/120" alt="">
+                                </button>
+                                <button class="thumb" type="button" data-src="https://picsum.photos/seed/pd4/1600/1200"
+                                    aria-label="Image 4">
+                                    <img src="https://picsum.photos/seed/pd4/120/120" alt="">
+                                </button>
+                            </div>
+
+                            <!-- Main image + magnifier -->
+                            <div class="gallery-main" id="magnifierRoot">
+                                <div class="gallery-topbar">
+                                    <span class="hint d-none d-lg-inline">Hover to zoom</span>
+                                    <button class="ghost-btn" type="button" data-bs-toggle="modal"
+                                        data-bs-target="#imgModal">
+                                        <i class="bi bi-arrows-fullscreen me-1"></i> View
+                                    </button>
+                                </div>
+
+                                <img id="mainProductImage" src="https://picsum.photos/seed/pd1/1600/1200"
+                                    alt="Product image">
+
+                                <!-- Lens + zoom result (JS controls visibility) -->
+                                <div class="zoom-lens" id="zoomLens" aria-hidden="true"></div>
+                                <div class="zoom-result" id="zoomResult" aria-hidden="true"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="card-soft p-3 mt-3">
+                        <div class="row g-2">
+                            <div class="col-6">
+                                <button class="btn btn-outline-brand w-100" type="button">
+                                    <i class="bi bi-bag me-1"></i> Add to Cart
+                                </button>
+                            </div>
+                            <div class="col-6">
+                                <button class="btn btn-brand w-100" type="button">
+                                    <i class="bi bi-lightning-charge-fill me-1"></i> Buy Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Similar products -->
+                    <div class="card-soft p-3 mt-3">
+                        <div class="fw-bold mb-2">1 Similar Products</div>
+                        <div class="d-flex gap-2">
+                            <a class="mini-p" href="#">
+                                <img src="https://picsum.photos/seed/sim1/180/180" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT: Details -->
+                <div class="col-12 col-lg-7">
+                    <div class="right-sticky">
+
+                        <div class="card-soft p-3">
+                            <div class="small text-muted mb-1">
+                                Mahadeva Camphor • 100 Gram • Bhimseni
+                            </div>
+                            <h1 class="h6 fw-bold mb-2">
+                                100% Pure Camphor Kapoor – Aromatic & Healing, No Chemicals
+                            </h1>
+
+                            <div class="d-flex align-items-end gap-2 flex-wrap">
+                                <div class="price-now">₹157</div>
+                                <div class="price-old">₹174</div>
+                                <div class="price-off">10% off</div>
+                            </div>
+
+                            <div class="d-flex align-items-center gap-2 mt-2 flex-wrap">
+                                <span class="rating-pill">
+                                    4.3 <i class="bi bi-star-fill"></i>
+                                </span>
+                                <span class="small text-muted">5479 Ratings, 4004 Reviews</span>
+                                <span class="small text-muted">• Free Delivery</span>
+                            </div>
+                        </div>
+
+                        <div class="card-soft p-3 mt-3">
+                            <div class="fw-bold mb-2">Select Size</div>
+                            <div class="d-flex gap-2 flex-wrap" id="sizeGroup">
+                                <button class="chip active" type="button">Free Size</button>
+                                <button class="chip" type="button">200g</button>
+                                <button class="chip" type="button">500g</button>
+                            </div>
+                        </div>
+
+                        <div class="card-soft p-3 mt-3">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <div class="fw-bold">Product Highlights</div>
+                                <button class="btn btn-link btn-sm text-decoration-none text-brand" type="button"
+                                    id="copyHighlightsBtn">
+                                    COPY
+                                </button>
+                            </div>
+
+                            <div class="row g-2 small" id="highlightsBox">
+                                <div class="col-6">
+                                    <div class="text-muted">Weight</div>
+                                    <div class="fw-semibold">0.1</div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="text-muted">Color</div>
+                                    <div class="fw-semibold">White</div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="text-muted">Net Quantity (N)</div>
+                                    <div class="fw-semibold">1</div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="text-muted">Material</div>
+                                    <div class="fw-semibold">Brass</div>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-light w-100 mt-3 d-flex align-items-center justify-content-between"
+                                type="button" data-bs-toggle="collapse" data-bs-target="#moreDetails">
+                                <span class="fw-semibold">Additional Details</span>
+                                <i class="bi bi-chevron-down"></i>
+                            </button>
+                            <div class="collapse mt-2" id="moreDetails">
+                                <div class="small text-muted">
+                                    Store in a cool, dry place. Keep away from moisture.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-soft p-3 mt-3">
+                            <div class="fw-bold mb-2">Sold By</div>
+                            <div class="d-flex align-items-start justify-content-between gap-2">
+                                <div class="d-flex gap-2">
+                                    <div class="seller-ic"><i class="bi bi-shop"></i></div>
+                                    <div>
+                                        <div class="fw-semibold">AYM Creatives</div>
+                                        <div class="small text-muted">4.2 ★ • 38,243 Ratings</div>
+                                    </div>
+                                </div>
+                                <a class="btn btn-outline-secondary btn-sm" href="#">View Shop</a>
+                            </div>
+
+                            <div class="row text-center mt-3 g-2">
+                                <div class="col-4">
+                                    <div class="fw-bold">108</div>
+                                    <div class="small text-muted">Followers</div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="fw-bold">165</div>
+                                    <div class="small text-muted">Products</div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="fw-bold">Trusted</div>
+                                    <div class="small text-muted">Seller</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-soft p-3 mt-3">
+                            <div class="fw-bold mb-3">Product Ratings & Reviews</div>
+
+                            <div class="row g-3">
+                                <div class="col-12 col-md-4">
+                                    <div class="display-6 fw-bold m-0">4.3<span class="fs-5">★</span></div>
+                                    <div class="small text-muted">5479 Ratings, 4004 Reviews</div>
+                                </div>
+
+                                <div class="col-12 col-md-8">
+                                    <div class="rating-row">
+                                        <div class="rating-label">Excellent</div>
+                                        <div class="progress flex-grow-1" style="height:8px;">
+                                            <div class="progress-bar bg-success" style="width:72%"></div>
+                                        </div>
+                                        <div class="rating-val">3261</div>
+                                    </div>
+
+                                    <div class="rating-row">
+                                        <div class="rating-label">Very Good</div>
+                                        <div class="progress flex-grow-1" style="height:8px;">
+                                            <div class="progress-bar bg-success" style="width:42%"></div>
+                                        </div>
+                                        <div class="rating-val">1888</div>
+                                    </div>
+
+                                    <div class="rating-row">
+                                        <div class="rating-label">Good</div>
+                                        <div class="progress flex-grow-1" style="height:8px;">
+                                            <div class="progress-bar bg-warning" style="width:18%"></div>
+                                        </div>
+                                        <div class="rating-val">494</div>
+                                    </div>
+
+                                    <div class="rating-row">
+                                        <div class="rating-label">Average</div>
+                                        <div class="progress flex-grow-1" style="height:8px;">
+                                            <div class="progress-bar bg-warning" style="width:8%"></div>
+                                        </div>
+                                        <div class="rating-val">19</div>
+                                    </div>
+
+                                    <div class="rating-row">
+                                        <div class="rating-label">Poor</div>
+                                        <div class="progress flex-grow-1" style="height:8px;">
+                                            <div class="progress-bar bg-danger" style="width:10%"></div>
+                                        </div>
+                                        <div class="rating-val">217</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="my-3">
+
+                            <div class="review">
+                                <div class="d-flex align-items-start justify-content-between gap-2">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <span class="rating-pill rating-pill--sm">5.0 <i
+                                                class="bi bi-star-fill"></i></span>
+                                        <div class="fw-semibold">Ravichandran G</div>
+                                    </div>
+                                    <div class="small text-muted">Posted on 6 Jan 2026</div>
+                                </div>
+                                <div class="small text-muted mt-2">Positive fragrance. Thank you.</div>
+
+                                <div class="d-flex gap-2 mt-2 flex-wrap">
+                                    <img class="review-img" src="https://picsum.photos/seed/r1/160/120" alt="">
+                                    <img class="review-img" src="https://picsum.photos/seed/r2/160/120" alt="">
+                                    <img class="review-img" src="https://picsum.photos/seed/r3/160/120" alt="">
+                                </div>
+
+                                <button class="btn btn-link btn-sm px-0 text-decoration-none mt-2" type="button">
+                                    <i class="bi bi-hand-thumbs-up me-1"></i> Helpful (0)
+                                </button>
+                            </div>
+
+                            <div class="trust-strip mt-3">
+                                <div class="trust-item">
+                                    <i class="bi bi-tag"></i>
+                                    <div>Lowest Price</div>
+                                </div>
+                                <div class="trust-item">
+                                    <i class="bi bi-cash-coin"></i>
+                                    <div>Cash on Delivery</div>
+                                </div>
+                                <div class="trust-item">
+                                    <i class="bi bi-arrow-repeat"></i>
+                                    <div>7-day Returns</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- People also viewed -->
+            <div class="card-soft p-3 mt-4">
+                <div class="d-flex align-items-center justify-content-between gap-2 mb-2">
+                    <div class="fw-bold">People also viewed</div>
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-light btn-sm" type="button" id="prevAlso"><i
+                                class="bi bi-chevron-left"></i></button>
+                        <button class="btn btn-light btn-sm" type="button" id="nextAlso"><i
+                                class="bi bi-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="also-wrap" id="alsoWrap">
+                    <a class="also-card" href="#">
+                        <img src="https://picsum.photos/seed/a1/500/400" alt="">
+                        <div class="also-body">
+                            <div class="also-title">Attractive Puja Articles</div>
+                            <div class="also-price">₹157 <span class="also-off">10% off</span></div>
+                            <div class="also-meta">
+                                <span class="rating-pill rating-pill--sm">4.4 <i class="bi bi-star-fill"></i></span>
+                                <span class="text-muted small">810 reviews</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a class="also-card" href="#">
+                        <img src="https://picsum.photos/seed/a2/500/400" alt="">
+                        <div class="also-body">
+                            <div class="also-title">Ravishing Puja Articles</div>
+                            <div class="also-price">₹307</div>
+                            <div class="also-meta">
+                                <span class="rating-pill rating-pill--sm">4.4 <i class="bi bi-star-fill"></i></span>
+                                <span class="text-muted small">2034 reviews</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a class="also-card" href="#">
+                        <img src="https://picsum.photos/seed/a3/500/400" alt="">
+                        <div class="also-body">
+                            <div class="also-title">Classic Puja Articles</div>
+                            <div class="also-price">₹234</div>
+                            <div class="also-meta">
+                                <span class="rating-pill rating-pill--sm">4.4 <i class="bi bi-star-fill"></i></span>
+                                <span class="text-muted small">1329 reviews</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a class="also-card" href="#">
+                        <img src="https://picsum.photos/seed/a4/500/400" alt="">
+                        <div class="also-body">
+                            <div class="also-title">Ravishing Puja Articles</div>
+                            <div class="also-price">₹148</div>
+                            <div class="also-meta">
+                                <span class="rating-pill rating-pill--sm">4.3 <i class="bi bi-star-fill"></i></span>
+                                <span class="text-muted small">1881 reviews</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a class="also-card" href="#">
+                        <img src="https://picsum.photos/seed/a5/500/400" alt="">
+                        <div class="also-body">
+                            <div class="also-title">Trendy Puja Articles</div>
+                            <div class="also-price">₹188 <span class="also-off">18% off</span></div>
+                            <div class="also-meta">
+                                <span class="rating-pill rating-pill--sm">4.3 <i class="bi bi-star-fill"></i></span>
+                                <span class="text-muted small">1690 reviews</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <!-- Zoom modal (mobile-friendly) -->
+    <div class="modal fade" id="imgModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down modal-lg">
+            <div class="modal-content">
+                <div class="modal-header py-2">
+                    <div class="fw-semibold">Image zoom</div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body p-0">
+                    <div class="modal-zoom-stage" id="zoomStage">
+                        <img id="modalProductImage" src="https://picsum.photos/seed/pd1/1600/1200" alt="">
+                    </div>
+                </div>
+
+                <div class="modal-footer justify-content-between">
+                    <div class="small text-muted">Drag to pan (zoomed)</div>
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-light btn-sm" type="button" id="zoomOutBtn"><i
+                                class="bi bi-dash-lg"></i></button>
+                        <button class="btn btn-light btn-sm" type="button" id="zoomInBtn"><i
+                                class="bi bi-plus-lg"></i></button>
+                        <button class="btn btn-brand btn-sm" type="button" id="zoomResetBtn">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer pt-5 pb-3">
+        <div class="container">
+            <hr class="my-4">
+            <!-- Footer Links -->
+            <div class="row g-4">
+                <div class="col-lg-3">
+                    <a class="navbar-brand d-inline-flex align-items-center gap-2 mb-2" href="#">
+                        <span class="brand-mark">J</span>
+                        <span class="brand-text">Jagannatha
+                            <span class="brand-accent">Krupa</span>
+                        </span>
+                    </a>
+                    <p class="text-muted mb-3">
+                        Premium devotional products for daily worship and special occasions.
+                    </p>
+                    <ul class="footer-links mb-4">
+                        <li><a href="#"><i class="bi bi-geo-alt me-1"></i> Bhubaneswar, Odisha</a></li>
+                        <li><a href="#"><i class="bi bi-telephone me-1"></i> +91 00000 00000</a></li>
+                        <li><a href="#"><i class="bi bi-envelope me-1"></i> support@example.com</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-2">
+                    <h6 class="footer-title">Our Company</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-2">
+                    <h6 class="footer-title">Products</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">All Products</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Best Sellers</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-5">
+
+
+                    <!-- Newsletter inside Contact Column -->
+                    <div class="footer-newsletter-box">
+                        <h6 class="footer-title mb-2">Newsletter</h6>
+                        <p class="text-muted small mb-3">Get puja updates, festival offers, and new devotional products.
+                        </p>
+                        <form class="newsletter-form-footer" onsubmit="event.preventDefault();">
+                            <input class="form-control" type="email" placeholder="Your email" required />
+                            <button class="btn btn-danger" type="submit">
+                                <i class="bi bi-send"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="d-flex gap-2 mt-4">
+                        <a class="footer-icon" href="#"><i class="bi bi-facebook"></i></a>
+                        <a class="footer-icon" href="#"><i class="bi bi-instagram"></i></a>
+                        <a class="footer-icon" href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4">
+
+            <div
+                class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 small text-muted">
+                <div>© 2026 JagannathaKrupa. All rights reserved.</div>
+                <div class="d-flex align-items-center gap-3">
+                    <a class="text-muted" href="#">Privacy</a>
+                    <a class="text-muted" href="#">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
