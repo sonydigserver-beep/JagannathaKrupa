@@ -8,403 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        :root {
-            /* Jagannath-inspired theme */
-            --brand-red: #E30613;
-            --brand-black: #060201;
-            --brand-white: #F7F8F6;
-            --brand-saffron: #FF6A00;
-            --brand-gold: #D4A017;
-            --dark: #060201;
-            --soft: #FFF7EE;
-            --muted: #6F6A66;
-            --border: #E8DED5;
-            --radius: 16px;
-        }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background-color: var(--brand-white);
-            color: var(--dark);
-        }
-
-        /* Video Header */
-        .video-header {
-            position: relative;
-            width: 100%;
-            height: 500px;
-            overflow: hidden;
-            background-color: var(--brand-red);
-        }
-
-        .video-header video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            transform: translate(-50%, -50%);
-            object-fit: cover;
-        }
-
-        .video-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: var(--brand-red);
-            opacity: 0.7;
-            z-index: 1;
-        }
-
-        .video-content {
-            position: relative;
-            z-index: 2;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-        }
-
-        .video-title {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        .video-subtitle {
-            font-size: 1.25rem;
-            opacity: 0.95;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Section Styling */
-        .content-section {
-            padding: 3rem 0;
-        }
-
-        .section-title {
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: var(--dark);
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        .section-title i {
-            color: var(--brand-red);
-            font-size: 1.5rem;
-        }
-
-        .section-subtitle {
-            color: var(--muted);
-            margin-bottom: 2rem;
-        }
-
-        /* Ritual Cards */
-        .ritual-card {
-            background: white;
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .ritual-card::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            background: var(--brand-red);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .ritual-card:hover {
-            box-shadow: 0 8px 24px rgba(6, 2, 1, 0.08);
-            transform: translateY(-2px);
-        }
-
-        .ritual-card:hover::before {
-            opacity: 1;
-        }
-
-        .ritual-time {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: var(--soft);
-            color: var(--brand-red);
-            font-weight: 700;
-            font-size: 1.25rem;
-            padding: 0.5rem 1rem;
-            border-radius: 12px;
-            margin-bottom: 1rem;
-        }
-
-        .ritual-time i {
-            font-size: 1.1rem;
-        }
-
-        .ritual-name {
-            font-size: 1.35rem;
-            font-weight: 700;
-            color: var(--dark);
-            margin-bottom: 0.75rem;
-        }
-
-        .ritual-description {
-            color: var(--muted);
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
-
-        .ritual-details {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-        }
-
-        .ritual-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            padding: 0.4rem 0.8rem;
-            background: var(--soft);
-            border-radius: 8px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: var(--dark);
-        }
-
-        .ritual-badge i {
-            color: var(--brand-red);
-            font-size: 0.9rem;
-        }
-
-        /* Panchang Calendar */
-        .panchang-card {
-            background: white;
-            border: 2px solid var(--brand-red);
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 8px 24px rgba(227, 6, 19, 0.1);
-        }
-
-        .panchang-header {
-            background: var(--brand-red);
-            color: white;
-            padding: 1.5rem;
-            text-align: center;
-        }
-
-        .panchang-date {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 0.25rem;
-        }
-
-        .panchang-month-year {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-
-        .panchang-body {
-            padding: 1.5rem;
-        }
-
-        .panchang-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem;
-            border-bottom: 1px solid var(--border);
-            transition: background 0.2s ease;
-        }
-
-        .panchang-item:last-child {
-            border-bottom: none;
-        }
-
-        .panchang-item:hover {
-            background: var(--soft);
-        }
-
-        .panchang-label {
-            font-weight: 600;
-            color: var(--muted);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .panchang-label i {
-            color: var(--brand-red);
-        }
-
-        .panchang-value {
-            font-weight: 700;
-            color: var(--dark);
-            text-align: right;
-        }
-
-        /* Special Days Section */
-        .special-day-card {
-            background: linear-gradient(135deg, var(--brand-saffron) 0%, var(--brand-red) 100%);
-            color: white;
-            border-radius: 16px;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .special-day-card::before {
-            content: '🕉';
-            position: absolute;
-            right: -20px;
-            top: -20px;
-            font-size: 8rem;
-            opacity: 0.1;
-        }
-
-        .special-day-date {
-            font-size: 0.9rem;
-            opacity: 0.9;
-            margin-bottom: 0.5rem;
-        }
-
-        .special-day-name {
-            font-size: 1.35rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .special-day-desc {
-            font-size: 0.95rem;
-            opacity: 0.9;
-        }
-
-        /* FIXED Timeline for rituals */
-        .ritual-timeline {
-            position: relative;
-            padding-left: 2.5rem;
-        }
-
-        .ritual-timeline::before {
-            content: '';
-            position: absolute;
-            left: 6px;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: var(--brand-red);
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: 2rem;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -2.5rem;
-            top: 1.5rem;
-            width: 14px;
-            height: 14px;
-            background: white;
-            border: 3px solid var(--brand-red);
-            border-radius: 50%;
-            z-index: 1;
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 991.98px) {
-
-            /* Calendar appears first on mobile */
-            .calendar-column {
-                order: -1;
-            }
-
-            .video-header {
-                height: 350px;
-            }
-
-            .video-title {
-                font-size: 2rem;
-            }
-
-            .video-subtitle {
-                font-size: 1rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .video-header {
-                height: 300px;
-            }
-
-            .video-title {
-                font-size: 1.75rem;
-            }
-
-            .panchang-date {
-                font-size: 2rem;
-            }
-
-            .ritual-card {
-                padding: 1.25rem;
-            }
-
-            .section-title {
-                font-size: 1.5rem;
-            }
-
-            .ritual-timeline {
-                padding-left: 2rem;
-            }
-
-            .ritual-timeline::before {
-                left: 5px;
-            }
-
-            .timeline-item::before {
-                left: -2rem;
-            }
-        }
-
-        /* Animation */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in-up {
-            animation: fadeInUp 0.6s ease-out;
-        }
-    </style>
 </head>
 
 <body>
@@ -642,6 +246,7 @@
             </div>
         </div>
     </header>
+
 
     <!-- Main Content -->
     <div class="container">
@@ -962,82 +567,84 @@
     </div>
 
 
-      <!-- Footer -->
-  <footer class="footer pt-5 pb-3">
-    <div class="container">
-      <hr class="my-4">
-      <!-- Footer Links -->
-      <div class="row g-4">
-        <div class="col-lg-3">
-          <a class="navbar-brand d-inline-flex align-items-center gap-2 mb-2" href="#">
-            <span class="brand-mark">J</span>
-            <span class="brand-text">Jagannatha
-              <span class="brand-accent">Krupa</span>
-            </span>
-          </a>
-          <p class="text-muted mb-3">
-            Premium devotional products for daily worship and special occasions.
-          </p>
-          <ul class="footer-links mb-4">
-            <li><a href="#"><i class="bi bi-geo-alt me-1"></i> Bhubaneswar, Odisha</a></li>
-            <li><a href="#"><i class="bi bi-telephone me-1"></i> +91 00000 00000</a></li>
-            <li><a href="#"><i class="bi bi-envelope me-1"></i> support@example.com</a></li>
-          </ul>
+    <!-- Footer -->
+    <footer class="footer pt-5 pb-3">
+        <div class="container">
+            <hr class="my-4">
+            <!-- Footer Links -->
+            <div class="row g-4">
+                <div class="col-lg-3">
+                    <a class="navbar-brand d-inline-flex align-items-center gap-2 mb-2" href="#">
+                        <span class="brand-mark">J</span>
+                        <span class="brand-text">Jagannatha
+                            <span class="brand-accent">Krupa</span>
+                        </span>
+                    </a>
+                    <p class="text-muted mb-3">
+                        Premium devotional products for daily worship and special occasions.
+                    </p>
+                    <ul class="footer-links mb-4">
+                        <li><a href="#"><i class="bi bi-geo-alt me-1"></i> Bhubaneswar, Odisha</a></li>
+                        <li><a href="#"><i class="bi bi-telephone me-1"></i> +91 00000 00000</a></li>
+                        <li><a href="#"><i class="bi bi-envelope me-1"></i> support@example.com</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-2">
+                    <h6 class="footer-title">Our Company</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-2">
+                    <h6 class="footer-title">Products</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">All Products</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Best Sellers</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-5">
+
+
+                    <!-- Newsletter inside Contact Column -->
+                    <div class="footer-newsletter-box">
+                        <h6 class="footer-title mb-2">Newsletter</h6>
+                        <p class="text-muted small mb-3">Get puja updates, festival offers, and new devotional products.
+                        </p>
+                        <form class="newsletter-form-footer" onsubmit="event.preventDefault();">
+                            <input class="form-control" type="email" placeholder="Your email" required />
+                            <button class="btn btn-danger" type="submit">
+                                <i class="bi bi-send"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="d-flex gap-2 mt-4">
+                        <a class="footer-icon" href="#"><i class="bi bi-facebook"></i></a>
+                        <a class="footer-icon" href="#"><i class="bi bi-instagram"></i></a>
+                        <a class="footer-icon" href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4">
+
+            <div
+                class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 small text-muted">
+                <div>© 2026 JagannathaKrupa. All rights reserved.</div>
+                <div class="d-flex align-items-center gap-3">
+                    <a class="text-muted" href="#">Privacy</a>
+                    <a class="text-muted" href="#">Terms</a>
+                </div>
+            </div>
         </div>
-
-        <div class="col-6 col-lg-2">
-          <h6 class="footer-title">Our Company</h6>
-          <ul class="footer-links">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">FAQ</a></li>
-          </ul>
-        </div>
-
-        <div class="col-6 col-lg-2">
-          <h6 class="footer-title">Products</h6>
-          <ul class="footer-links">
-            <li><a href="#">All Products</a></li>
-            <li><a href="#">New Arrivals</a></li>
-            <li><a href="#">Best Sellers</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-5">
-
-
-          <!-- Newsletter inside Contact Column -->
-          <div class="footer-newsletter-box">
-            <h6 class="footer-title mb-2">Newsletter</h6>
-            <p class="text-muted small mb-3">Get puja updates, festival offers, and new devotional products.</p>
-            <form class="newsletter-form-footer" onsubmit="event.preventDefault();">
-              <input class="form-control" type="email" placeholder="Your email" required />
-              <button class="btn btn-danger" type="submit">
-                <i class="bi bi-send"></i>
-              </button>
-            </form>
-          </div>
-          <div class="d-flex gap-2 mt-4">
-            <a class="footer-icon" href="#"><i class="bi bi-facebook"></i></a>
-            <a class="footer-icon" href="#"><i class="bi bi-instagram"></i></a>
-            <a class="footer-icon" href="#"><i class="bi bi-youtube"></i></a>
-          </div>
-        </div>
-      </div>
-
-      <hr class="my-4">
-
-      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 small text-muted">
-        <div>© 2026 JagannathaKrupa. All rights reserved.</div>
-        <div class="d-flex align-items-center gap-3">
-          <a class="text-muted" href="#">Privacy</a>
-          <a class="text-muted" href="#">Terms</a>
-        </div>
-      </div>
-    </div>
-  </footer
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </footer>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+    </script>
     <script>
         // Add animation on scroll
         const observerOptions = {
