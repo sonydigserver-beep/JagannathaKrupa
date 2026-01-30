@@ -25,6 +25,7 @@
 <body>
 
     <!-- Topbar -->
+    <!-- Topbar -->
     <div class="topbar py-2 d-none d-lg-block">
         <div class="container">
             <div class="d-flex align-items-center justify-content-between gap-3">
@@ -36,10 +37,14 @@
                     <a class="topbar-link" href="#">Tracking Order</a>
                     <a class="topbar-link" href="#">My Account</a>
                     <div class="d-flex align-items-center gap-2">
+
+                        <!-- Social Icons -->
                         <a class="topbar-icon" href="#"><i class="bi bi-facebook"></i></a>
                         <a class="topbar-icon" href="#"><i class="bi bi-instagram"></i></a>
                         <a class="topbar-icon" href="#"><i class="bi bi-youtube"></i></a>
+
                     </div>
+
                 </div>
             </div>
         </div>
@@ -52,12 +57,6 @@
 
                 <!-- MOBILE TOP ROW -->
                 <div class="mobile-top d-flex d-lg-none w-100 align-items-center justify-content-between gap-2">
-
-                    <!-- Toggler => opens sidebar -->
-                    <!-- <button class="navbar-toggler m-0" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Open menu">
-                        <span class="navbar-toggler-icon"></span>
-                    </button> -->
                     <button class="navbar-toggler nav-toggler-mini" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false"
                         aria-label="Toggle navigation">
@@ -72,10 +71,9 @@
 
                     <!-- Icons -->
                     <div class="d-flex align-items-center gap-2 mobile-icons">
-                        <div class="dropdown ">
+                        <div class="dropdown">
                             <a class="icon-btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
-
                                 <i class="bi bi-translate"></i>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end language-dropdown">
@@ -91,7 +89,7 @@
                     </div>
                 </div>
 
-                <!-- DESKTOP HEADER (same as before) -->
+                <!-- DESKTOP HEADER -->
                 <a class="navbar-brand d-none d-lg-flex align-items-center gap-2" href="#">
                     <span class="brand-mark">J</span>
                     <span class="brand-text">Jagannatha<span class="brand-accent">Krupa</span></span>
@@ -99,10 +97,99 @@
 
                 <div class="collapse navbar-collapse d-none d-lg-flex" id="desktopNav">
                     <ul class="navbar-nav mx-lg-auto mb-2 mb-lg-0 gap-lg-2">
-                        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Pages</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+
+                        <!-- SHOP DROPDOWN -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Shop
+                            </a>
+                            <div class="dropdown-menu shop-mega-menu-compact">
+                                <div class="mega-menu-wrapper">
+                                    <div class="row g-0">
+                                        <!-- Left Side: Categories List -->
+                                        <div class="col-5">
+                                            <div class="mega-menu-section">
+                                                <h6 class="mega-menu-title">SHOP BY CATEGORY</h6>
+                                                <ul class="mega-menu-categories">
+                                                    <li>
+                                                        <a href="#" class="category-link">
+                                                            <i class="bi bi-hand-thumbs-up"></i>
+                                                            <span>Handcraft</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="category-link">
+                                                            <i class="bi bi-threads"></i>
+                                                            <span>Handlooms</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="category-link">
+                                                            <i class="bi bi-gift"></i>
+                                                            <span>Dry Prashad</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="category-link">
+                                                            <i class="bi bi-flag"></i>
+                                                            <span>Flag Hosting Booking</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="category-link">
+                                                            <i class="bi bi-airplane"></i>
+                                                            <span>Travel and Hotel Bookings</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <!-- Right Side: Featured Products (Only 2) -->
+                                        <div class="col-7">
+                                            <div class="mega-menu-section border-start">
+                                                <h6 class="mega-menu-title">FEATURED PRODUCTS</h6>
+                                                <div class="row g-3">
+                                                    <!-- Product Card 1 -->
+                                                    <div class="col-6">
+                                                        <a href="#" class="mega-product-card">
+                                                            <div class="mega-product-image">
+                                                                <img src="https://images.unsplash.com/photo-1610375461246-83df859d849d?w=300&h=300&fit=crop"
+                                                                    alt="Ganesh Statue">
+                                                            </div>
+                                                            <h6 class="mega-product-title">Ganesh Statue</h6>
+                                                        </a>
+                                                    </div>
+
+                                                    <!-- Product Card 2 -->
+                                                    <div class="col-6">
+                                                        <a href="#" class="mega-product-card">
+                                                            <div class="mega-product-image">
+                                                                <img src="https://images.unsplash.com/photo-1604608672516-f1b9b1a0b3c5?w=300&h=300&fit=crop"
+                                                                    alt="Buddha Figurine">
+                                                            </div>
+                                                            <h6 class="mega-product-title">Buddha Figurine</h6>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- View All Button -->
+                                                <div class="text-center mt-3">
+                                                    <a href="shop.html" class="btn-view-all-compact">
+                                                        See All Products
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+
+                        <li class="nav-item"><a class="nav-link" href="#">Librery</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
                     </ul>
 
@@ -118,10 +205,9 @@
                             <i class="bi bi-bag"></i>
                             <span class="badge rounded-pill text-bg-dark icon-badge">2</span>
                         </a>
-                        <div class="dropdown ">
+                        <div class="dropdown">
                             <a class="icon-btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
-
                                 <i class="bi bi-translate"></i>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end language-dropdown">
@@ -157,10 +243,9 @@
 
             <div class="offcanvas-body">
                 <nav class="mobile-menu">
-                    <a class="mobile-link active" href="#">Home</a>
-                    <a class="mobile-link" href="#">Products</a>
-                    <a class="mobile-link" href="#">Blog</a>
-                    <a class="mobile-link" href="#">Pages</a>
+                    <a class="mobile-link active" href="index.html">Home</a>
+                    <a class="mobile-link" href="shop.html">Shop</a>
+                    <a class="mobile-link" href="#">Librery</a>
                     <a class="mobile-link" href="#">Contact</a>
                 </nav>
 
@@ -174,11 +259,6 @@
             </div>
         </div>
     </header>
-
-
-
-
-
 
     <section class="py-4">
         <div class="container">
@@ -445,24 +525,27 @@
     </section>
 
 
-
     <!-- Footer -->
     <footer class="footer pt-5 pb-3">
         <div class="container">
+            <hr class="my-4">
+            <!-- Footer Links -->
             <div class="row g-4">
-                <div class="col-lg-4">
+                <div class="col-lg-3">
                     <a class="navbar-brand d-inline-flex align-items-center gap-2 mb-2" href="#">
                         <span class="brand-mark">J</span>
-                        <span class="brand-text">Jagannatha<span class="brand-accent">Krupa</span></span>
+                        <span class="brand-text">Jagannatha
+                            <span class="brand-accent">Krupa</span>
+                        </span>
                     </a>
                     <p class="text-muted mb-3">
                         Premium devotional products for daily worship and special occasions.
                     </p>
-                    <div class="d-flex gap-2">
-                        <a class="footer-icon" href="#"><i class="bi bi-facebook"></i></a>
-                        <a class="footer-icon" href="#"><i class="bi bi-instagram"></i></a>
-                        <a class="footer-icon" href="#"><i class="bi bi-youtube"></i></a>
-                    </div>
+                    <ul class="footer-links mb-4">
+                        <li><a href="#"><i class="bi bi-geo-alt me-1"></i> Bhubaneswar, Odisha</a></li>
+                        <li><a href="#"><i class="bi bi-telephone me-1"></i> +91 00000 00000</a></li>
+                        <li><a href="#"><i class="bi bi-envelope me-1"></i> support@example.com</a></li>
+                    </ul>
                 </div>
 
                 <div class="col-6 col-lg-2">
@@ -483,13 +566,26 @@
                     </ul>
                 </div>
 
-                <div class="col-lg-4">
-                    <h6 class="footer-title">Contact us</h6>
-                    <ul class="footer-links">
-                        <li><a href="#"><i class="bi bi-geo-alt me-1"></i> Bhubaneswar, Odisha</a></li>
-                        <li><a href="#"><i class="bi bi-telephone me-1"></i> +91 00000 00000</a></li>
-                        <li><a href="#"><i class="bi bi-envelope me-1"></i> support@example.com</a></li>
-                    </ul>
+                <div class="col-lg-5">
+
+
+                    <!-- Newsletter inside Contact Column -->
+                    <div class="footer-newsletter-box">
+                        <h6 class="footer-title mb-2">Newsletter</h6>
+                        <p class="text-muted small mb-3">Get puja updates, festival offers, and new devotional products.
+                        </p>
+                        <form class="newsletter-form-footer" onsubmit="event.preventDefault();">
+                            <input class="form-control" type="email" placeholder="Your email" required />
+                            <button class="btn btn-danger" type="submit">
+                                <i class="bi bi-send"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="d-flex gap-2 mt-4">
+                        <a class="footer-icon" href="#"><i class="bi bi-facebook"></i></a>
+                        <a class="footer-icon" href="#"><i class="bi bi-instagram"></i></a>
+                        <a class="footer-icon" href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
                 </div>
             </div>
 
@@ -505,7 +601,7 @@
             </div>
         </div>
     </footer>
-
+    
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>

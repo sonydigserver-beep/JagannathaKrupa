@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Services - JagannathaKrupa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+  <!-- Topbar -->
+  <div class="topbar py-2 d-none d-lg-block">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-between gap-3">
+        <div class="topbar-left small">
+          <span class="me-3"><i class="bi bi-telephone me-1"></i> +91 00000 00000</span>
+          <span><i class="bi bi-envelope me-1"></i> support@example.com</span>
+        </div>
+        <div class="topbar-right d-flex align-items-center gap-3 small">
+          <a class="topbar-link" href="#">Tracking Order</a>
+          <a class="topbar-link" href="#">My Account</a>
+          <div class="d-flex align-items-center gap-2">
+
+            <!-- Social Icons -->
+            <a class="topbar-icon" href="#"><i class="bi bi-facebook"></i></a>
+            <a class="topbar-icon" href="#"><i class="bi bi-instagram"></i></a>
+            <a class="topbar-icon" href="#"><i class="bi bi-youtube"></i></a>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg bg-white border-bottom py-2 py-lg-3">
+      <div class="container">
+
+        <!-- MOBILE TOP ROW -->
+        <div class="mobile-top d-flex d-lg-none w-100 align-items-center justify-content-between gap-2">
+          <button class="navbar-toggler nav-toggler-mini" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Brand -->
+          <a class="navbar-brand d-flex align-items-center gap-2 m-0 mobile-brand" href="#">
+            <span class="brand-mark">J</span>
+            <span class="brand-text text-truncate">Jagannatha<span class="brand-accent">Krupa</span></span>
+          </a>
+
+          <!-- Icons -->
+          <div class="d-flex align-items-center gap-2 mobile-icons">
+            <div class="dropdown">
+              <a class="icon-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end language-dropdown">
+                <li><a class="dropdown-item" href="#">En</a></li>
+                <li><a class="dropdown-item" href="#">हिंदी</a></li>
+                <li><a class="dropdown-item" href="#">ଓଡ଼ିଆ</a></li>
+              </ul>
+            </div>
+            <a class="icon-btn position-relative" href="#" aria-label="Cart">
+              <i class="bi bi-bag"></i>
+              <span class="badge rounded-pill text-bg-dark icon-badge">2</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- DESKTOP HEADER -->
+        <a class="navbar-brand d-none d-lg-flex align-items-center gap-2" href="#">
+          <span class="brand-mark">J</span>
+          <span class="brand-text">Jagannatha<span class="brand-accent">Krupa</span></span>
+        </a>
+
+        <div class="collapse navbar-collapse d-none d-lg-flex" id="desktopNav">
+          <ul class="navbar-nav mx-lg-auto mb-2 mb-lg-0 gap-lg-2">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+
+            <!-- SHOP DROPDOWN -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Shop
+              </a>
+              <div class="dropdown-menu shop-mega-menu-compact">
+                <div class="mega-menu-wrapper">
+                  <div class="row g-0">
+                    <!-- Left Side: Categories List -->
+                    <div class="col-5">
+                      <div class="mega-menu-section">
+                        <h6 class="mega-menu-title">SHOP BY CATEGORY</h6>
+                        <ul class="mega-menu-categories">
+                          <li>
+                            <a href="#" class="category-link">
+                              <i class="bi bi-hand-thumbs-up"></i>
+                              <span>Handcraft</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="category-link">
+                              <i class="bi bi-threads"></i>
+                              <span>Handlooms</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="category-link">
+                              <i class="bi bi-gift"></i>
+                              <span>Dry Prashad</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="category-link">
+                              <i class="bi bi-flag"></i>
+                              <span>Flag Hosting Booking</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="category-link">
+                              <i class="bi bi-airplane"></i>
+                              <span>Travel and Hotel Bookings</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <!-- Right Side: Featured Products (Only 2) -->
+                    <div class="col-7">
+                      <div class="mega-menu-section border-start">
+                        <h6 class="mega-menu-title">FEATURED PRODUCTS</h6>
+                        <div class="row g-3">
+                          <!-- Product Card 1 -->
+                          <div class="col-6">
+                            <a href="#" class="mega-product-card">
+                              <div class="mega-product-image">
+                                <img
+                                  src="https://images.unsplash.com/photo-1610375461246-83df859d849d?w=300&h=300&fit=crop"
+                                  alt="Ganesh Statue">
+                              </div>
+                              <h6 class="mega-product-title">Ganesh Statue</h6>
+                            </a>
+                          </div>
+
+                          <!-- Product Card 2 -->
+                          <div class="col-6">
+                            <a href="#" class="mega-product-card">
+                              <div class="mega-product-image">
+                                <img
+                                  src="https://images.unsplash.com/photo-1604608672516-f1b9b1a0b3c5?w=300&h=300&fit=crop"
+                                  alt="Buddha Figurine">
+                              </div>
+                              <h6 class="mega-product-title">Buddha Figurine</h6>
+                            </a>
+                          </div>
+                        </div>
+
+                        <!-- View All Button -->
+                        <div class="text-center mt-3">
+                          <a href="shop.html" class="btn-view-all-compact">
+                            See All Products
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+
+            <li class="nav-item"><a class="nav-link" href="#">Librery</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          </ul>
+
+          <div class="d-none d-lg-flex align-items-center gap-2">
+            <div class="header-search d-none d-lg-flex">
+              <i class="bi bi-search"></i>
+              <input class="form-control form-control-sm" type="text" placeholder="Search..." />
+            </div>
+
+            <a class="icon-btn" href="#" aria-label="Account"><i class="bi bi-person"></i></a>
+            <a class="icon-btn" href="#" aria-label="Wishlist"><i class="bi bi-heart"></i></a>
+            <a class="icon-btn position-relative" href="#" aria-label="Cart">
+              <i class="bi bi-bag"></i>
+              <span class="badge rounded-pill text-bg-dark icon-badge">2</span>
+            </a>
+            <div class="dropdown">
+              <a class="icon-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end language-dropdown">
+                <li><a class="dropdown-item" href="#">En</a></li>
+                <li><a class="dropdown-item" href="#">हिंदी</a></li>
+                <li><a class="dropdown-item" href="#">ଓଡ଼ିଆ</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- MOBILE SEARCH ROW -->
+      <div class="d-lg-none w-100 px-0">
+        <div class="container pt-2 pb-2">
+          <form class="mobile-search" onsubmit="event.preventDefault();">
+            <input type="text" class="mobile-search-input" placeholder="Search JagannathaKrupa..." />
+            <button class="mobile-search-btn" type="submit" aria-label="Search">
+              <i class="bi bi-search"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- OFFCANVAS SIDEBAR (mobile menu) -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+      <div class="offcanvas-body">
+        <nav class="mobile-menu">
+          <a class="mobile-link active" href="index.html">Home</a>
+          <a class="mobile-link" href="shop.html">Shop</a>
+          <a class="mobile-link" href="#">Librery</a>
+          <a class="mobile-link" href="#">Contact</a>
+        </nav>
+
+        <hr>
+
+        <div class="d-grid gap-2">
+          <a href="#" class="btn btn-outline-dark btn-sm"><i class="bi bi-person me-1"></i> Account</a>
+          <a href="#" class="btn btn-outline-dark btn-sm"><i class="bi bi-heart me-1"></i> Wishlist</a>
+          <a href="#" class="btn btn-brand btn-sm"><i class="bi bi-bag me-1"></i> Cart</a>
+        </div>
+      </div>
+    </div>
+  </header>
+    <!-- Main Content -->
+    <div class="container content-section">
+        <div class="row g-4">
+            <!-- Left Column: Services -->
+            <div class="col-lg-8 service-column">
+                <div class="section-title">
+                    <i class="bi bi-list-check"></i>
+                    Available Services
+                </div>
+                <p class="section-subtitle">
+                    Select the services you wish to book for your temple visit
+                </p>
+
+                <!-- Info Alert -->
+                <div class="info-alert fade-in-up">
+                    <div class="info-alert-title">
+                        <i class="bi bi-info-circle-fill"></i>
+                        Important Information
+                    </div>
+                    <p class="info-alert-text">
+                        All services must be booked at least 24 hours in advance. Prices are subject to change during
+                        special festival days. For group bookings (10+ people), please contact us directly.
+                    </p>
+                </div>
+
+                <!-- Service 1: Sukhila Bhoga -->
+                <div class="service-card fade-in-up" data-service="sukhila-bhoga" data-price="501">
+                    <input type="checkbox" class="service-checkbox" id="service1">
+                    <div class="service-icon">
+                        <i class="bi bi-flower1"></i>
+                    </div>
+                    <h3 class="service-name">Sukhila Bhoga</h3>
+                    <p class="service-name-odia">ଶୁଖିଳା ଭୋଗ</p>
+                    <p class="service-description">
+                        A special dry food offering (Prasad) to Lord Jagannath. Includes traditional sweets and fruits.
+                    </p>
+                    <div class="service-features">
+                        <span class="service-feature">
+                            <i class="bi bi-check-circle-fill"></i>
+                            Prasad Package
+                        </span>
+                        <span class="service-feature">
+                            <i class="bi bi-clock"></i>
+                            Same Day
+                        </span>
+                        <span class="service-feature">
+                            <i class="bi bi-bag-check"></i>
+                            Takeaway
+                        </span>
+                    </div>
+                    <div class="service-price">
+                        <span class="service-price-currency">₹</span>
+                        <span>501</span>
+                    </div>
+                </div>
+
+                <!-- Service 2: VIP Entry -->
+                <div class="service-card fade-in-up" data-service="vip-entry" data-price="300">
+                    <input type="checkbox" class="service-checkbox" id="service2">
+                    <div class="service-icon">
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                    <h3 class="service-name">VIP Entry</h3>
+                    <p class="service-name-odia">ଭିଆଇପି ପ୍ରବେଶ</p>
+                    <p class="service-description">
+                        Skip the queue with priority access. Quick darshan through dedicated VIP entrance.
+                    </p>
+                    <div class="service-features">
+                        <span class="service-feature">
+                            <i class="bi bi-check-circle-fill"></i>
+                            Priority Access
+                        </span>
+                        <span class="service-feature">
+                            <i class="bi bi-clock"></i>
+                            No Queue
+                        </span>
+                        <span class="service-feature">
+                            <i class="bi bi-person-check"></i>
+                            Per Person
+                        </span>
+                    </div>
+                    <div class="service-price">
+                        <span class="service-price-currency">₹</span>
+                        <span>300</span>
+                    </div>
+                </div>
+
+                <!-- Service 3: Mandira Darshan -->
+                <div class="service-card fade-in-up" data-service="mandira-darshan" data-price="100">
+                    <input type="checkbox" class="service-checkbox" id="service3">
+                    <div class="service-icon">
+                        <i class="bi bi-eye-fill"></i>
+                    </div>
+                    <h3 class="service-name">Mandira Darshan</h3>
+                    <p class="service-name-odia">ମନ୍ଦିର ଦର୍ଶନ</p>
+                    <p class="service-description">
+                        General temple entry for divine darshan of the Trinity. Experience the spiritual atmosphere.
+                    </p>
+                    <div class="service-features">
+                        <span class="service-feature">
+                            <i class="bi bi-check-circle-fill"></i>
+                            Standard Entry
+                        </span>
+                        <span class="service-feature">
+                            <i class="bi bi-clock"></i>
+                            Flexible Timing
+                        </span>
+                        <span class="service-feature">
+                            <i class="bi bi-people"></i>
+                            All Ages
+                        </span>
+                    </div>
+                    <div class="service-price">
+                        <span class="service-price-currency">₹</span>
+                        <span>100</span>
+                    </div>
+                </div>
+
+                <!-- Service 4: Mandir Parikrama -->
+                <div class="service-card fade-in-up" data-service="mandir-parikrama" data-price="51">
+                    <input type="checkbox" class="service-checkbox" id="service4">
+                    <div class="service-icon">
+                        <i class="bi bi-arrow-repeat"></i>
+                    </div>
+                    <h3 class="service-name">Mandir Parikrama</h3>
+                    <p class="service-name-odia">ମନ୍ଦିର ପରିକ୍ରମା</p>
+                    <p class="service-description">
+                        Sacred circumambulation around the temple. Guided route with prayer assistance.
+                    </p>
+                    <div class="service-features">
+                        <span class="service-feature">
+                            <i class="bi bi-check-circle-fill"></i>
+                            Guided Path
+                        </span>
+                        <span class="service-feature">
+                            <i class="bi bi-clock"></i>
+                            30-45 mins
+                        </span>
+                        <span class="service-feature">
+                            <i class="bi bi-signpost"></i>
+                            Prayer Guide
+                        </span>
+                    </div>
+                    <div class="service-price">
+                        <span class="service-price-currency">₹</span>
+                        <span>51</span>
+                    </div>
+                </div>
+
+                <!-- Service 5: Mahaprasad Abhada Sebana -->
+                <div class="service-card fade-in-up" data-service="mahaprasad" data-price="201">
+                    <input type="checkbox" class="service-checkbox" id="service5">
+                    <div class="service-icon">
+                        <i class="bi bi-bowl-hot-fill"></i>
+                    </div>
+                    <h3 class="service-name">Mahaprasad Abhada Sebana</h3>
+                    <p class="service-name-odia">ମହାପ୍ରସାଦ ଅଭଦ ସେବନ</p>
+                    <p class="service-description">
+                        Partake in blessed Mahaprasad offered to Lord Jagannath. Choose from different meal options.
+                    </p>
+                    <div class="service-features">
+                        <span class="service-feature">
+                            <i class="bi bi-check-circle-fill"></i>
+                            Sacred Food
+                        </span>
+                        <span class="service-feature">
+                            <i class="bi bi-clock"></i>
+                            Lunch/Dinner
+                        </span>
+                        <span class="service-feature">
+                            <i class="bi bi-building"></i>
+                            Dining Hall
+                        </span>
+                    </div>
+                    <div class="service-price">
+                        <span class="service-price-currency">₹</span>
+                        <span class="mahaprasad-price">201</span>
+                    </div>
+
+                    <!-- Mahaprasad Options -->
+                    <div class="service-options">
+                        <label class="service-options-label">
+                            <i class="bi bi-list-ul"></i>
+                            Select Meal Option:
+                        </label>
+                        <select class="service-select mahaprasad-select">
+                            <option value="201">Standard Thali - ₹201</option>
+                            <option value="301">Deluxe Thali - ₹301</option>
+                            <option value="501">Premium Thali - ₹501</option>
+                            <option value="751">Special Thali with Sweets - ₹751</option>
+                            <option value="1001">Grand Thali (Full Course) - ₹1,001</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Service 6: Bana (Flag Hosting) -->
+                <div class="service-card fade-in-up" data-service="bana-flag" data-price="5100">
+                    <input type="checkbox" class="service-checkbox" id="service6">
+                    <div class="service-icon">
+                        <i class="bi bi-flag-fill"></i>
+                    </div>
+                    <h3 class="service-name">Bana (Flag Hosting on Nila Chakra)</h3>
+                    <p class="service-name-odia">ବାନ (ନୀଳଚକ୍ରରେ ପତାକା ଉତ୍ତୋଳନ)</p>
+                    <p class="service-description">
+                        Host a sacred flag on the Nila Chakra. Choose from different flag sizes and materials.
+                    </p>
+                    <div class="service-features">
+                        <span class="service-feature">
+                            <i class="bi bi-check-circle-fill"></i>
+                            Flag Provided
+                        </span>
+                        <span class="service-feature">
+                            <i class="bi bi-award"></i>
+                            Certificate
+                        </span>
+                        <span class="service-feature">
+                            <i class="bi bi-calendar3"></i>
+                            Advance Booking
+                        </span>
+                    </div>
+                    <div class="service-price">
+                        <span class="service-price-currency">₹</span>
+                        <span class="bana-price">5,100</span>
+                    </div>
+
+                    <!-- Bana Options -->
+                    <div class="service-options">
+                        <label class="service-options-label">
+                            <i class="bi bi-rulers"></i>
+                            Select Flag Size:
+                        </label>
+                        <select class="service-select bana-select">
+                            <option value="5100">Small (3 feet) - Cotton - ₹5,100</option>
+                            <option value="7500">Medium (5 feet) - Cotton - ₹7,500</option>
+                            <option value="10100">Large (7 feet) - Cotton - ₹10,100</option>
+                            <option value="15100">Extra Large (10 feet) - Silk - ₹15,100</option>
+                            <option value="21100">Premium (12 feet) - Premium Silk - ₹21,100</option>
+                            <option value="31100">Grand (15 feet) - Royal Silk with Gold Border - ₹31,100</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Summary -->
+            <div class="col-lg-4 summary-column">
+                <div class="summary-card fade-in-up">
+                    <div class="summary-title">
+                        <i class="bi bi-receipt"></i>
+                        Booking Summary
+                    </div>
+
+                    <div id="summaryContent">
+                        <div class="summary-empty">
+                            <i class="bi bi-cart-x"></i>
+                            <p>No services selected yet.<br>Choose services to continue.</p>
+                        </div>
+                    </div>
+
+                    <div id="summaryTotal" style="display: none;">
+                        <div class="summary-total">
+                            <span class="summary-total-label">Total Amount:</span>
+                            <span class="summary-total-amount">₹<span id="totalAmount">0</span></span>
+                        </div>
+                    </div>
+
+                    <button class="btn-proceed" id="proceedBtn" disabled>
+                        <i class="bi bi-arrow-right-circle-fill"></i>
+                        Proceed to Booking
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <!-- Footer -->
+  <footer class="footer pt-5 pb-3">
+    <div class="container">
+      <hr class="my-4">
+      <!-- Footer Links -->
+      <div class="row g-4">
+        <div class="col-lg-3">
+          <a class="navbar-brand d-inline-flex align-items-center gap-2 mb-2" href="#">
+            <span class="brand-mark">J</span>
+            <span class="brand-text">Jagannatha
+              <span class="brand-accent">Krupa</span>
+            </span>
+          </a>
+          <p class="text-muted mb-3">
+            Premium devotional products for daily worship and special occasions.
+          </p>
+          <ul class="footer-links mb-4">
+            <li><a href="#"><i class="bi bi-geo-alt me-1"></i> Bhubaneswar, Odisha</a></li>
+            <li><a href="#"><i class="bi bi-telephone me-1"></i> +91 00000 00000</a></li>
+            <li><a href="#"><i class="bi bi-envelope me-1"></i> support@example.com</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h6 class="footer-title">Our Company</h6>
+          <ul class="footer-links">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h6 class="footer-title">Products</h6>
+          <ul class="footer-links">
+            <li><a href="#">All Products</a></li>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Best Sellers</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-5">
+
+
+          <!-- Newsletter inside Contact Column -->
+          <div class="footer-newsletter-box">
+            <h6 class="footer-title mb-2">Newsletter</h6>
+            <p class="text-muted small mb-3">Get puja updates, festival offers, and new devotional products.</p>
+            <form class="newsletter-form-footer" onsubmit="event.preventDefault();">
+              <input class="form-control" type="email" placeholder="Your email" required />
+              <button class="btn btn-danger" type="submit">
+                <i class="bi bi-send"></i>
+              </button>
+            </form>
+          </div>
+          <div class="d-flex gap-2 mt-4">
+            <a class="footer-icon" href="#"><i class="bi bi-facebook"></i></a>
+            <a class="footer-icon" href="#"><i class="bi bi-instagram"></i></a>
+            <a class="footer-icon" href="#"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-4">
+
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 small text-muted">
+        <div>© 2026 JagannathaKrupa. All rights reserved.</div>
+        <div class="d-flex align-items-center gap-3">
+          <a class="text-muted" href="#">Privacy</a>
+          <a class="text-muted" href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Service data
+        const services = {
+            'sukhila-bhoga': { name: 'Sukhila Bhoga', price: 501 },
+            'vip-entry': { name: 'VIP Entry', price: 300 },
+            'mandira-darshan': { name: 'Mandira Darshan', price: 100 },
+            'mandir-parikrama': { name: 'Mandir Parikrama', price: 51 },
+            'mahaprasad': { name: 'Mahaprasad Abhada Sebana', price: 201 },
+            'bana-flag': { name: 'Bana (Flag Hosting)', price: 5100 }
+        };
+
+        let selectedServices = {};
+
+        // Initialize service cards
+        document.querySelectorAll('.service-card').forEach(card => {
+            const checkbox = card.querySelector('.service-checkbox');
+
+            card.addEventListener('click', (e) => {
+                // Don't toggle if clicking on checkbox or select dropdown
+                if (e.target !== checkbox && !e.target.classList.contains('service-select')) {
+                    checkbox.checked = !checkbox.checked;
+                    handleServiceToggle(card, checkbox);
+                }
+            });
+
+            checkbox.addEventListener('change', () => {
+                handleServiceToggle(card, checkbox);
+            });
+        });
+
+        // Mahaprasad dropdown
+        const mahaprasadSelect = document.querySelector('.mahaprasad-select');
+        if (mahaprasadSelect) {
+            mahaprasadSelect.addEventListener('change', (e) => {
+                e.stopPropagation();
+                const newPrice = parseInt(e.target.value);
+                const card = e.target.closest('.service-card');
+                card.dataset.price = newPrice;
+                card.querySelector('.mahaprasad-price').textContent = newPrice.toLocaleString('en-IN');
+                
+                if (selectedServices['mahaprasad']) {
+                    const selectedOption = e.target.options[e.target.selectedIndex].text;
+                    selectedServices['mahaprasad'].price = newPrice;
+                    selectedServices['mahaprasad'].option = selectedOption.split(' - ')[0];
+                    updateSummary();
+                }
+            });
+        }
+
+        // Bana dropdown
+        const banaSelect = document.querySelector('.bana-select');
+        if (banaSelect) {
+            banaSelect.addEventListener('change', (e) => {
+                e.stopPropagation();
+                const newPrice = parseInt(e.target.value);
+                const card = e.target.closest('.service-card');
+                card.dataset.price = newPrice;
+                card.querySelector('.bana-price').textContent = newPrice.toLocaleString('en-IN');
+                
+                if (selectedServices['bana-flag']) {
+                    const selectedOption = e.target.options[e.target.selectedIndex].text;
+                    selectedServices['bana-flag'].price = newPrice;
+                    selectedServices['bana-flag'].option = selectedOption.split(' - ')[0] + ' - ' + selectedOption.split(' - ')[1];
+                    updateSummary();
+                }
+            });
+        }
+
+        function handleServiceToggle(card, checkbox) {
+            const serviceId = card.dataset.service;
+            const servicePrice = parseInt(card.dataset.price);
+
+            if (checkbox.checked) {
+                card.classList.add('selected');
+                
+                let option = null;
+                
+                // Get selected option for Mahaprasad
+                if (serviceId === 'mahaprasad') {
+                    const select = card.querySelector('.mahaprasad-select');
+                    const selectedOption = select.options[select.selectedIndex].text;
+                    option = selectedOption.split(' - ')[0];
+                }
+                
+                // Get selected option for Bana
+                if (serviceId === 'bana-flag') {
+                    const select = card.querySelector('.bana-select');
+                    const selectedOption = select.options[select.selectedIndex].text;
+                    option = selectedOption.split(' - ')[0] + ' - ' + selectedOption.split(' - ')[1];
+                }
+                
+                selectedServices[serviceId] = {
+                    name: services[serviceId].name,
+                    price: servicePrice,
+                    option: option
+                };
+            } else {
+                card.classList.remove('selected');
+                delete selectedServices[serviceId];
+            }
+
+            updateSummary();
+        }
+
+        function updateSummary() {
+            const summaryContent = document.getElementById('summaryContent');
+            const summaryTotal = document.getElementById('summaryTotal');
+            const proceedBtn = document.getElementById('proceedBtn');
+            const totalAmount = document.getElementById('totalAmount');
+
+            const serviceCount = Object.keys(selectedServices).length;
+
+            if (serviceCount === 0) {
+                summaryContent.innerHTML = `
+                    <div class="summary-empty">
+                        <i class="bi bi-cart-x"></i>
+                        <p>No services selected yet.<br>Choose services to continue.</p>
+                    </div>
+                `;
+                summaryTotal.style.display = 'none';
+                proceedBtn.disabled = true;
+            } else {
+                let summaryHTML = '';
+                let total = 0;
+
+                Object.keys(selectedServices).forEach(serviceId => {
+                    const service = selectedServices[serviceId];
+                    total += service.price;
+
+                    let optionHTML = '';
+                    if (service.option) {
+                        optionHTML = `<div class="summary-item-option">${service.option}</div>`;
+                    }
+
+                    summaryHTML += `
+                        <div class="summary-item">
+                            <div class="summary-item-details">
+                                <div class="summary-item-name">${service.name}</div>
+                                ${optionHTML}
+                            </div>
+                            <div class="summary-item-right">
+                                <span class="summary-item-price">₹${service.price.toLocaleString('en-IN')}</span>
+                                <button class="summary-item-remove" onclick="removeService('${serviceId}')">
+                                    <i class="bi bi-x-lg"></i>
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                });
+
+                summaryContent.innerHTML = summaryHTML;
+                totalAmount.textContent = total.toLocaleString('en-IN');
+                summaryTotal.style.display = 'block';
+                proceedBtn.disabled = false;
+            }
+        }
+
+        function removeService(serviceId) {
+            const card = document.querySelector(`[data-service="${serviceId}"]`);
+            const checkbox = card.querySelector('.service-checkbox');
+            checkbox.checked = false;
+            card.classList.remove('selected');
+            delete selectedServices[serviceId];
+            updateSummary();
+        }
+
+        // Proceed button action
+        document.getElementById('proceedBtn').addEventListener('click', () => {
+            if (Object.keys(selectedServices).length > 0) {
+                let message = 'Proceeding to booking page...\n\nSelected Services:\n';
+                
+                Object.values(selectedServices).forEach(s => {
+                    message += `- ${s.name}`;
+                    if (s.option) {
+                        message += ` (${s.option})`;
+                    }
+                    message += `: ₹${s.price.toLocaleString('en-IN')}\n`;
+                });
+                
+                message += '\nTotal: ₹' + document.getElementById('totalAmount').textContent;
+                
+                alert(message);
+                // Here you would redirect to actual booking page
+                // window.location.href = 'booking.html';
+            }
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
+    </script>
+</body>
+
+</html>
