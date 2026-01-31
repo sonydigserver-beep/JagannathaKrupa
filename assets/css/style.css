@@ -19,8 +19,11 @@
 
 * {
   box-sizing: border-box;
+  
 }
-
+a{
+  text-decoration: none;
+}
 body {
   font-family: "Manrope", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: var(--dark);
@@ -2336,835 +2339,285 @@ body {
         padding: 1rem;
     }
 }
-        /* Video Header */
-        .video-header {
-            position: relative;
-            width: 100%;
-            height: 500px;
-            overflow: hidden;
-            background-color: var(--brand-red);
-        }
 
-        .video-header video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            transform: translate(-50%, -50%);
-            object-fit: cover;
-        }
 
-        .video-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: var(--brand-red);
-            opacity: 0.7;
-            z-index: 1;
-        }
-
-        .video-content {
-            position: relative;
-            z-index: 2;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-        }
-
-        .video-title {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        .video-subtitle {
-            font-size: 1.25rem;
-            opacity: 0.95;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Section Styling */
-        .content-section {
-            padding: 3rem 0;
-        }
-
-        .section-title {
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: var(--dark);
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        .section-title i {
-            color: var(--brand-red);
-            font-size: 1.5rem;
-        }
-
-        .section-subtitle {
-            color: var(--muted);
-            margin-bottom: 2rem;
-        }
-
-        /* Ritual Cards */
-        .ritual-card {
-            background: white;
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .ritual-card::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            background: var(--brand-red);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .ritual-card:hover {
-            box-shadow: 0 8px 24px rgba(6, 2, 1, 0.08);
-            transform: translateY(-2px);
-        }
-
-        .ritual-card:hover::before {
-            opacity: 1;
-        }
-
-        .ritual-time {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: var(--soft);
-            color: var(--brand-red);
-            font-weight: 700;
-            font-size: 1.25rem;
-            padding: 0.5rem 1rem;
-            border-radius: 12px;
-            margin-bottom: 1rem;
-        }
-
-        .ritual-time i {
-            font-size: 1.1rem;
-        }
-
-        .ritual-name {
-            font-size: 1.35rem;
-            font-weight: 700;
-            color: var(--dark);
-            margin-bottom: 0.75rem;
-        }
-
-        .ritual-description {
-            color: var(--muted);
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
-
-        .ritual-details {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-        }
-
-        .ritual-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            padding: 0.4rem 0.8rem;
-            background: var(--soft);
-            border-radius: 8px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: var(--dark);
-        }
-
-        .ritual-badge i {
-            color: var(--brand-red);
-            font-size: 0.9rem;
-        }
-
-        /* Panchang Calendar */
-        .panchang-card {
-            background: white;
-            border: 2px solid var(--brand-red);
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 8px 24px rgba(227, 6, 19, 0.1);
-        }
-
-        .panchang-header {
-            background: var(--brand-red);
-            color: white;
-            padding: 1.5rem;
-            text-align: center;
-        }
-
-        .panchang-date {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 0.25rem;
-        }
-
-        .panchang-month-year {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-
-        .panchang-body {
-            padding: 1.5rem;
-        }
-
-        .panchang-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem;
-            border-bottom: 1px solid var(--border);
-            transition: background 0.2s ease;
-        }
-
-        .panchang-item:last-child {
-            border-bottom: none;
-        }
-
-        .panchang-item:hover {
-            background: var(--soft);
-        }
-
-        .panchang-label {
-            font-weight: 600;
-            color: var(--muted);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .panchang-label i {
-            color: var(--brand-red);
-        }
-
-        .panchang-value {
-            font-weight: 700;
-            color: var(--dark);
-            text-align: right;
-        }
-
-        /* Special Days Section */
-        .special-day-card {
-            background: linear-gradient(135deg, var(--brand-saffron) 0%, var(--brand-red) 100%);
-            color: white;
-            border-radius: 16px;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .special-day-card::before {
-            content: '🕉';
-            position: absolute;
-            right: -20px;
-            top: -20px;
-            font-size: 8rem;
-            opacity: 0.1;
-        }
-
-        .special-day-date {
-            font-size: 0.9rem;
-            opacity: 0.9;
-            margin-bottom: 0.5rem;
-        }
-
-        .special-day-name {
-            font-size: 1.35rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .special-day-desc {
-            font-size: 0.95rem;
-            opacity: 0.9;
-        }
-
-        /* FIXED Timeline for rituals */
-        .ritual-timeline {
-            position: relative;
-            padding-left: 2.5rem;
-        }
-
-        .ritual-timeline::before {
-            content: '';
-            position: absolute;
-            left: 6px;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: var(--brand-red);
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: 2rem;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -2.5rem;
-            top: 1.5rem;
-            width: 14px;
-            height: 14px;
-            background: white;
-            border: 3px solid var(--brand-red);
-            border-radius: 50%;
-            z-index: 1;
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 991.98px) {
-
-            /* Calendar appears first on mobile */
-            .calendar-column {
-                order: -1;
-            }
-
-            .video-header {
-                height: 350px;
-            }
-
-            .video-title {
-                font-size: 2rem;
-            }
-
-            .video-subtitle {
-                font-size: 1rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .video-header {
-                height: 300px;
-            }
-
-            .video-title {
-                font-size: 1.75rem;
-            }
-
-            .panchang-date {
-                font-size: 2rem;
-            }
-
-            .ritual-card {
-                padding: 1.25rem;
-            }
-
-            .section-title {
-                font-size: 1.5rem;
-            }
-
-            .ritual-timeline {
-                padding-left: 2rem;
-            }
-
-            .ritual-timeline::before {
-                left: 5px;
-            }
-
-            .timeline-item::before {
-                left: -2rem;
-            }
-        }
-
-        /* Animation */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in-up {
-            animation: fadeInUp 0.6s ease-out;
-        }
-
-
-
-        .page-header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" fill="rgba(255,255,255,0.05)"/></svg>');
-            background-size: 100px 100px;
-            opacity: 0.3;
-        }
-
-        .page-header-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .page-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .page-subtitle {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-
-        /* Content Section */
-        .content-section {
-            padding: 3rem 0;
-        }
-
-        .section-title {
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: var(--dark);
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        .section-title i {
-            color: var(--brand-red);
-            font-size: 1.5rem;
-        }
-
-        .section-subtitle {
-            color: var(--muted);
-            margin-bottom: 2rem;
-        }
-
-        /* Service Card - Made Smaller */
-        .service-card {
-            background: white;
-            border: 2px solid var(--border);
-            border-radius: 12px;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            position: relative;
-        }
-
-        .service-card:hover {
-            border-color: var(--brand-red);
-            box-shadow: 0 6px 20px rgba(227, 6, 19, 0.1);
-            transform: translateY(-2px);
-        }
-
-        .service-card.selected {
-            border-color: var(--brand-red);
-            background: var(--soft);
-            box-shadow: 0 6px 20px rgba(227, 6, 19, 0.15);
-        }
-
-        .service-checkbox {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            width: 24px;
-            height: 24px;
-            accent-color: var(--brand-red);
-            cursor: pointer;
-        }
-
-        .service-icon {
-            width: 48px;
-            height: 48px;
-            background: var(--soft);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 0.75rem;
-            transition: all 0.3s ease;
-        }
-
-        .service-card.selected .service-icon {
-            background: var(--brand-red);
-        }
-
-        .service-icon i {
-            font-size: 1.5rem;
-            color: var(--brand-red);
-            transition: color 0.3s ease;
-        }
-
-        .service-card.selected .service-icon i {
-            color: white;
-        }
-
-        .service-name {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--dark);
-            margin-bottom: 0.25rem;
-            padding-right: 35px;
-        }
-
-        .service-name-odia {
-            font-size: 0.85rem;
-            color: var(--muted);
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
-
-        .service-description {
-            color: var(--muted);
-            line-height: 1.5;
-            margin-bottom: 0.75rem;
-            font-size: 0.875rem;
-        }
-
-        .service-features {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.4rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .service-feature {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.3rem;
-            padding: 0.3rem 0.6rem;
-            background: white;
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            font-size: 0.75rem;
-            font-weight: 500;
-            color: var(--dark);
-        }
-
-        .service-card.selected .service-feature {
-            background: white;
-            border-color: var(--brand-red);
-            color: var(--brand-red);
-        }
-
-        .service-feature i {
-            color: var(--brand-red);
-            font-size: 0.8rem;
-        }
-
-        .service-price {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 1.35rem;
-            font-weight: 700;
-            color: var(--brand-red);
-        }
-
-        .service-price-currency {
-            font-size: 1rem;
-        }
-
-        /* Options Dropdown */
-        .service-options {
-            margin-top: 0.75rem;
-            padding-top: 0.75rem;
-            border-top: 1px solid var(--border);
-            display: none;
-        }
-
-        .service-card.selected .service-options {
-            display: block;
-        }
-
-        .service-options-label {
-            font-size: 0.875rem;
-            font-weight: 600;
-            color: var(--dark);
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-        }
-
-        .service-options-label i {
-            color: var(--brand-red);
-            font-size: 0.9rem;
-        }
-
-        .service-select {
-            width: 100%;
-            padding: 0.6rem 0.75rem;
-            border: 2px solid var(--border);
-            border-radius: 8px;
-            font-size: 0.875rem;
-            color: var(--dark);
-            background: white;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .service-select:focus {
-            outline: none;
-            border-color: var(--brand-red);
-            box-shadow: 0 0 0 3px rgba(227, 6, 19, 0.1);
-        }
-
-        .service-select option {
-            padding: 0.5rem;
-        }
-
-        /* Summary Card */
-        .summary-card {
-            position: sticky;
-            top: 20px;
-            background: white;
-            border: 2px solid var(--brand-red);
-            border-radius: 16px;
-            padding: 1.5rem;
-            box-shadow: 0 8px 24px rgba(227, 6, 19, 0.1);
-        }
-
-        .summary-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--dark);
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .summary-title i {
-            color: var(--brand-red);
-        }
-
-        .summary-empty {
-            text-align: center;
-            padding: 2rem 1rem;
-            color: var(--muted);
-        }
-
-        .summary-empty i {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            opacity: 0.3;
-        }
-
-        .summary-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            padding: 0.875rem 0;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .summary-item:last-child {
-            border-bottom: none;
-        }
-
-        .summary-item-details {
-            flex: 1;
-        }
-
-        .summary-item-name {
-            font-weight: 600;
-            color: var(--dark);
-            font-size: 0.95rem;
-        }
-
-        .summary-item-option {
-            font-size: 0.8rem;
-            color: var(--muted);
-            margin-top: 0.2rem;
-        }
-
-        .summary-item-right {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            margin-left: 1rem;
-        }
-
-        .summary-item-price {
-            font-weight: 700;
-            color: var(--dark);
-            white-space: nowrap;
-        }
-
-        .summary-item-remove {
-            background: none;
-            border: none;
-            color: var(--brand-red);
-            cursor: pointer;
-            padding: 0.25rem 0.5rem;
-            transition: all 0.2s ease;
-            font-size: 1.1rem;
-        }
-
-        .summary-item-remove:hover {
-            background: var(--soft);
-            border-radius: 4px;
-        }
-
-        .summary-total {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 1.5rem;
-            margin-top: 1rem;
-            border-top: 2px solid var(--border);
-        }
-
-        .summary-total-label {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--dark);
-        }
-
-        .summary-total-amount {
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: var(--brand-red);
-        }
-
-        .btn-proceed {
-            width: 100%;
-            padding: 1rem;
-            background: var(--brand-red);
-            color: white;
-            border: none;
-            border-radius: 12px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            margin-top: 1.5rem;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-        }
-
-        .btn-proceed:hover {
-            background: #b30410;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(227, 6, 19, 0.3);
-        }
-
-        .btn-proceed:disabled {
-            background: var(--muted);
-            cursor: not-allowed;
-            transform: none;
-            box-shadow: none;
-        }
-
-        /* Info Alert */
-        .info-alert {
-            background: var(--soft);
-            border-left: 4px solid var(--brand-red);
-            padding: 1rem 1.25rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-        }
-
-        .info-alert-title {
-            font-weight: 700;
-            color: var(--dark);
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .info-alert-title i {
-            color: var(--brand-red);
-        }
-
-        .info-alert-text {
-            color: var(--muted);
-            font-size: 0.95rem;
-            margin: 0;
-        }
-
-        /* Responsive */
-        @media (max-width: 991.98px) {
-            .summary-card {
-                position: relative;
-                top: 0;
-                margin-top: 2rem;
-                margin-bottom: 0;
-            }
-
-            .service-column {
-                order: -1;
-            }
-
-            .summary-column {
-                order: 1;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .page-title {
-                font-size: 2rem;
-            }
-
-            .service-card {
-                padding: 1rem;
-            }
-
-            .service-name {
-                font-size: 1rem;
-            }
-
-            .service-checkbox {
-                width: 22px;
-                height: 22px;
-            }
-        }
-
-        /* Animation */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in-up {
-            animation: fadeInUp 0.6s ease-out;
-        }
-    
+/* cart section styles */
+
+.bg-soft{ background: var(--soft); }
+
+.card-soft{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.section-title{
+  font-weight:900;
+  color:#222;
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+}
+
+/* Stepper (premium) */
+.jk-stepper{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 14px 12px;
+  box-shadow: 0 12px 30px rgba(6,2,1,.06);
+}
+.jk-steps{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+}
+.jk-step{
+  border:0;
+  background:transparent;
+  padding:0;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  color:#444;
+  font-weight:900;
+  cursor:pointer;
+  min-width: 0;
+}
+.jk-dot{
+  width:34px;
+  height:34px;
+  border-radius:999px;
+  display:grid;
+  place-items:center;
+  border:1px solid var(--border);
+  background:#fff;
+  color:#111;
+  font-weight:900;
+  flex: 0 0 auto;
+}
+.jk-label{
+  font-size:.95rem;
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  max-width: 120px;
+}
+.jk-step.is-active .jk-dot{
+  background:#111;
+  border-color:#111;
+  color:#fff;
+}
+.jk-step.is-complete .jk-dot{
+  background: var(--brand-red);
+  border-color: var(--brand-red);
+  color:#fff;
+  font-size:0;
+}
+.jk-step.is-complete .jk-dot::before{
+  content:"✓";
+  font-weight:900;
+  font-size:16px;
+}
+.jk-progress{ margin-top: 12px; }
+.jk-progress .progress{
+  background:#f2f2f2;
+  border-radius:999px;
+  overflow:hidden;
+}
+.jk-progress .progress-bar{
+  background: var(--brand-red);
+  border-radius:999px;
+  transition: width .25s ease;
+}
+
+/* Right sticky */
+.right-sticky{
+  position: sticky;
+  top: 90px;
+}
+
+/* Lines */
+.line{
+  height:1px;
+  background: var(--border);
+}
+
+/* Links */
+.link-brand{
+  border:0;
+  background:transparent;
+  color: var(--brand-red);
+  font-weight:900;
+  font-size: .9rem;
+}
+.link-brand:hover{ text-decoration: underline; }
+
+.link-danger-lite{
+  border:0;
+  background:transparent;
+  color:#444;
+  font-weight:800;
+  font-size: .9rem;
+  padding:0;
+}
+.link-danger-lite:hover{ color:#111; text-decoration: underline; }
+
+/* Product item */
+.p-thumb{
+  width:54px;
+  height:54px;
+  border-radius: 10px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  background:#fff;
+  flex: 0 0 auto;
+}
+.p-thumb img{ width:100%; height:100%; object-fit: cover; display:block; }
+
+.p-name{
+  font-weight:800;
+  font-size: .95rem;
+  color:#222;
+  line-height:1.25;
+}
+.p-price{
+  font-weight:900;
+  color:#111;
+}
+
+/* Qty */
+.qty-wrap{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-left: 6px;
+}
+.qty-btn{
+  width:28px;
+  height:28px;
+  border-radius: 10px;
+  border:1px solid var(--border);
+  background:#fff;
+  font-weight:900;
+  line-height:1;
+}
+.qty-btn:hover{ border-color: var(--brand-red); color: var(--brand-red); }
+
+/* Buttons */
+.btn-brand{
+  background: var(--brand-red);
+  border-color: var(--brand-red);
+  color:#fff;
+  font-weight:900;
+}
+.btn-brand:hover{
+  background: var(--brand-saffron);
+  border-color: var(--brand-saffron);
+  color:#fff;
+}
+
+/* Address */
+.address-card{
+  background:#f5f7ff;
+  border:1px solid #e3e7ff;
+}
+.address-card.is-selected{
+  box-shadow: 0 14px 40px rgba(6,2,1,.08);
+}
+
+/* Payment */
+.pay-list{ display:flex; flex-direction:column; gap:14px; }
+.pay-item{
+  display:block;
+  border:1px solid var(--border);
+  border-radius: var(--radius);
+  background:#fff;
+  box-shadow: 0 10px 24px rgba(6,2,1,.05);
+  overflow:hidden;
+  cursor:pointer;
+}
+.pay-item input{ display:none; }
+.pay-main{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding: 16px;
+}
+.pay-left{ display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
+.pay-amount{ font-weight:900; font-size: 1.2rem; color:#111; }
+.pay-name{ font-weight:900; color:#222; }
+.pay-save{
+  margin-left: 8px;
+  font-size:.78rem;
+  font-weight:900;
+  background:#e9fff1;
+  color:#137a3f;
+  border:1px solid #c8f3d8;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.pay-right{ width:34px; display:flex; justify-content:flex-end; }
+.pay-radio{
+  width:18px;height:18px;border-radius:999px;border:2px solid #aaa; display:inline-block;
+}
+.pay-check{
+  width:20px;height:20px;border-radius:999px;background: var(--brand-red); color:#fff;
+  display:grid; place-items:center; font-size: 14px;
+}
+
+.pay-item.is-selected{
+  border-color: var(--brand-red);
+  box-shadow: 0 16px 45px rgba(227,6,19,.12);
+}
+
+.pay-foot{
+  border-top:1px solid var(--border);
+  background:#f7fafc;
+  padding: 10px 16px;
+}
+
+/* Segmented */
+.segmented{
+  display:flex;
+  gap:10px;
+}
+.seg-btn{
+  border:1px solid var(--border);
+  background:#fff;
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-weight:900;
+}
+.seg-btn.is-active{
+  border-color: #f0b8d9;
+  background: #ffe7f5;
+}
+
+/* Note + safety */
+.note{
+  font-size: .82rem;
+  color:#666;
+  background:#f7f7f7;
+  border:1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+.safety-inner{
+  border:1px solid var(--border);
+  border-radius: 12px;
+  overflow:hidden;
+  background:#fff;
+}
+.safety-inner img{ width:100%; height:auto; display:block; }
+
+/* Mobile */
+@media (max-width: 575.98px){
+  .jk-stepper{ padding: 12px; }
+  .jk-label{ font-size: .85rem; max-width: 70px; }
+  .jk-dot{ width:30px; height:30px; }
+  .right-sticky{ position: static; top:auto; }
+}
