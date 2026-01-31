@@ -18,6 +18,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
         rel="stylesheet">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
     <link rel="stylesheet" href="assets/css/style.css" />
 </head>
@@ -258,271 +262,200 @@
       </div>
     </div>
   </header>
-
-    <section class="py-4">
-        <div class="container">
-            <div class="row g-4">
-
-                <!-- Sidebar -->
-                <aside class="col-12 col-lg-3">
-
-                    <!-- Mobile filter open button -->
-                    <div class="d-lg-none mb-2">
-                        <button class="btn btn-brand w-100" type="button" id="openFilterBtn">
-                            <i class="bi bi-sliders me-1"></i> Filters
-                        </button>
-                    </div>
-
-                    <!-- Sidebar panel -->
-                    <div class="filter-sidebar" id="filterSidebar">
-
-                        <div class="filter-mobile-head d-lg-none">
-                            <div class="fw-bold">Filter</div>
-                            <button type="button" class="btn-close" id="closeFilterBtn" aria-label="Close"></button>
-                        </div>
-
-                        <div class="filter-card mb-3">
-                            <h6 class="filter-title">Shop Categories</h6>
-                            <ul class="filter-list">
-                                <li><a href="http://127.0.0.1:5500/index.html#">Handcraft</a></li>
-                                <li><a href="http://127.0.0.1:5500/index.html#">Handlooms</a></li>
-                                <li><a href="http://127.0.0.1:5500/index.html#">Dry Prashad</a></li>
-                                <li><a href="#">Puri Prasidh Khaja</a></li>
-                                <li><a href="#">Pipili Chandua</a></li>
-                                <li><a href="#">Khandua Pata</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="filter-card mb-3">
-                            <h6 class="filter-title">Filter by Price</h6>
-                            <input type="range" class="form-range" min="0" max="10000" value="4000" id="priceRange">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <button class="btn btn-brand btn-sm" type="button">Filter</button>
-                                <div class="small text-muted">0 - <span id="priceVal">4000</span></div>
-                            </div>
-                        </div>
-
-                        <div class="filter-card mb-3">
-                            <h6 class="filter-title">Filter by Color</h6>
-                            <div class="form-check"><input class="form-check-input" type="checkbox" id="c1"><label
-                                    class="form-check-label" for="c1">Red</label></div>
-                            <div class="form-check"><input class="form-check-input" type="checkbox" id="c2"><label
-                                    class="form-check-label" for="c2">Yellow</label></div>
-                            <div class="form-check"><input class="form-check-input" type="checkbox" id="c3"><label
-                                    class="form-check-label" for="c3">White</label></div>
-                            <div class="form-check"><input class="form-check-input" type="checkbox" id="c4"><label
-                                    class="form-check-label" for="c4">Black</label></div>
-                        </div>
-
-                        <div class="filter-card mb-3">
-                            <h6 class="filter-title">Filter by Size</h6>
-                            <div class="form-check"><input class="form-check-input" type="checkbox" id="s1"><label
-                                    class="form-check-label" for="s1">S</label></div>
-                            <div class="form-check"><input class="form-check-input" type="checkbox" id="s2"><label
-                                    class="form-check-label" for="s2">M</label></div>
-                            <div class="form-check"><input class="form-check-input" type="checkbox" id="s3"><label
-                                    class="form-check-label" for="s3">L</label></div>
-                            <div class="form-check"><input class="form-check-input" type="checkbox" id="s4"><label
-                                    class="form-check-label" for="s4">XL</label></div>
-                        </div>
-
-                        <div class="filter-card">
-                            <h6 class="filter-title">Filter by Brand</h6>
-                            <div class="form-check"><input class="form-check-input" type="checkbox" id="b0"
-                                    checked><label class="form-check-label" for="b0">JagannathaKrupa</label></div>
-                            <div class="form-check"><input class="form-check-input" type="checkbox" id="b1"><label
-                                    class="form-check-label" for="b1">Puri Local</label></div>
-                            <div class="form-check"><input class="form-check-input" type="checkbox" id="b2"><label
-                                    class="form-check-label" for="b2">Temple Co‑op</label></div>
-                        </div>
-
-                    </div>
-
-                    <!-- Mobile overlay -->
-                    <div class="filter-overlay d-lg-none" id="filterOverlay"></div>
-                </aside>
-
-                <!-- Products -->
-                <main class="col-12 col-lg-9">
-
-                    <!-- IMPORTANT: 2 cards in mobile -->
-                    <div class="row row-cols-2 row-cols-md-2 row-cols-lg-3 g-3 g-lg-4">
-
-                        <div class="col">
-                            <div class="p-card">
-                                <div class="p-badges">
-                                    <span class="badge badge-best">best</span>
-                                    <span class="badge badge-off">-33%</span>
-                                </div>
-
-                                <div class="p-actions">
-                                    <button class="p-act" type="button" title="Add to cart" data-action="cart"><i
-                                            class="bi bi-bag"></i></button>
-                                    <button class="p-act" type="button" title="Wishlist" data-action="wish"><i
-                                            class="bi bi-heart"></i></button>
-                                    <button class="p-act" type="button" title="Share" data-action="share"><i
-                                            class="bi bi-share"></i></button>
-                                </div>
-
-                                <div class="p-img">
-                                    <img src="https://picsum.photos/seed/odhand1/1200/900" alt="">
-                                </div>
-
-                                <div class="p-body">
-                                    <div class="p-cat">Handcraft</div>
-                                    <div class="p-title">Pattachitra Jagannath Wall Art</div>
-                                    <div class="p-stars">★★★★★</div>
-                                    <div class="p-price"><span class="old">₹2,950</span> <span class="new">₹1,980</span>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="p-card">
-                                <div class="p-badges">
-                                    <span class="badge badge-best">best</span>
-                                    <span class="badge badge-off">-29%</span>
-                                </div>
-
-                                <div class="p-actions">
-                                    <button class="p-act" type="button" title="Add to cart" data-action="cart"><i
-                                            class="bi bi-bag"></i></button>
-                                    <button class="p-act" type="button" title="Wishlist" data-action="wish"><i
-                                            class="bi bi-heart"></i></button>
-                                    <button class="p-act" type="button" title="Share" data-action="share"><i
-                                            class="bi bi-share"></i></button>
-                                </div>
-
-                                <div class="p-img">
-                                    <img src="https://picsum.photos/seed/khandua/1200/900" alt="">
-                                </div>
-
-                                <div class="p-body">
-                                    <div class="p-cat">Handlooms</div>
-                                    <div class="p-title">Khandua Pata (Traditional Cloth)</div>
-                                    <div class="p-stars">★★★★★</div>
-                                    <div class="p-price"><span class="new">₹3,250</span></div>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="p-card">
-                                <div class="p-badges">
-                                    <span class="badge badge-feature">feature</span>
-                                    <span class="badge badge-off">-20%</span>
-                                </div>
-
-                                <div class="p-actions">
-                                    <button class="p-act" type="button" title="Add to cart" data-action="cart"><i
-                                            class="bi bi-bag"></i></button>
-                                    <button class="p-act" type="button" title="Wishlist" data-action="wish"><i
-                                            class="bi bi-heart"></i></button>
-                                    <button class="p-act" type="button" title="Share" data-action="share"><i
-                                            class="bi bi-share"></i></button>
-                                </div>
-
-                                <div class="p-img">
-                                    <img src="https://picsum.photos/seed/khaja/1200/900" alt="">
-                                </div>
-
-                                <div class="p-body">
-                                    <div class="p-cat">Puri Prasidh Khaja</div>
-                                    <div class="p-title">Puri Khaja Pack (500g)</div>
-                                    <div class="p-stars">★★★★★</div>
-                                    <div class="p-price"><span class="old">₹380</span> <span class="new">₹304</span>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="p-card">
-                                <div class="p-badges">
-                                    <span class="badge badge-new">new</span>
-                                    <span class="badge badge-off">-10%</span>
-                                </div>
-
-                                <div class="p-actions">
-                                    <button class="p-act" type="button" title="Add to cart" data-action="cart"><i
-                                            class="bi bi-bag"></i></button>
-                                    <button class="p-act" type="button" title="Wishlist" data-action="wish"><i
-                                            class="bi bi-heart"></i></button>
-                                    <button class="p-act" type="button" title="Share" data-action="share"><i
-                                            class="bi bi-share"></i></button>
-                                </div>
-
-                                <div class="p-img">
-                                    <img src="https://picsum.photos/seed/prasad/1200/900" alt="">
-                                </div>
-
-                                <div class="p-body">
-                                    <div class="p-cat">Dry Prashad</div>
-                                    <div class="p-title">Mahaprasad Dry Mix (250g)</div>
-                                    <div class="p-stars">★★★★★</div>
-                                    <div class="p-price"><span class="old">₹260</span> <span class="new">₹234</span>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="p-card">
-                                <div class="p-badges">
-                                    <span class="badge badge-best">best</span>
-                                    <span class="badge badge-off">-15%</span>
-                                </div>
-
-                                <div class="p-actions">
-                                    <button class="p-act" type="button" title="Add to cart" data-action="cart"><i
-                                            class="bi bi-bag"></i></button>
-                                    <button class="p-act" type="button" title="Wishlist" data-action="wish"><i
-                                            class="bi bi-heart"></i></button>
-                                    <button class="p-act" type="button" title="Share" data-action="share"><i
-                                            class="bi bi-share"></i></button>
-                                </div>
-
-                                <div class="p-img">
-                                    <img src="https://picsum.photos/seed/pipili/1200/900" alt="">
-                                </div>
-
-                                <div class="p-body">
-                                    <div class="p-cat">Pipili Chandua</div>
-                                    <div class="p-title">Applique Chandua Wall Hanging</div>
-                                    <div class="p-stars">★★★★★</div>
-                                    <div class="p-price"><span class="old">₹1,650</span> <span class="new">₹1,402</span>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- Pagination -->
-                    <div class="d-flex justify-content-center mt-4">
-                        <nav aria-label="Page navigation">
-                            <ul class="pagination pagination-sm">
-                                <li class="page-item"><a class="page-link" href="#">«</a></li>
-                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                <li class="page-item"><a class="page-link" href="#">»</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-
-                </main>
+    <!-- Service 1: Hotel Booking -->
+    <section class="services-item">
+        <div class="services-item-visual">
+            <div class="services-number-large">01</div>
+            <div class="services-visual-content">
+                <div class="services-icon-large">
+                    <i class="bi bi-building"></i>
+                </div>
+                <div class="services-visual-label">Hotel Booking</div>
+                <div class="services-visual-label-odia">ହୋଟେଲ ବୁକିଂ</div>
             </div>
+        </div>
+        <div class="services-item-content">
+            <div class="services-deco-line"></div>
+            <div class="services-content-label">Accommodation Services</div>
+            <h2 class="services-content-title">Rest in Comfort</h2>
+            <p class="services-content-description">
+                Find the perfect accommodation near the temple. Our curated selection ensures your physical comfort
+                complements your spiritual journey, with verified properties ranging from budget-friendly options to
+                premium hotels.
+            </p>
+            <div class="services-features-grid">
+                <div class="services-feature-box">
+                    <div class="services-feature-icon-wrapper">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <div class="services-feature-title">Verified Properties</div>
+                    <div class="services-feature-desc">Every hotel personally inspected for quality</div>
+                </div>
+                <div class="services-feature-box">
+                    <div class="services-feature-icon-wrapper">
+                        <i class="bi bi-geo-alt-fill"></i>
+                    </div>
+                    <div class="services-feature-title">Prime Locations</div>
+                    <div class="services-feature-desc">Walking distance to temple and key sites</div>
+                </div>
+                <div class="services-feature-box">
+                    <div class="services-feature-icon-wrapper">
+                        <i class="bi bi-currency-rupee"></i>
+                    </div>
+                    <div class="services-feature-title">Best Prices</div>
+                    <div class="services-feature-desc">Guaranteed competitive rates</div>
+                </div>
+                <div class="services-feature-box">
+                    <div class="services-feature-icon-wrapper">
+                        <i class="bi bi-headset"></i>
+                    </div>
+                    <div class="services-feature-title">24/7 Support</div>
+                    <div class="services-feature-desc">Round-the-clock assistance</div>
+                </div>
+            </div>
+            <a href="hotel.html" class="services-cta-button">
+                <span>Book Your Stay</span>
+                <i class="bi bi-arrow-right"></i>
+            </a>
         </div>
     </section>
 
+    <!-- Service 2: Mandira Darshan -->
+    <section class="services-item">
+        <div class="services-item-visual">
+            <div class="services-number-large">02</div>
+            <div class="services-visual-content">
+                <div class="services-icon-large">
+                    <i class="bi bi-eye-fill"></i>
+                </div>
+                <div class="services-visual-label">Mandira Darshan</div>
+                <div class="services-visual-label-odia">ମନ୍ଦିର ଦର୍ଶନ</div>
+            </div>
+        </div>
+        <div class="services-item-content">
+            <div class="services-deco-line"></div>
+            <div class="services-content-label">Temple Experience</div>
+            <h2 class="services-content-title">Divine Encounters</h2>
+            <p class="services-content-description">
+                Experience darshan of Lord Jagannath without the wait. Choose from general entry, VIP access, or
+                comprehensive service packages including Mahaprasad, Sukhila Bhoga, and guided Parikrama for a complete
+                temple experience.
+            </p>
+            <div class="services-features-grid">
+                <div class="services-feature-box">
+                    <div class="services-feature-icon-wrapper">
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                    <div class="services-feature-title">VIP Entry</div>
+                    <div class="services-feature-desc">Skip queues with priority access</div>
+                </div>
+                <div class="services-feature-box">
+                    <div class="services-feature-icon-wrapper">
+                        <i class="bi bi-flower1"></i>
+                    </div>
+                    <div class="services-feature-title">Sacred Offerings</div>
+                    <div class="services-feature-desc">Bhoga and Mahaprasad services</div>
+                </div>
+                <div class="services-feature-box">
+                    <div class="services-feature-icon-wrapper">
+                        <i class="bi bi-arrow-repeat"></i>
+                    </div>
+                    <div class="services-feature-title">Guided Parikrama</div>
+                    <div class="services-feature-desc">Circumambulation with assistance</div>
+                </div>
+                <div class="services-feature-box">
+                    <div class="services-feature-icon-wrapper">
+                        <i class="bi bi-calendar-check"></i>
+                    </div>
+                    <div class="services-feature-title">Easy Booking</div>
+                    <div class="services-feature-desc">Reserve your slot in advance</div>
+                </div>
+            </div>
+            <a href="service-details-mandir-darshan.html" class="services-cta-button">
+                <span>Book Darshan</span>
+                <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Service 3: Bana (Flag Hosting) -->
+    <section class="services-item">
+        <div class="services-item-visual">
+            <div class="services-number-large">03</div>
+            <div class="services-visual-content">
+                <div class="services-icon-large">
+                    <i class="bi bi-flag-fill"></i>
+                </div>
+                <div class="services-visual-label">Bana Hosting</div>
+                <div class="services-visual-label-odia">ବାନ ଉତ୍ତୋଳନ</div>
+            </div>
+        </div>
+        <div class="services-item-content">
+            <div class="services-deco-line"></div>
+            <div class="services-content-label">Sacred Ritual</div>
+            <h2 class="services-content-title">The Highest Honor</h2>
+            <p class="services-content-description">
+                A rare privilege to host your flag upon the sacred Nila Chakra atop the temple. Choose from multiple
+                flag sizes and premium materials, from cotton to royal silk with gold borders. Includes commemorative
+                certificate.
+            </p>
+            <div class="services-features-grid">
+                <div class="services-feature-box">
+                    <div class="services-feature-icon-wrapper">
+                        <i class="bi bi-trophy-fill"></i>
+                    </div>
+                    <div class="services-feature-title">Nila Chakra</div>
+                    <div class="services-feature-desc">Flag on the sacred blue disc</div>
+                </div>
+                <div class="services-feature-box">
+                    <div class="services-feature-icon-wrapper">
+                        <i class="bi bi-rulers"></i>
+                    </div>
+                    <div class="services-feature-title">Multiple Sizes</div>
+                    <div class="services-feature-desc">3 feet to grand 15-foot banners</div>
+                </div>
+                <div class="services-feature-box">
+                    <div class="services-feature-icon-wrapper">
+                        <i class="bi bi-gem"></i>
+                    </div>
+                    <div class="services-feature-title">Premium Materials</div>
+                    <div class="services-feature-desc">Cotton, silk, and royal silk options</div>
+                </div>
+                <div class="services-feature-box">
+                    <div class="services-feature-icon-wrapper">
+                        <i class="bi bi-award-fill"></i>
+                    </div>
+                    <div class="services-feature-title">Certificate</div>
+                    <div class="services-feature-desc">Official commemoration included</div>
+                </div>
+            </div>
+            <a href="bana.html" class="services-cta-button">
+                <span>Book Bana</span>
+                <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+
+    <!-- Final CTA -->
+    <section class="services-cta-banner">
+        <div class="services-cta-banner-content">
+            <div class="services-cta-banner-text">
+                <h2>Begin Your Journey</h2>
+                <p>Every pilgrimage starts with a single step. Let us guide yours.</p>
+            </div>
+            <div class="services-cta-banner-buttons">
+                <a href="temple-services-improved.html" class="services-btn-white">
+                    <i class="bi bi-calendar-check"></i>
+                    Book Services
+                </a>
+                <a href="#" class="services-btn-outline">
+                    <i class="bi bi-telephone"></i>
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer pt-5 pb-3">
@@ -600,10 +533,53 @@
             </div>
         </div>
     </footer>
-    
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <!-- jQuery (required for Owl Carousel) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <!-- Initialize Testimonials Carousel -->
+    <script>
+        $(document).ready(function () {
+            $('.testimonials-carousel').owlCarousel({
+                loop: true,
+                margin: 20,
+                nav: false,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                navText: [
+                    '<i class="bi bi-chevron-left"></i>',
+                    '<i class="bi bi-chevron-right"></i>'
+                ],
+                responsive: {
+                    0: {
+                        items: 1,
+                        margin: 15
+                    },
+                    768: {
+                        items: 2,
+                        margin: 20
+                    },
+                    992: {
+                        items: 3,
+                        margin: 30
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

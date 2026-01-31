@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Bookings - JagannathaKrupa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <!-- Topbar -->
+  <div class="topbar py-2 d-none d-lg-block">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-between gap-3">
+        <div class="topbar-left small">
+          <span class="me-3"><i class="bi bi-telephone me-1"></i> +91 00000 00000</span>
+          <span><i class="bi bi-envelope me-1"></i> support@example.com</span>
+        </div>
+        <div class="topbar-right d-flex align-items-center gap-3 small">
+          <a class="topbar-link" href="#">Tracking Order</a>
+          <a class="topbar-link" href="#">My Account</a>
+          <div class="d-flex align-items-center gap-2">
+
+            <!-- Social Icons -->
+            <a class="topbar-icon" href="#"><i class="bi bi-facebook"></i></a>
+            <a class="topbar-icon" href="#"><i class="bi bi-instagram"></i></a>
+            <a class="topbar-icon" href="#"><i class="bi bi-youtube"></i></a>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg bg-white border-bottom py-2 py-lg-3">
+      <div class="container">
+
+        <!-- MOBILE TOP ROW -->
+        <div class="mobile-top d-flex d-lg-none w-100 align-items-center justify-content-between gap-2">
+          <button class="navbar-toggler nav-toggler-mini" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Brand -->
+          <a class="navbar-brand d-flex align-items-center gap-2 m-0 mobile-brand" href="#">
+            <span class="brand-mark">J</span>
+            <span class="brand-text text-truncate">Jagannatha<span class="brand-accent">Krupa</span></span>
+          </a>
+
+          <!-- Icons -->
+          <div class="d-flex align-items-center gap-2 mobile-icons">
+            <div class="dropdown">
+              <a class="icon-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end language-dropdown">
+                <li><a class="dropdown-item" href="#">En</a></li>
+                <li><a class="dropdown-item" href="#">हिंदी</a></li>
+                <li><a class="dropdown-item" href="#">ଓଡ଼ିଆ</a></li>
+              </ul>
+            </div>
+            <a class="icon-btn position-relative" href="#" aria-label="Cart">
+              <i class="bi bi-bag"></i>
+              <span class="badge rounded-pill text-bg-dark icon-badge">2</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- DESKTOP HEADER -->
+        <a class="navbar-brand d-none d-lg-flex align-items-center gap-2" href="#">
+          <span class="brand-mark">J</span>
+          <span class="brand-text">Jagannatha<span class="brand-accent">Krupa</span></span>
+        </a>
+
+        <div class="collapse navbar-collapse d-none d-lg-flex" id="desktopNav">
+          <ul class="navbar-nav mx-lg-auto mb-2 mb-lg-0 gap-lg-2">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+
+            <!-- SHOP DROPDOWN -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Shop
+              </a>
+              <div class="dropdown-menu shop-mega-menu-compact">
+                <div class="mega-menu-wrapper">
+                  <div class="row g-0">
+                    <!-- Left Side: Categories List -->
+                    <div class="col-5">
+                      <div class="mega-menu-section">
+                        <h6 class="mega-menu-title">SHOP BY CATEGORY</h6>
+                        <ul class="mega-menu-categories">
+                          <li>
+                            <a href="#" class="category-link">
+                              <i class="bi bi-hand-thumbs-up"></i>
+                              <span>Handcraft</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="category-link">
+                              <i class="bi bi-threads"></i>
+                              <span>Handlooms</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="category-link">
+                              <i class="bi bi-gift"></i>
+                              <span>Dry Prashad</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="category-link">
+                              <i class="bi bi-flag"></i>
+                              <span>Flag Hosting Booking</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="category-link">
+                              <i class="bi bi-airplane"></i>
+                              <span>Travel and Hotel Bookings</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <!-- Right Side: Featured Products (Only 2) -->
+                    <div class="col-7">
+                      <div class="mega-menu-section border-start">
+                        <h6 class="mega-menu-title">FEATURED PRODUCTS</h6>
+                        <div class="row g-3">
+                          <!-- Product Card 1 -->
+                          <div class="col-6">
+                            <a href="#" class="mega-product-card">
+                              <div class="mega-product-image">
+                                <img
+                                  src="https://images.unsplash.com/photo-1610375461246-83df859d849d?w=300&h=300&fit=crop"
+                                  alt="Ganesh Statue">
+                              </div>
+                              <h6 class="mega-product-title">Ganesh Statue</h6>
+                            </a>
+                          </div>
+
+                          <!-- Product Card 2 -->
+                          <div class="col-6">
+                            <a href="#" class="mega-product-card">
+                              <div class="mega-product-image">
+                                <img
+                                  src="https://images.unsplash.com/photo-1604608672516-f1b9b1a0b3c5?w=300&h=300&fit=crop"
+                                  alt="Buddha Figurine">
+                              </div>
+                              <h6 class="mega-product-title">Buddha Figurine</h6>
+                            </a>
+                          </div>
+                        </div>
+
+                        <!-- View All Button -->
+                        <div class="text-center mt-3">
+                          <a href="shop.html" class="btn-view-all-compact">
+                            See All Products
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+         
+            <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Library</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          </ul>
+
+          <div class="d-none d-lg-flex align-items-center gap-2">
+            <div class="header-search d-none d-lg-flex">
+              <i class="bi bi-search"></i>
+              <input class="form-control form-control-sm" type="text" placeholder="Search..." />
+            </div>
+
+            <a class="icon-btn" href="#" aria-label="Account"><i class="bi bi-person"></i></a>
+            <a class="icon-btn" href="#" aria-label="Wishlist"><i class="bi bi-heart"></i></a>
+            <a class="icon-btn position-relative" href="#" aria-label="Cart">
+              <i class="bi bi-bag"></i>
+              <span class="badge rounded-pill text-bg-dark icon-badge">2</span>
+            </a>
+            <div class="dropdown">
+              <a class="icon-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end language-dropdown">
+                <li><a class="dropdown-item" href="#">En</a></li>
+                <li><a class="dropdown-item" href="#">हिंदी</a></li>
+                <li><a class="dropdown-item" href="#">ଓଡ଼ିଆ</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- MOBILE SEARCH ROW -->
+      <div class="d-lg-none w-100 px-0">
+        <div class="container pt-2 pb-2">
+          <form class="mobile-search" onsubmit="event.preventDefault();">
+            <input type="text" class="mobile-search-input" placeholder="Search JagannathaKrupa..." />
+            <button class="mobile-search-btn" type="submit" aria-label="Search">
+              <i class="bi bi-search"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- OFFCANVAS SIDEBAR (mobile menu) -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+      <div class="offcanvas-body">
+        <nav class="mobile-menu">
+          <a class="mobile-link active" href="index.html">Home</a>
+          <a class="mobile-link" href="shop.html">Shop</a>
+          <a class="mobile-link" href="#">Librery</a>
+          <a class="mobile-link" href="#">Contact</a>
+        </nav>
+
+        <hr>
+
+        <div class="d-grid gap-2">
+          <a href="#" class="btn btn-outline-dark btn-sm"><i class="bi bi-person me-1"></i> Account</a>
+          <a href="#" class="btn btn-outline-dark btn-sm"><i class="bi bi-heart me-1"></i> Wishlist</a>
+          <a href="#" class="btn btn-brand btn-sm"><i class="bi bi-bag me-1"></i> Cart</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="image-modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content-img" id="modalImage" alt="">
+        <div class="modal-caption" id="modalCaption"></div>
+    </div>
+
+    <!-- Mobile Filter Drawer -->
+    <div id="mobileFilterDrawer" class="mobile-filter-drawer">
+        <div class="mobile-filter-inner">
+            <button class="mobile-filter-close" id="mobileFilterClose">&times;</button>
+            <div id="mobileFilterContent"><!-- injected by JS --></div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="content-section">
+        <div class="container">
+            <div class="row g-3">
+
+                <!-- LEFT: Filter Sidebar (desktop) -->
+                <div class="col-lg-3 filter-col">
+                    <div id="desktopFilter" class="filter-panel"></div>
+                </div>
+
+                <!-- RIGHT: Hotels -->
+                <div class="col-lg-9 hotels-col">
+                    <div class="results-header">
+                        <div class="results-count">Showing <strong id="resultsNum">6</strong> hotels</div>
+                        <button class="mobile-filter-btn" id="mobileFilterBtn">
+                            <i class="bi bi-sliders"></i> Filters
+                            <span class="filter-badge" id="activeBadge" style="display:none;">0</span>
+                        </button>
+                    </div>
+
+                    <div id="hotelsList">
+                        <!-- Hotel 1: Mayfair Heritage -->
+                        <div class="hotel-card" data-location="nearTemple" data-category="midRange" data-rating="4.5"
+                            data-ac-price="3500" data-non-ac-price="2200">
+                            <div class="hotel-gallery">
+                                <div class="hotel-gallery-main"
+                                    onclick="openModal('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&h=600&fit=crop','Mayfair Heritage – Luxury Exterior')">
+                                    <div class="hotel-badge">Premium</div>
+                                    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&h=600&fit=crop"
+                                        alt="Mayfair Heritage" loading="lazy">
+                                    <div class="gallery-zoom-hint"><i class="bi bi-zoom-in"></i> View full</div>
+                                </div>
+                                <div class="hotel-gallery-thumb"
+                                    onclick="openModal('https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=400&h=300&fit=crop','Mayfair Heritage – Deluxe Room')">
+                                    <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=400&h=300&fit=crop"
+                                        alt="Mayfair Heritage – Room" loading="lazy">
+                                    <div class="gallery-zoom-hint"><i class="bi bi-zoom-in"></i> View full</div>
+                                </div>
+                                <div class="hotel-gallery-thumb"
+                                    onclick="openModal('https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&h=300&fit=crop','Mayfair Heritage – Lobby')">
+                                    <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&h=300&fit=crop"
+                                        alt="Mayfair Heritage – Interior" loading="lazy">
+                                    <div class="gallery-zoom-hint"><i class="bi bi-zoom-in"></i> View full</div>
+                                </div>
+                            </div>
+                            <div class="hotel-info">
+                                <div class="hotel-header">
+                                    <div>
+                                        <h2 class="hotel-name">Mayfair Heritage</h2>
+                                        <div class="hotel-location"><i class="bi bi-geo-alt-fill"></i> VIP Road, Near
+                                            Jagannath Temple, Puri</div>
+                                    </div>
+                                    <div class="hotel-rating"><i class="bi bi-star-fill"></i> 4.5/5</div>
+                                </div>
+                                <div class="hotel-tags">
+                                    <span class="hotel-tag tag-temple"><i class="bi bi-gem"></i> Near Temple</span>
+                                </div>
+                                <p class="hotel-description">Experience luxury and tradition at Mayfair Heritage.
+                                    Elegant rooms blend modern amenities with traditional Odia architecture, offering a
+                                    comfortable and spiritually enriching stay minutes from the sacred temple.</p>
+                                <div class="hotel-features">
+                                    <span class="hotel-feature"><i class="bi bi-wifi"></i> Free WiFi</span>
+                                    <span class="hotel-feature"><i class="bi bi-car-front"></i> Free Parking</span>
+                                    <span class="hotel-feature"><i class="bi bi-cup-hot"></i> Restaurant</span>
+                                    <span class="hotel-feature"><i class="bi bi-tv"></i> Smart TV</span>
+                                    <span class="hotel-feature"><i class="bi bi-droplet"></i> 24/7 Hot Water</span>
+                                    <span class="hotel-feature"><i class="bi bi-concierge-bell"></i> Room Service</span>
+                                </div>
+                                <div class="hotel-footer">
+                                    <div class="hotel-pricing">
+                                        <div class="pricing-options">
+                                            <div class="price-option">
+                                                <div class="price-type"><i class="bi bi-wind"></i><span>AC Room</span>
+                                                </div>
+                                                <div class="price-amount"><span class="price-currency">₹</span>3,500
+                                                </div>
+                                                <div class="price-per">/night</div>
+                                            </div>
+                                            <div class="price-option">
+                                                <div class="price-type"><i class="bi bi-fan"></i><span>Non-AC
+                                                        Room</span></div>
+                                                <div class="price-amount"><span class="price-currency">₹</span>2,200
+                                                </div>
+                                                <div class="price-per">/night</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hotel-contact">
+                                        <a href="tel:+916752222777" class="btn-call"><i
+                                                class="bi bi-telephone-fill"></i> Call to Book</a>
+                                        <div class="contact-number">
+                                            <span class="contact-label">Direct Line</span>
+                                            <span class="contact-phone">+91 6752 222 777</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hotel 2: Shree Hari Grand -->
+                        <div class="hotel-card" data-location="nearTemple nearMarket" data-category="budget"
+                            data-rating="4.3" data-ac-price="2200" data-non-ac-price="1400">
+                            <div class="hotel-gallery">
+                                <div class="hotel-gallery-main"
+                                    onclick="openModal('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop','Shree Hari Grand – Front View')">
+                                    <div class="hotel-badge">Popular</div>
+                                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop"
+                                        alt="Shree Hari Grand" loading="lazy">
+                                    <div class="gallery-zoom-hint"><i class="bi bi-zoom-in"></i> View full</div>
+                                </div>
+                                <div class="hotel-gallery-thumb"
+                                    onclick="openModal('https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=400&h=300&fit=crop','Shree Hari Grand – Comfortable Room')">
+                                    <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=400&h=300&fit=crop"
+                                        alt="Shree Hari Grand – Room" loading="lazy">
+                                    <div class="gallery-zoom-hint"><i class="bi bi-zoom-in"></i> View full</div>
+                                </div>
+                                <div class="hotel-gallery-thumb"
+                                    onclick="openModal('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&h=300&fit=crop','Shree Hari Grand – Modern Bathroom')">
+                                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&h=300&fit=crop"
+                                        alt="Shree Hari Grand – Interior" loading="lazy">
+                                    <div class="gallery-zoom-hint"><i class="bi bi-zoom-in"></i> View full</div>
+                                </div>
+                            </div>
+                            <div class="hotel-info">
+                                <div class="hotel-header">
+                                    <div>
+                                        <h2 class="hotel-name">Shree Hari Grand</h2>
+                                        <div class="hotel-location"><i class="bi bi-geo-alt-fill"></i> Grand Road, Puri
+                                            – 752001</div>
+                                    </div>
+                                    <div class="hotel-rating"><i class="bi bi-star-fill"></i> 4.3/5</div>
+                                </div>
+                                <div class="hotel-tags">
+                                    <span class="hotel-tag tag-temple"><i class="bi bi-gem"></i> Near Temple</span>
+                                    <span class="hotel-tag tag-market"><i class="bi bi-shop"></i> Near Market</span>
+                                </div>
+                                <p class="hotel-description">Shree Hari Grand offers exceptional value on Grand Road.
+                                    Perfect for pilgrims and families, clean and comfortable rooms with essential
+                                    amenities ensure a peaceful stay during your visit to Lord Jagannath.</p>
+                                <div class="hotel-features">
+                                    <span class="hotel-feature"><i class="bi bi-wifi"></i> Free WiFi</span>
+                                    <span class="hotel-feature"><i class="bi bi-cup-hot"></i> Breakfast</span>
+                                    <span class="hotel-feature"><i class="bi bi-tv"></i> Cable TV</span>
+                                    <span class="hotel-feature"><i class="bi bi-shield-check"></i> 24/7 Security</span>
+                                    <span class="hotel-feature"><i class="bi bi-people"></i> Family Rooms</span>
+                                    <span class="hotel-feature"><i class="bi bi-car-front"></i> Parking</span>
+                                </div>
+                                <div class="hotel-footer">
+                                    <div class="hotel-pricing">
+                                        <div class="pricing-options">
+                                            <div class="price-option">
+                                                <div class="price-type"><i class="bi bi-wind"></i><span>AC Room</span>
+                                                </div>
+                                                <div class="price-amount"><span class="price-currency">₹</span>2,200
+                                                </div>
+                                                <div class="price-per">/night</div>
+                                            </div>
+                                            <div class="price-option">
+                                                <div class="price-type"><i class="bi bi-fan"></i><span>Non-AC
+                                                        Room</span></div>
+                                                <div class="price-amount"><span class="price-currency">₹</span>1,400
+                                                </div>
+                                                <div class="price-per">/night</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hotel-contact">
+                                        <a href="tel:+916752234567" class="btn-call"><i
+                                                class="bi bi-telephone-fill"></i> Call to Book</a>
+                                        <div class="contact-number">
+                                            <span class="contact-label">Direct Line</span>
+                                            <span class="contact-phone">+91 6752 234 567</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hotel 3: Puri Beach Resort -->
+                        <div class="hotel-card" data-location="nearBeach" data-category="luxury" data-rating="4.7"
+                            data-ac-price="4500" data-non-ac-price="3000">
+                            <div class="hotel-gallery">
+                                <div class="hotel-gallery-main"
+                                    onclick="openModal('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&h=600&fit=crop','Puri Beach Resort – Beachfront')">
+                                    <div class="hotel-badge">Beachfront</div>
+                                    <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&h=600&fit=crop"
+                                        alt="Puri Beach Resort" loading="lazy">
+                                    <div class="gallery-zoom-hint"><i class="bi bi-zoom-in"></i> View full</div>
+                                </div>
+                                <div class="hotel-gallery-thumb"
+                                    onclick="openModal('https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=400&h=300&fit=crop','Puri Beach Resort – Sea View Room')">
+                                    <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=400&h=300&fit=crop"
+                                        alt="Puri Beach Resort – Room" loading="lazy">
+                                    <div class="gallery-zoom-hint"><i class="bi bi-zoom-in"></i> View full</div>
+                                </div>
+                                <div class="hotel-gallery-thumb"
+                                    onclick="openModal('https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&h=300&fit=crop','Puri Beach Resort – Pool')">
+                                    <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&h=300&fit=crop"
+                                        alt="Puri Beach Resort – Interior" loading="lazy">
+                                    <div class="gallery-zoom-hint"><i class="bi bi-zoom-in"></i> View full</div>
+                                </div>
+                            </div>
+                            <div class="hotel-info">
+                                <div class="hotel-header">
+                                    <div>
+                                        <h2 class="hotel-name">Puri Beach Resort</h2>
+                                        <div class="hotel-location"><i class="bi bi-geo-alt-fill"></i> Beach Road,
+                                            Swargadwar, Puri</div>
+                                    </div>
+                                    <div class="hotel-rating"><i class="bi bi-star-fill"></i> 4.7/5</div>
+                                </div>
+                                <div class="hotel-tags">
+                                    <span class="hotel-tag tag-beach"><i class="bi bi-water"></i> Near Beach</span>
+                                </div>
+                                <p class="hotel-description">Wake up to stunning Bay of Bengal views. Our beachfront
+                                    resort offers luxury accommodations with private balconies, swimming pool, and
+                                    multi-cuisine restaurant — a perfect relaxing pilgrimage getaway.</p>
+                                <div class="hotel-features">
+                                    <span class="hotel-feature"><i class="bi bi-water"></i> Swimming Pool</span>
+                                    <span class="hotel-feature"><i class="bi bi-wifi"></i> Free WiFi</span>
+                                    <span class="hotel-feature"><i class="bi bi-cup-hot"></i> Restaurant</span>
+                                    <span class="hotel-feature"><i class="bi bi-eye"></i> Sea View</span>
+                                    <span class="hotel-feature"><i class="bi bi-spa"></i> Spa & Wellness</span>
+                                    <span class="hotel-feature"><i class="bi bi-bicycle"></i> Bicycle Rental</span>
+                                </div>
+                                <div class="hotel-footer">
+                                    <div class="hotel-pricing">
+                                        <div class="pricing-options">
+                                            <div class="price-option">
+                                                <div class="price-type"><i class="bi bi-wind"></i><span>AC Room</span>
+                                                </div>
+                                                <div class="price-amount"><span class="price-currency">₹</span>4,500
+                                                </div>
+                                                <div class="price-per">/night</div>
+                                            </div>
+                                            <div class="price-option">
+                                                <div class="price-type"><i class="bi bi-fan"></i><span>Non-AC
+                                                        Room</span></div>
+                                                <div class="price-amount"><span class="price-currency">₹</span>3,000
+                                                </div>
+                                                <div class="price-per">/night</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hotel-contact">
+                                        <a href="tel:+916752888999" class="btn-call"><i
+                                                class="bi bi-telephone-fill"></i> Call to Book</a>
+                                        <div class="contact-number">
+                                            <span class="contact-label">Direct Line</span>
+                                            <span class="contact-phone">+91 6752 888 999</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hotel 4: Hotel Nilachal -->
+                        <div class="hotel-card" data-location="nearTemple nearStation" data-category="budget"
+                            data-rating="4.0" data-ac-price="1200" data-non-ac-price="800">
+                            <div class="hotel-gallery">
+                                <div class="hotel-gallery-main"
+                                    onclick="openModal('https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&h=600&fit=crop','Hotel Nilachal – Affordable Stay')">
+                                    <div class="hotel-badge">Budget Friendly</div>
+                                    <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&h=600&fit=crop"
+                                        alt="Hotel Nilachal" loading="lazy">
+                                    <div class="gallery-zoom-hint"><i class="bi bi-zoom-in"></i> View full</div>
+                                </div>
+                                <div class="hotel-gallery-thumb"
+                                    onclick="openModal('https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=400&h=300&fit=crop','Hotel Nilachal – Clean Room')">
+                                    <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=400&h=300&fit=crop"
+                                        alt="Hotel Nilachal – Room" loading="lazy">
+                                    <div class="gallery-zoom-hint"><i class="bi bi-zoom-in"></i> View full</div>
+                                </div>
+                                <div class="hotel-gallery-thumb"
+                                    onclick="openModal('https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=400&h=300&fit=crop','Hotel Nilachal – Lobby')">
+                                    <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=400&h=300&fit=crop"
+                                        alt="Hotel Nilachal – Interior" loading="lazy">
+                                    <div class="gallery-zoom-hint"><i class="bi bi-zoom-in"></i> View full</div>
+                                </div>
+                            </div>
+                            <div class="hotel-info">
+                                <div class="hotel-header">
+                                    <div>
+                                        <h2 class="hotel-name">Hotel Nilachal</h2>
+                                        <div class="hotel-location"><i class="bi bi-geo-alt-fill"></i> Station Road,
+                                            Puri – 752002</div>
+                                    </div>
+                                    <div class="hotel-rating"><i class="bi bi-star-fill"></i> 4.0/5</div>
+                                </div>
+                                <div class="hotel-tags">
+                                    <span class="hotel-tag tag-temple"><i class="bi bi-gem"></i> Near Temple</span>
+                                    <span class="hotel-tag tag-station"><i class="bi bi-train-front"></i> Near
+                                        Station</span>
+                                </div>
+                                <p class="hotel-description">Affordable and comfortable accommodation for pilgrims.
+                                    Conveniently near the railway station and within walking distance of Jagannath
+                                    Temple — clean rooms with essential amenities at budget-friendly rates.</p>
+                                <div class="hotel-features">
+                                    <span class="hotel-feature"><i class="bi bi-cup-hot"></i> Free Tea</span>
+                                    <span class="hotel-feature"><i class="bi bi-car-front"></i> Parking</span>
+                                    <span class="hotel-feature"><i class="bi bi-tv"></i> TV</span>
+                                    <span class="hotel-feature"><i class="bi bi-droplet"></i> Hot Water</span>
+                                    <span class="hotel-feature"><i class="bi bi-reception-4"></i> 24/7 Front Desk</span>
+                                    <span class="hotel-feature"><i class="bi bi-shield-check"></i> CCTV Security</span>
+                                </div>
+                                <div class="hotel-footer">
+                                    <div class="hotel-pricing">
+                                        <div class="pricing-options">
+                                            <div class="price-option">
+                                                <div class="price-type"><i class="bi bi-wind"></i><span>AC Room</span>
+                                                </div>
+                                                <div class="price-amount"><span class="price-currency">₹</span>1,200
+                                                </div>
+                                                <div class="price-per">/night</div>
+                                            </div>
+                                            <div class="price-option">
+                                                <div class="price-type"><i class="bi bi-fan"></i><span>Non-AC
+                                                        Room</span></div>
+                                                <div class="price-amount"><span class="price-currency">₹</span>800</div>
+                                                <div class="price-per">/night</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hotel-contact">
+                                        <a href="tel:+916752345678" class="btn-call"><i
+                                                class="bi bi-telephone-fill"></i> Call to Book</a>
+                                        <div class="contact-number">
+                                            <span class="contact-label">Direct Line</span>
+                                            <span class="contact-phone">+91 6752 345 678</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hotel 5: The Gajapati Hotel -->
+                        <div class="hotel-card" data-location="nearTemple nearMarket" data-category="midRange"
+                            data-rating="4.6" data-ac-price="3000" data-non-ac-price="1900">
+                            <div class="hotel-gallery">
+                                <div class="hotel-gallery-main"
+                                    onclick="openModal('https://images.unsplash.com/photo-1549294413-26f195200c16?w=800&h=600&fit=crop','The Gajapati Hotel – Heritage Property')">
+                                    <div class="hotel-badge">Heritage</div>
+                                    <img src="https://images.unsplash.com/photo-1549294413-26f195200c16?w=800&h=600&fit=crop"
+                                        alt="The Gajapati Hotel" loading="lazy">
+                                    <div class="gallery-zoom-hint"><i class="bi bi-zoom-in"></i> View full</div>
+                                </div>
+                                <div class="hotel-gallery-thumb"
+                                    onclick="openModal('https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=400&h=300&fit=crop','The Gajapati Hotel – Deluxe Suite')">
+                                    <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=400&h=300&fit=crop"
+                                        alt="The Gajapati Hotel – Room" loading="lazy">
+                                    <div class="gallery-zoom-hint"><i class="bi bi-zoom-in"></i> View full</div>
+                                </div>
+                                <div class="hotel-gallery-thumb"
+                                    onclick="openModal('https://images.unsplash.com/photo-1576354302919-96748cb8299e?w=400&h=300&fit=crop','The Gajapati Hotel – Dining')">
+                                    <img src="https://images.unsplash.com/photo-1576354302919-96748cb8299e?w=400&h=300&fit=crop"
+                                        alt="The Gajapati Hotel – Interior" loading="lazy">
+                                    <div class="gallery-zoom-hint"><i class="bi bi-zoom-in"></i> View full</div>
+                                </div>
+                            </div>
+                            <div class="hotel-info">
+                                <div class="hotel-header">
+                                    <div>
+                                        <h2 class="hotel-name">The Gajapati Hotel</h2>
+                                        <div class="hotel-location"><i class="bi bi-geo-alt-fill"></i> CT Road, Near
+                                            Temple, Puri</div>
+                                    </div>
+                                    <div class="hotel-rating"><i class="bi bi-star-fill"></i> 4.6/5</div>
+                                </div>
+                                <div class="hotel-tags">
+                                    <span class="hotel-tag tag-temple"><i class="bi bi-gem"></i> Near Temple</span>
+                                    <span class="hotel-tag tag-market"><i class="bi bi-shop"></i> Near Market</span>
+                                </div>
+                                <p class="hotel-description">Heritage charm meets modern luxury. Beautifully restored
+                                    traditional Odia architecture, spacious rooms with antique furnishings, and
+                                    impeccable service — the perfect base for your spiritual journey in Puri.</p>
+                                <div class="hotel-features">
+                                    <span class="hotel-feature"><i class="bi bi-cup-hot"></i> Restaurant</span>
+                                    <span class="hotel-feature"><i class="bi bi-wifi"></i> High-Speed WiFi</span>
+                                    <span class="hotel-feature"><i class="bi bi-wind"></i> Deluxe AC</span>
+                                    <span class="hotel-feature"><i class="bi bi-gift"></i> Breakfast</span>
+                                    <span class="hotel-feature"><i class="bi bi-building"></i> Conference Hall</span>
+                                    <span class="hotel-feature"><i class="bi bi-concierge-bell"></i> Room Service</span>
+                                </div>
+                                <div class="hotel-footer">
+                                    <div class="hotel-pricing">
+                                        <div class="pricing-options">
+                                            <div class="price-option">
+                                                <div class="price-type"><i class="bi bi-wind"></i><span>AC Room</span>
+                                                </div>
+                                                <div class="price-amount"><span class="price-currency">₹</span>3,000
+                                                </div>
+                                                <div class="price-per">/night</div>
+                                            </div>
+                                            <div class="price-option">
+                                                <div class="price-type"><i class="bi bi-fan"></i><span>Non-AC
+                                                        Room</span></div>
+                                                <div class="price-amount"><span class="price-currency">₹</span>1,900
+                                                </div>
+                                                <div class="price-per">/night</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hotel-contact">
+                                        <a href="tel:+916752567890" class="btn-call"><i
+                                                class="bi bi-telephone-fill"></i> Call to Book</a>
+                                        <div class="contact-number">
+                                            <span class="contact-label">Direct Line</span>
+                                            <span class="contact-phone">+91 6752 567 890</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hotel 6: Sagar Tarang -->
+                        <div class="hotel-card" data-location="nearBeach" data-category="midRange" data-rating="4.4"
+                            data-ac-price="2800" data-non-ac-price="1800">
+                            <div class="hotel-gallery">
+                                <div class="hotel-gallery-main"
+                                    onclick="openModal('https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&h=600&fit=crop','Sagar Tarang – Ocean Front')">
+                                    <div class="hotel-badge">Sea Facing</div>
+                                    <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&h=600&fit=crop"
+                                        alt="Sagar Tarang" loading="lazy">
+                                    <div class="gallery-zoom-hint"><i class="bi bi-zoom-in"></i> View full</div>
+                                </div>
+                                <div class="hotel-gallery-thumb"
+                                    onclick="openModal('https://images.unsplash.com/photo-1587985064135-0366536eab42?w=400&h=300&fit=crop','Sagar Tarang – Balcony View')">
+                                    <img src="https://images.unsplash.com/photo-1587985064135-0366536eab42?w=400&h=300&fit=crop"
+                                        alt="Sagar Tarang – Room" loading="lazy">
+                                    <div class="gallery-zoom-hint"><i class="bi bi-zoom-in"></i> View full</div>
+                                </div>
+                                <div class="hotel-gallery-thumb"
+                                    onclick="openModal('https://images.unsplash.com/photo-1595576508898-0ad5c879a061?w=400&h=300&fit=crop','Sagar Tarang – Seafood Restaurant')">
+                                    <img src="https://images.unsplash.com/photo-1595576508898-0ad5c879a061?w=400&h=300&fit=crop"
+                                        alt="Sagar Tarang – Interior" loading="lazy">
+                                    <div class="gallery-zoom-hint"><i class="bi bi-zoom-in"></i> View full</div>
+                                </div>
+                            </div>
+                            <div class="hotel-info">
+                                <div class="hotel-header">
+                                    <div>
+                                        <h2 class="hotel-name">Sagar Tarang</h2>
+                                        <div class="hotel-location"><i class="bi bi-geo-alt-fill"></i> Marine Drive,
+                                            Puri Beach Front</div>
+                                    </div>
+                                    <div class="hotel-rating"><i class="bi bi-star-fill"></i> 4.4/5</div>
+                                </div>
+                                <div class="hotel-tags">
+                                    <span class="hotel-tag tag-beach"><i class="bi bi-water"></i> Near Beach</span>
+                                </div>
+                                <p class="hotel-description">Where gentle waves meet warm hospitality. Our sea-facing
+                                    property offers spectacular sunrise views, comfortable rooms, and authentic Odia
+                                    cuisine — ideal for pilgrims and leisure travelers seeking peace.</p>
+                                <div class="hotel-features">
+                                    <span class="hotel-feature"><i class="bi bi-water"></i> Beach Access</span>
+                                    <span class="hotel-feature"><i class="bi bi-cup-hot"></i> Seafood Restaurant</span>
+                                    <span class="hotel-feature"><i class="bi bi-wifi"></i> Free WiFi</span>
+                                    <span class="hotel-feature"><i class="bi bi-eye"></i> Ocean View</span>
+                                    <span class="hotel-feature"><i class="bi bi-umbrella-fill"></i> Rooftop
+                                        Terrace</span>
+                                    <span class="hotel-feature"><i class="bi bi-car-front"></i> Parking</span>
+                                </div>
+                                <div class="hotel-footer">
+                                    <div class="hotel-pricing">
+                                        <div class="pricing-options">
+                                            <div class="price-option">
+                                                <div class="price-type"><i class="bi bi-wind"></i><span>AC Room</span>
+                                                </div>
+                                                <div class="price-amount"><span class="price-currency">₹</span>2,800
+                                                </div>
+                                                <div class="price-per">/night</div>
+                                            </div>
+                                            <div class="price-option">
+                                                <div class="price-type"><i class="bi bi-fan"></i><span>Non-AC
+                                                        Room</span></div>
+                                                <div class="price-amount"><span class="price-currency">₹</span>1,800
+                                                </div>
+                                                <div class="price-per">/night</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hotel-contact">
+                                        <a href="tel:+916752678901" class="btn-call"><i
+                                                class="bi bi-telephone-fill"></i> Call to Book</a>
+                                        <div class="contact-number">
+                                            <span class="contact-label">Direct Line</span>
+                                            <span class="contact-phone">+91 6752 678 901</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ===================== PAGINATION HTML ===================== -->
+                    <nav class="hotels-pagination-wrapper" aria-label="Hotels page navigation">
+                        <ul class="hotels-pagination" id="hotelsPagination">
+                            <!-- Pagination will be dynamically generated here -->
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer pt-5 pb-3">
+        <div class="container">
+            <hr class="my-4">
+            <!-- Footer Links -->
+            <div class="row g-4">
+                <div class="col-lg-3">
+                    <a class="navbar-brand d-inline-flex align-items-center gap-2 mb-2" href="#">
+                        <span class="brand-mark">J</span>
+                        <span class="brand-text">Jagannatha
+                            <span class="brand-accent">Krupa</span>
+                        </span>
+                    </a>
+                    <p class="text-muted mb-3">
+                        Premium devotional products for daily worship and special occasions.
+                    </p>
+                    <ul class="footer-links mb-4">
+                        <li><a href="#"><i class="bi bi-geo-alt me-1"></i> Bhubaneswar, Odisha</a></li>
+                        <li><a href="#"><i class="bi bi-telephone me-1"></i> +91 00000 00000</a></li>
+                        <li><a href="#"><i class="bi bi-envelope me-1"></i> support@example.com</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-2">
+                    <h6 class="footer-title">Our Company</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-2">
+                    <h6 class="footer-title">Products</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">All Products</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Best Sellers</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-5">
+
+
+                    <!-- Newsletter inside Contact Column -->
+                    <div class="footer-newsletter-box">
+                        <h6 class="footer-title mb-2">Newsletter</h6>
+                        <p class="text-muted small mb-3">Get puja updates, festival offers, and new devotional products.
+                        </p>
+                        <form class="newsletter-form-footer" onsubmit="event.preventDefault();">
+                            <input class="form-control" type="email" placeholder="Your email" required />
+                            <button class="btn btn-danger" type="submit">
+                                <i class="bi bi-send"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="d-flex gap-2 mt-4">
+                        <a class="footer-icon" href="#"><i class="bi bi-facebook"></i></a>
+                        <a class="footer-icon" href="#"><i class="bi bi-instagram"></i></a>
+                        <a class="footer-icon" href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4">
+
+            <div
+                class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 small text-muted">
+                <div>© 2026 JagannathaKrupa. All rights reserved.</div>
+                <div class="d-flex align-items-center gap-3">
+                    <a class="text-muted" href="#">Privacy</a>
+                    <a class="text-muted" href="#">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // ===================== FILTER STATE =====================
+        let state = {
+            location: [],
+            priceMax: 5000,
+            rating: [],
+            category: []
+        };
+
+        const locationFilters = [
+            { key: "nearTemple", label: "Near Jagannath Temple", icon: "bi-gem" },
+            { key: "nearBeach", label: "Near Sea Beach", icon: "bi-water" },
+            { key: "nearStation", label: "Near Railway Station", icon: "bi-train-front" },
+            { key: "nearMarket", label: "Near Market Area", icon: "bi-shop" }
+        ];
+        const ratingFilters = [
+            { key: "4.5+", label: "4.5 & above", icon: "bi-stars" },
+            { key: "4.0+", label: "4.0 & above", icon: "bi-star-fill" },
+            { key: "3.5+", label: "3.5 & above", icon: "bi-star-half" }
+        ];
+        const categoryFilters = [
+            { key: "budget", label: "Budget (under ₹1,500)", icon: "bi-wallet2" },
+            { key: "midRange", label: "Mid-Range (₹1,500–3,500)", icon: "bi-credit-card" },
+            { key: "luxury", label: "Luxury (above ₹3,500)", icon: "bi-gem" }
+        ];
+
+        // ===================== FILTER COUNTS =====================
+        function getCount(filterFn) {
+            return Array.from(document.querySelectorAll('.hotel-card')).filter(filterFn).length;
+        }
+
+        // ===================== BUILD FILTER HTML =====================
+        function buildFilterHTML() {
+            return `
+    <div class="filter-header">
+        <h5><i class="bi bi-sliders"></i> Filters</h5>
+        <button class="filter-clear" id="clearBtn">Clear All</button>
+    </div>
+    <div class="filter-body">
+        <div class="filter-group">
+            <div class="filter-group-title"><i class="bi bi-geo-alt-fill"></i> Location</div>
+            ${locationFilters.map(f => `
+            <label class="filter-option">
+                <input type="checkbox" class="loc-check" data-key="${f.key}" ${state.location.includes(f.key) ? 'checked' : ''}>
+                <span class="filter-option-label"><i class="bi ${f.icon}"></i> ${f.label}</span>
+                <span class="filter-option-count">${getCount(card => card.dataset.location.includes(f.key))}</span>
+            </label>`).join('')}
+        </div>
+        <hr class="filter-divider">
+        <div class="filter-group">
+            <div class="filter-group-title"><i class="bi bi-cash-stack"></i> Price Range (AC)</div>
+            <div class="price-range-display">
+                <span class="price-tag">₹0</span>
+                <span class="price-tag" id="priceVal">₹${state.priceMax.toLocaleString('en-IN')}</span>
+            </div>
+            <input type="range" id="priceSlider" min="0" max="5000" step="100" value="${state.priceMax}">
+            <div class="price-labels"><span>₹0</span><span>₹5,000</span></div>
+        </div>
+        <hr class="filter-divider">
+        <div class="filter-group">
+            <div class="filter-group-title"><i class="bi bi-star-fill"></i> Rating</div>
+            ${ratingFilters.map(f => `
+            <label class="filter-option">
+                <input type="checkbox" class="rat-check" data-key="${f.key}" ${state.rating.includes(f.key) ? 'checked' : ''}>
+                <span class="filter-option-label"><i class="bi ${f.icon}"></i> ${f.label}</span>
+                <span class="filter-option-count">${getCount(card => parseFloat(card.dataset.rating) >= parseFloat(f.key))}</span>
+            </label>`).join('')}
+        </div>
+        <hr class="filter-divider">
+        <div class="filter-group">
+            <div class="filter-group-title"><i class="bi bi-layers"></i> Category</div>
+            ${categoryFilters.map(f => `
+            <label class="filter-option">
+                <input type="checkbox" class="cat-check" data-key="${f.key}" ${state.category.includes(f.key) ? 'checked' : ''}>
+                <span class="filter-option-label"><i class="bi ${f.icon}"></i> ${f.label}</span>
+                <span class="filter-option-count">${getCount(card => card.dataset.category.includes(f.key))}</span>
+            </label>`).join('')}
+        </div>
+    </div>`;
+        }
+
+        // ===================== RENDER & BIND FILTERS =====================
+        function renderFilters() {
+            const html = buildFilterHTML();
+            document.getElementById('desktopFilter').innerHTML = html;
+            document.getElementById('mobileFilterContent').innerHTML = html;
+            bindFilterEvents();
+        }
+
+        function bindFilterEvents() {
+            const bind = (selector, stateKey) => {
+                document.querySelectorAll(selector).forEach(el => {
+                    el.addEventListener('change', () => {
+                        const k = el.dataset.key;
+                        if (el.checked) { if (!state[stateKey].includes(k)) state[stateKey].push(k); }
+                        else { state[stateKey] = state[stateKey].filter(v => v !== k); }
+                        applyFilters();
+                    });
+                });
+            };
+            bind('.loc-check', 'location');
+            bind('.rat-check', 'rating');
+            bind('.cat-check', 'category');
+
+            document.querySelectorAll('#priceSlider').forEach(el => {
+                el.addEventListener('input', () => {
+                    state.priceMax = parseInt(el.value);
+                    document.querySelectorAll('#priceVal').forEach(v => v.textContent = '₹' + state.priceMax.toLocaleString('en-IN'));
+                    applyFilters();
+                });
+            });
+            document.querySelectorAll('#clearBtn').forEach(el => el.addEventListener('click', clearFilters));
+        }
+
+        // ===================== FILTER LOGIC =====================
+        function applyFilters() {
+            const cards = Array.from(document.querySelectorAll('.hotel-card'));
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                let show = true;
+
+                // Location filter
+                if (state.location.length > 0) {
+                    const cardLocations = card.dataset.location.split(' ');
+                    show = show && state.location.some(loc => cardLocations.includes(loc));
+                }
+
+                // Price filter
+                const acPrice = parseInt(card.dataset.acPrice);
+                show = show && acPrice <= state.priceMax;
+
+                // Rating filter
+                if (state.rating.length > 0) {
+                    const cardRating = parseFloat(card.dataset.rating);
+                    const minRating = Math.min(...state.rating.map(r => parseFloat(r)));
+                    show = show && cardRating >= minRating;
+                }
+
+                // Category filter
+                if (state.category.length > 0) {
+                    const cardCategories = card.dataset.category.split(' ');
+                    show = show && state.category.some(cat => cardCategories.includes(cat));
+                }
+
+                card.style.display = show ? 'block' : 'none';
+                if (show) visibleCount++;
+            });
+
+            document.getElementById('resultsNum').textContent = visibleCount;
+
+            // Update active filter badge
+            const badge = document.getElementById('activeBadge');
+            const activeCount = countActive();
+            badge.style.display = activeCount > 0 ? 'inline' : 'none';
+            badge.textContent = activeCount;
+
+            renderFilters();
+        }
+
+        function countActive() {
+            let c = state.location.length + state.rating.length + state.category.length;
+            if (state.priceMax < 5000) c++;
+            return c;
+        }
+
+        function clearFilters() {
+            state.location = []; state.priceMax = 5000; state.rating = []; state.category = [];
+            applyFilters();
+        }
+
+        // ===================== IMAGE MODAL =====================
+        function openModal(src, caption) {
+            document.getElementById('modalImage').src = src;
+            document.getElementById('modalCaption').textContent = caption || '';
+            document.getElementById('imageModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        document.querySelector('.close-modal').onclick = closeModal;
+        document.getElementById('imageModal').addEventListener('click', function (e) { if (e.target === this) closeModal(); });
+        document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
+
+        // ===================== MOBILE FILTER DRAWER =====================
+        document.getElementById('mobileFilterBtn').addEventListener('click', function () {
+            document.getElementById('mobileFilterDrawer').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        });
+        function closeMobileFilter() {
+            document.getElementById('mobileFilterDrawer').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        document.getElementById('mobileFilterClose').addEventListener('click', closeMobileFilter);
+        document.getElementById('mobileFilterDrawer').addEventListener('click', function (e) { if (e.target === this) closeMobileFilter(); });
+
+        // ===================== INIT =====================
+        renderFilters();
+    </script>
+    <script>
+
+
+// ===================== PAGINATION CONFIG =====================
+const HOTELS_PER_PAGE = 3; // Change this to show more/less hotels per page
+let currentPage = 1;
+
+// ===================== PAGINATION FUNCTIONS =====================
+function getTotalPages() {
+    const visibleCards = Array.from(document.querySelectorAll('.hotel-card'))
+        .filter(card => card.style.display !== 'none');
+    return Math.ceil(visibleCards.length / HOTELS_PER_PAGE);
+}
+
+function showHotelsForPage(page) {
+    const visibleCards = Array.from(document.querySelectorAll('.hotel-card'))
+        .filter(card => card.style.display !== 'none');
+    
+    const start = (page - 1) * HOTELS_PER_PAGE;
+    const end = start + HOTELS_PER_PAGE;
+    
+    // Hide all visible cards first
+    visibleCards.forEach(card => card.classList.add('pagination-hidden'));
+    
+    // Show only cards for current page
+    visibleCards.slice(start, end).forEach(card => card.classList.remove('pagination-hidden'));
+    
+    // Scroll to top of hotels list
+    document.querySelector('.hotels-col').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function renderPagination() {
+    const totalPages = getTotalPages();
+    const paginationEl = document.getElementById('hotelsPagination');
+    
+    if (totalPages <= 1) {
+        paginationEl.innerHTML = '';
+        return;
+    }
+    
+    let html = '';
+    
+    // Previous button
+    html += `<li class="prev-page ${currentPage === 1 ? 'disabled' : ''}">
+        <a href="#" data-page="${currentPage - 1}">
+            <i class="bi bi-chevron-left"></i> Prev
+        </a>
+    </li>`;
+    
+    // Page numbers with smart ellipsis
+    for (let i = 1; i <= totalPages; i++) {
+        if (
+            i === 1 || // Always show first page
+            i === totalPages || // Always show last page
+            (i >= currentPage - 1 && i <= currentPage + 1) // Show current page and neighbors
+        ) {
+            html += `<li class="${i === currentPage ? 'active' : ''}">
+                ${i === currentPage 
+                    ? `<span>${i}</span>` 
+                    : `<a href="#" data-page="${i}">${i}</a>`
+                }
+            </li>`;
+        } else if (
+            (i === currentPage - 2 && currentPage > 3) ||
+            (i === currentPage + 2 && currentPage < totalPages - 2)
+        ) {
+            html += `<li class="dots"><span>...</span></li>`;
+        }
+    }
+    
+    // Next button
+    html += `<li class="next-page ${currentPage === totalPages ? 'disabled' : ''}">
+        <a href="#" data-page="${currentPage + 1}">
+            Next <i class="bi bi-chevron-right"></i>
+        </a>
+    </li>`;
+    
+    paginationEl.innerHTML = html;
+    
+    // Bind click events
+    paginationEl.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const page = parseInt(this.dataset.page);
+            if (page >= 1 && page <= totalPages) {
+                currentPage = page;
+                showHotelsForPage(currentPage);
+                renderPagination();
+            }
+        });
+    });
+}
+
+// ===================== UPDATE APPLY FILTERS FUNCTION =====================
+// REPLACE your existing applyFilters() function with this updated version:
+
+function applyFilters() {
+    const cards = Array.from(document.querySelectorAll('.hotel-card'));
+    let visibleCount = 0;
+    
+    cards.forEach(card => {
+        let show = true;
+        
+        // Location filter
+        if (state.location.length > 0) {
+            const cardLocations = card.dataset.location.split(' ');
+            show = show && state.location.some(loc => cardLocations.includes(loc));
+        }
+        
+        // Price filter
+        const acPrice = parseInt(card.dataset.acPrice);
+        show = show && acPrice <= state.priceMax;
+        
+        // Rating filter
+        if (state.rating.length > 0) {
+            const cardRating = parseFloat(card.dataset.rating);
+            const minRating = Math.min(...state.rating.map(r => parseFloat(r)));
+            show = show && cardRating >= minRating;
+        }
+        
+        // Category filter
+        if (state.category.length > 0) {
+            const cardCategories = card.dataset.category.split(' ');
+            show = show && state.category.some(cat => cardCategories.includes(cat));
+        }
+        
+        // Apply filter visibility
+        card.style.display = show ? 'block' : 'none';
+        // Remove pagination hidden class when filtering
+        card.classList.remove('pagination-hidden');
+        if (show) visibleCount++;
+    });
+    
+    document.getElementById('resultsNum').textContent = visibleCount;
+    
+    // Update active filter badge
+    const badge = document.getElementById('activeBadge');
+    const activeCount = countActive();
+    badge.style.display = activeCount > 0 ? 'inline' : 'none';
+    badge.textContent = activeCount;
+    
+    renderFilters();
+    
+    // Reset to page 1 and update pagination
+    currentPage = 1;
+    showHotelsForPage(currentPage);
+    renderPagination();
+}
+
+
+// ===================== INIT =====================
+renderFilters();
+showHotelsForPage(currentPage);
+renderPagination();
+
+
+
+
+
+        
+    </script>
+</body>
+
+</html>
