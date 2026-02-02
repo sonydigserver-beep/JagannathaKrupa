@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jagannath Krupa - Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+    <section class="login">
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <div class="logo"><img src="assets/img/ratha-collage.png" alt="" style="height: 10px;"></div>
+                <h1>Jagannath Krupa</h1>
+                <p>Welcome back! Please login to continue</p>
+            </div>
+
+            <div class="login-body">
+                <div class="success-message" id="successMessage">
+                    <i class="bi bi-check-circle-fill"></i> OTP sent successfully!
+                </div>
+
+                <!-- Phone Number Section -->
+                <div class="phone-section" id="phoneSection">
+                    <div class="input-group">
+                        <label class="form-label">Mobile Number</label>
+                        <div class="phone-input-group">
+                            <input type="text" class="form-control country-code" value="+91" readonly>
+                            <input type="tel" class="form-control" id="phoneNumber" placeholder="Enter your mobile number" maxlength="10">
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" id="sendOtpBtn">
+                        <i class="bi bi-phone-fill me-2"></i>Send OTP
+                    </button>
+
+                    <div class="divider">
+                        <span>or continue with</span>
+                    </div>
+
+                    <div class="social-login">
+                        <button class="social-btn google" onclick="socialLogin('google')">
+                            <i class="bi bi-google"></i>
+                        </button>
+                        <button class="social-btn facebook" onclick="socialLogin('facebook')">
+                            <i class="bi bi-facebook"></i>
+                        </button>
+                        <button class="social-btn apple" onclick="socialLogin('apple')">
+                            <i class="bi bi-apple"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- OTP Section -->
+                <div class="otp-section" id="otpSection">
+                    <button class="back-btn" id="backBtn">
+                        <i class="bi bi-arrow-left"></i> Back
+                    </button>
+
+                    <div class="input-group">
+                        <label class="form-label">Enter OTP</label>
+                        <p style="font-size: 13px; color: var(--muted); margin-bottom: 12px;">
+                            We've sent a 6-digit code to <strong id="displayPhone"></strong>
+                        </p>
+                        <div class="otp-inputs">
+                            <input type="text" class="otp-input" maxlength="1" />
+                            <input type="text" class="otp-input" maxlength="1" />
+                            <input type="text" class="otp-input" maxlength="1" />
+                            <input type="text" class="otp-input" maxlength="1" />
+                            <input type="text" class="otp-input" maxlength="1" />
+                            <input type="text" class="otp-input" maxlength="1" />
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" id="verifyOtpBtn">
+                        <i class="bi bi-shield-check me-2"></i>Verify OTP
+                    </button>
+
+                    <div class="resend-link">
+                        Didn't receive code? <a href="#" id="resendOtp">Resend OTP</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Elements
+        const phoneSection = document.getElementById('phoneSection');
+        const otpSection = document.getElementById('otpSection');
+        const phoneNumber = document.getElementById('phoneNumber');
+        const sendOtpBtn = document.getElementById('sendOtpBtn');
+        const verifyOtpBtn = document.getElementById('verifyOtpBtn');
+        const backBtn = document.getElementById('backBtn');
+        const displayPhone = document.getElementById('displayPhone');
+        const successMessage = document.getElementById('successMessage');
+        const otpInputs = document.querySelectorAll('.otp-input');
+        const resendOtpBtn = document.getElementById('resendOtp');
+
+        // Phone number validation
+        phoneNumber.addEventListener('input', function(e) {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        });
+
+        // Send OTP
+        sendOtpBtn.addEventListener('click', function() {
+            const phone = phoneNumber.value.trim();
+            
+            if (phone.length !== 10) {
+                alert('Please enter a valid 10-digit mobile number');
+                return;
+            }
+
+            // Show success message
+            successMessage.classList.add('show');
+            setTimeout(() => {
+                successMessage.classList.remove('show');
+            }, 3000);
+
+            // Switch to OTP section
+            phoneSection.classList.add('hidden');
+            otpSection.classList.add('active');
+            displayPhone.textContent = '+91 ' + phone;
+
+            // Focus first OTP input
+            otpInputs[0].focus();
+
+            // Simulate OTP send (in real app, call your API here)
+            console.log('Sending OTP to:', '+91' + phone);
+        });
+
+        // OTP input handling
+        otpInputs.forEach((input, index) => {
+            input.addEventListener('input', function(e) {
+                this.value = this.value.replace(/[^0-9]/g, '');
+                
+                if (this.value.length === 1 && index < otpInputs.length - 1) {
+                    otpInputs[index + 1].focus();
+                }
+            });
+
+            input.addEventListener('keydown', function(e) {
+                if (e.key === 'Backspace' && !this.value && index > 0) {
+                    otpInputs[index - 1].focus();
+                }
+            });
+
+            // Paste handling
+            input.addEventListener('paste', function(e) {
+                e.preventDefault();
+                const pastedData = e.clipboardData.getData('text').replace(/[^0-9]/g, '');
+                
+                for (let i = 0; i < pastedData.length && index + i < otpInputs.length; i++) {
+                    otpInputs[index + i].value = pastedData[i];
+                }
+                
+                const nextIndex = Math.min(index + pastedData.length, otpInputs.length - 1);
+                otpInputs[nextIndex].focus();
+            });
+        });
+
+        // Verify OTP
+        verifyOtpBtn.addEventListener('click', function() {
+            const otp = Array.from(otpInputs).map(input => input.value).join('');
+            
+            if (otp.length !== 6) {
+                alert('Please enter the complete 6-digit OTP');
+                return;
+            }
+
+            // Simulate OTP verification (in real app, call your API here)
+            console.log('Verifying OTP:', otp);
+            
+            // Show success and redirect (simulated)
+            alert('Login successful! Redirecting...');
+            // window.location.href = '/dashboard';
+        });
+
+        // Back button
+        backBtn.addEventListener('click', function() {
+            otpSection.classList.remove('active');
+            phoneSection.classList.remove('hidden');
+            
+            // Clear OTP inputs
+            otpInputs.forEach(input => input.value = '');
+        });
+
+        // Resend OTP
+        resendOtpBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Show success message
+            successMessage.textContent = '✓ OTP resent successfully!';
+            successMessage.classList.add('show');
+            setTimeout(() => {
+                successMessage.classList.remove('show');
+            }, 3000);
+
+            // Clear OTP inputs
+            otpInputs.forEach(input => input.value = '');
+            otpInputs[0].focus();
+
+            // Simulate resend (in real app, call your API here)
+            console.log('Resending OTP to:', displayPhone.textContent);
+        });
+
+        // Social login
+        function socialLogin(provider) {
+            console.log('Social login with:', provider);
+            alert(`Redirecting to ${provider} login...`);
+            // In real app, redirect to OAuth flow
+            // window.location.href = '/auth/' + provider;
+        }
+
+        // Enter key handling
+        phoneNumber.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendOtpBtn.click();
+            }
+        });
+
+        otpInputs.forEach(input => {
+            input.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    verifyOtpBtn.click();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

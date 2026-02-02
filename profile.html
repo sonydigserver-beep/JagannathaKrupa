@@ -1,0 +1,1656 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Account - Jagannatha Krupa</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+
+    .brand-mark {
+      background: linear-gradient(135deg, var(--brand-red) 0%, #a00410 100%);
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.25rem;
+    }
+
+    .brand-text {
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--brand-dark);
+    }
+
+    .brand-accent {
+      color: var(--brand-red);
+    }
+
+    /* Page Header */
+    .page-header {
+      background: white;
+      padding: 2rem 0;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .page-header h1 {
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin-bottom: 0.5rem;
+      font-size: 1.75rem;
+    }
+
+    .page-header .breadcrumb {
+      background: transparent;
+      padding: 0;
+      margin: 0;
+    }
+
+    .breadcrumb-item a {
+      color: var(--brand-red);
+      text-decoration: none;
+    }
+
+    .breadcrumb-item.active {
+      color: var(--text-muted);
+    }
+
+    /* Profile Section */
+    .profile-section {
+      padding: 2rem 0;
+    }
+
+    /* Sidebar Menu */
+    .account-sidebar {
+      background: white;
+      border-radius: 12px;
+      padding: 0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+    }
+
+    .profile-header {
+      background: linear-gradient(135deg, var(--brand-red) 0%, #a00410 100%);
+      padding: 2rem;
+      text-align: center;
+      color: white;
+    }
+
+    .profile-avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 4px solid white;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      background: white;
+    }
+
+    .profile-header h4 {
+      margin-bottom: 0.25rem;
+      font-weight: 700;
+    }
+
+    .profile-header p {
+      margin: 0;
+      opacity: 0.9;
+      font-size: 0.9rem;
+    }
+
+    .account-menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .account-menu li {
+      border-bottom: 1px solid #e9ecef;
+    }
+
+    .account-menu li:last-child {
+      border-bottom: none;
+    }
+
+    .account-menu a {
+      display: flex;
+      align-items: center;
+      padding: 1rem 1.5rem;
+      color: var(--brand-dark);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+
+    .account-menu a i {
+      font-size: 1.25rem;
+      margin-right: 1rem;
+      color: var(--text-muted);
+      width: 24px;
+      text-align: center;
+    }
+
+    .account-menu a:hover,
+    .account-menu a.active {
+      background: rgba(227, 6, 19, 0.05);
+      color: var(--brand-red);
+      padding-left: 2rem;
+    }
+
+    .account-menu a:hover i,
+    .account-menu a.active i {
+      color: var(--brand-red);
+    }
+
+    /* Content Card */
+    .content-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      margin-bottom: 2rem;
+    }
+
+    .content-card h3 {
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: var(--brand-dark);
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .content-card h3 i {
+      color: var(--brand-red);
+      font-size: 1.75rem;
+    }
+
+    /* Form Styling */
+    .form-label {
+      font-weight: 600;
+      color: var(--brand-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .form-control,
+    .form-select {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      font-size: 0.95rem;
+    }
+
+    .form-control:focus,
+    .form-select:focus {
+      border-color: var(--brand-red);
+      box-shadow: 0 0 0 0.2rem rgba(227, 6, 19, 0.15);
+    }
+
+    .form-control:disabled,
+    .form-select:disabled {
+      background-color: var(--bg-soft);
+    }
+
+    /* Avatar Upload */
+    .avatar-upload {
+      position: relative;
+      width: 120px;
+      margin: 0 auto 2rem;
+    }
+
+    .avatar-upload img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #e9ecef;
+    }
+
+    .avatar-upload-btn {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--brand-red);
+      color: white;
+      border: 3px solid white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .avatar-upload-btn:hover {
+      background: #a00410;
+      transform: scale(1.1);
+    }
+
+    .avatar-upload input[type="file"] {
+      display: none;
+    }
+
+    /* Stats Cards */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .stat-card {
+      background: linear-gradient(135deg, rgba(227, 6, 19, 0.05) 0%, rgba(227, 6, 19, 0.1) 100%);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      border: 1px solid rgba(227, 6, 19, 0.1);
+    }
+
+    .stat-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      color: var(--brand-red);
+      font-size: 1.75rem;
+    }
+
+    .stat-value {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin-bottom: 0.25rem;
+    }
+
+    .stat-label {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* Order Table */
+    .order-table {
+      overflow-x: auto;
+    }
+
+    .order-table table {
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    .order-table th {
+      background: var(--bg-soft);
+      padding: 1rem;
+      font-weight: 600;
+      color: var(--brand-dark);
+      border-bottom: 2px solid #dee2e6;
+    }
+
+    .order-table td {
+      padding: 1rem;
+      border-bottom: 1px solid #e9ecef;
+    }
+
+    .order-status {
+      display: inline-block;
+      padding: 0.35rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .status-delivered {
+      background: #d4edda;
+      color: #155724;
+    }
+
+    .status-processing {
+      background: #fff3cd;
+      color: #856404;
+    }
+
+    .status-cancelled {
+      background: #f8d7da;
+      color: #721c24;
+    }
+
+    /* Address Card */
+    .address-card {
+      border: 2px solid #e9ecef;
+      border-radius: 12px;
+      padding: 1.5rem;
+      position: relative;
+      transition: all 0.3s ease;
+      margin-bottom: 1rem;
+    }
+
+    .address-card:hover {
+      border-color: var(--brand-red);
+      box-shadow: 0 5px 15px rgba(227, 6, 19, 0.1);
+    }
+
+    .address-card.default {
+      border-color: var(--brand-red);
+      background: rgba(227, 6, 19, 0.02);
+    }
+
+    .address-badge {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: var(--brand-red);
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .address-actions {
+      margin-top: 1rem;
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    /* Buttons */
+    .btn-brand {
+      background: linear-gradient(135deg, var(--brand-red) 0%, #a00410 100%);
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .btn-brand:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(227, 6, 19, 0.3);
+      color: white;
+    }
+
+    .btn-outline-brand {
+      border: 2px solid var(--brand-red);
+      color: var(--brand-red);
+      background: transparent;
+      padding: 0.625rem 1.25rem;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .btn-outline-brand:hover {
+      background: var(--brand-red);
+      color: white;
+    }
+
+    .btn-delete {
+      background: #dc3545;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .btn-delete:hover {
+      background: #c82333;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(220, 53, 69, 0.3);
+    }
+
+    /* Danger Zone */
+    .danger-zone {
+      border: 2px solid #dc3545;
+      border-radius: 12px;
+      padding: 2rem;
+      background: rgba(220, 53, 69, 0.02);
+      margin-top: 2rem;
+    }
+
+    .danger-zone h4 {
+      color: #dc3545;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .danger-zone h4 i {
+      font-size: 1.5rem;
+    }
+
+    /* Modal Customization */
+    .modal-header {
+      background: var(--brand-red);
+      color: white;
+      border-bottom: none;
+    }
+
+    .modal-header .btn-close {
+      filter: invert(1);
+    }
+
+    /* Alert */
+    .alert-custom {
+      border-radius: 12px;
+      border-left: 4px solid var(--brand-red);
+      background: rgba(227, 6, 19, 0.05);
+      color: var(--brand-dark);
+    }
+
+    /* Mobile Bottom Navigation */
+    .mobile-bottom-nav {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      padding: 0.5rem 0;
+    }
+
+    .mobile-nav-items {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .mobile-nav-item {
+      flex: 1;
+      text-align: center;
+    }
+
+    .mobile-nav-item a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.5rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.75rem;
+      transition: all 0.3s ease;
+    }
+
+    .mobile-nav-item a i {
+      font-size: 1.5rem;
+    }
+
+    .mobile-nav-item a.active {
+      color: var(--brand-red);
+    }
+
+    .mobile-nav-item a.active i {
+      color: var(--brand-red);
+    }
+
+    /* Mobile Header */
+    .mobile-profile-header {
+      display: none;
+      background: linear-gradient(135deg, var(--brand-red) 0%, #a00410 100%);
+      padding: 1.5rem 1rem 1rem;
+      color: white;
+      margin-bottom: 1rem;
+      border-radius: 0 0 20px 20px;
+    }
+
+    .mobile-profile-info {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .mobile-profile-info img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 3px solid white;
+    }
+
+    .mobile-profile-info h5 {
+      margin: 0;
+      font-weight: 700;
+    }
+
+    .mobile-profile-info p {
+      margin: 0;
+      font-size: 0.85rem;
+      opacity: 0.9;
+    }
+
+    /* Mobile Stats */
+    .mobile-stats {
+      display: none;
+      margin: -2rem 1rem 1rem;
+      background: white;
+      border-radius: 12px;
+      padding: 1rem;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .mobile-stats-row {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+    }
+
+    .mobile-stat-item {
+      flex: 1;
+    }
+
+    .mobile-stat-value {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--brand-red);
+    }
+
+    .mobile-stat-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    /* Quick Actions for Mobile */
+    .quick-actions {
+      display: none;
+      padding: 0 1rem 1rem;
+    }
+
+    .quick-actions-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.75rem;
+    }
+
+    .quick-action-btn {
+      background: white;
+      border: 1px solid #e9ecef;
+      border-radius: 12px;
+      padding: 1rem 0.5rem;
+      text-align: center;
+      text-decoration: none;
+      color: var(--brand-dark);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .quick-action-btn:hover,
+    .quick-action-btn.active {
+      background: rgba(227, 6, 19, 0.05);
+      border-color: var(--brand-red);
+      color: var(--brand-red);
+    }
+
+    .quick-action-btn i {
+      font-size: 1.5rem;
+    }
+
+    .quick-action-btn span {
+      font-size: 0.7rem;
+      font-weight: 600;
+    }
+
+    /* Responsive */
+    @media (max-width: 991px) {
+      body {
+        padding-bottom: 70px; /* Space for bottom nav */
+      }
+
+      .navbar {
+        display: none; /* Hide desktop navbar on mobile */
+      }
+
+      .page-header {
+        display: none; /* Hide page header on mobile */
+      }
+
+      .account-sidebar {
+        display: none; /* Hide sidebar on mobile */
+      }
+
+      .mobile-bottom-nav {
+        display: block;
+      }
+
+      .mobile-profile-header {
+        display: block;
+      }
+
+      .mobile-stats {
+        display: block;
+      }
+
+      .quick-actions {
+        display: block;
+      }
+
+      .profile-section {
+        padding: 0;
+      }
+
+      .content-card {
+        padding: 1rem;
+        border-radius: 0;
+        margin-bottom: 0;
+        box-shadow: none;
+        border-top: 1px solid #e9ecef;
+      }
+
+      .content-card h3 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+
+      .stat-card {
+        padding: 1rem;
+      }
+
+      .stat-icon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 0.75rem;
+      }
+
+      .stat-icon i {
+        font-size: 1.5rem;
+      }
+
+      .stat-value {
+        font-size: 1.5rem;
+      }
+
+      .stat-label {
+        font-size: 0.8rem;
+      }
+
+      /* Mobile optimized tables */
+      .order-table {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .order-table table {
+        font-size: 0.8rem;
+        min-width: 600px;
+      }
+
+      .order-table th,
+      .order-table td {
+        padding: 0.75rem 0.5rem;
+        white-space: nowrap;
+      }
+
+      /* Mobile Cards */
+      .address-card {
+        padding: 1.25rem;
+      }
+
+      .address-badge {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.5rem;
+      }
+
+      .address-actions {
+        flex-direction: column;
+      }
+
+      .address-actions button {
+        width: 100%;
+      }
+
+      /* Mobile Forms */
+      .avatar-upload {
+        width: 100px;
+        margin-bottom: 1.5rem;
+      }
+
+      .avatar-upload img {
+        width: 100px;
+        height: 100px;
+      }
+
+      .avatar-upload-btn {
+        width: 35px;
+        height: 35px;
+      }
+
+      /* Danger Zone Mobile */
+      .danger-zone {
+        padding: 1.25rem;
+      }
+
+      .danger-zone h4 {
+        font-size: 1.1rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-actions-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .quick-action-btn {
+        padding: 0.75rem 0.25rem;
+      }
+
+      .quick-action-btn i {
+        font-size: 1.25rem;
+      }
+
+      .quick-action-btn span {
+        font-size: 0.65rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Topbar -->
+  <div class="topbar py-2 d-none d-lg-block">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-between gap-3">
+        <div class="topbar-left small">
+          <span class="me-3"><i class="bi bi-telephone me-1"></i> +91 00000 00000</span>
+          <span><i class="bi bi-envelope me-1"></i> support@example.com</span>
+        </div>
+        <div class="topbar-right d-flex align-items-center gap-3 small">
+          <a class="topbar-link" href="#">Tracking Order</a>
+          <a class="topbar-link" href="#">My Account</a>
+          <div class="d-flex align-items-center gap-2">
+
+            <!-- Social Icons -->
+            <a class="topbar-icon" href="#"><i class="bi bi-facebook"></i></a>
+            <a class="topbar-icon" href="#"><i class="bi bi-instagram"></i></a>
+            <a class="topbar-icon" href="#"><i class="bi bi-youtube"></i></a>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg bg-white border-bottom py-2 py-lg-3">
+      <div class="container">
+
+        <!-- MOBILE TOP ROW -->
+        <div class="mobile-top d-flex d-lg-none w-100 align-items-center justify-content-between gap-2">
+          <button class="navbar-toggler nav-toggler-mini" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Brand -->
+          <a class="navbar-brand d-flex align-items-center gap-2 m-0 mobile-brand" href="#">
+            <span class="brand-mark">J</span>
+            <span class="brand-text text-truncate">Jagannatha<span class="brand-accent">Krupa</span></span>
+          </a>
+
+          <!-- Icons -->
+          <div class="d-flex align-items-center gap-2 mobile-icons">
+            <div class="dropdown">
+              <a class="icon-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end language-dropdown">
+                <li><a class="dropdown-item" href="#">En</a></li>
+                <li><a class="dropdown-item" href="#">हिंदी</a></li>
+                <li><a class="dropdown-item" href="#">ଓଡ଼ିଆ</a></li>
+              </ul>
+            </div>
+            <a class="icon-btn position-relative" href="cart.html" aria-label="Cart">
+              <i class="bi bi-bag"></i>
+              <span class="badge rounded-pill text-bg-dark icon-badge">2</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- DESKTOP HEADER -->
+        <a class="navbar-brand d-none d-lg-flex align-items-center gap-2" href="#">
+          <span class="brand-mark">J</span>
+          <span class="brand-text">Jagannatha<span class="brand-accent">Krupa</span></span>
+        </a>
+
+        <div class="collapse navbar-collapse d-none d-lg-flex" id="desktopNav">
+          <ul class="navbar-nav mx-lg-auto mb-2 mb-lg-0 gap-lg-2">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+
+            <!-- SHOP DROPDOWN -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Shop
+              </a>
+              <div class="dropdown-menu shop-mega-menu-compact">
+                <div class="mega-menu-wrapper">
+                  <div class="row g-0">
+                    <!-- Left Side: Categories List -->
+                    <div class="col-5">
+                      <div class="mega-menu-section">
+                        <h6 class="mega-menu-title">SHOP BY CATEGORY</h6>
+                        <ul class="mega-menu-categories">
+                          <li>
+                            <a href="#" class="category-link">
+                              <i class="bi bi-hand-thumbs-up"></i>
+                              <span>Handcraft</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="category-link">
+                              <i class="bi bi-threads"></i>
+                              <span>Handlooms</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="category-link">
+                              <i class="bi bi-gift"></i>
+                              <span>Dry Prashad</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="category-link">
+                              <i class="bi bi-flag"></i>
+                              <span>Flag Hosting Booking</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="category-link">
+                              <i class="bi bi-airplane"></i>
+                              <span>Travel and Hotel Bookings</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <!-- Right Side: Featured Products (Only 2) -->
+                    <div class="col-7">
+                      <div class="mega-menu-section border-start">
+                        <h6 class="mega-menu-title">FEATURED PRODUCTS</h6>
+                        <div class="row g-3">
+                          <!-- Product Card 1 -->
+                          <div class="col-6">
+                            <a href="#" class="mega-product-card">
+                              <div class="mega-product-image">
+                                <img
+                                  src="https://images.unsplash.com/photo-1610375461246-83df859d849d?w=300&h=300&fit=crop"
+                                  alt="Ganesh Statue">
+                              </div>
+                              <h6 class="mega-product-title">Ganesh Statue</h6>
+                            </a>
+                          </div>
+
+                          <!-- Product Card 2 -->
+                          <div class="col-6">
+                            <a href="#" class="mega-product-card">
+                              <div class="mega-product-image">
+                                <img
+                                  src="https://images.unsplash.com/photo-1604608672516-f1b9b1a0b3c5?w=300&h=300&fit=crop"
+                                  alt="Buddha Figurine">
+                              </div>
+                              <h6 class="mega-product-title">Buddha Figurine</h6>
+                            </a>
+                          </div>
+                        </div>
+
+                        <!-- View All Button -->
+                        <div class="text-center mt-3">
+                          <a href="shop.html" class="btn-view-all-compact">
+                            See All Products
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+         
+            <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Library</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          </ul>
+
+          <div class="d-none d-lg-flex align-items-center gap-2">
+            <div class="header-search d-none d-lg-flex">
+              <i class="bi bi-search"></i>
+              <input class="form-control form-control-sm" type="text" placeholder="Search..." />
+            </div>
+
+            <a class="icon-btn" href="#" aria-label="Account"><i class="bi bi-person"></i></a>
+            <a class="icon-btn" href="#" aria-label="Wishlist"><i class="bi bi-heart"></i></a>
+            <a class="icon-btn position-relative" href="cart.html" aria-label="Cart">
+              <i class="bi bi-bag"></i>
+              <span class="badge rounded-pill text-bg-dark icon-badge">2</span>
+            </a>
+            <div class="dropdown">
+              <a class="icon-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end language-dropdown">
+                <li><a class="dropdown-item" href="#">En</a></li>
+                <li><a class="dropdown-item" href="#">हिंदी</a></li>
+                <li><a class="dropdown-item" href="#">ଓଡ଼ିଆ</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- MOBILE SEARCH ROW -->
+      <div class="d-lg-none w-100 px-0">
+        <div class="container pt-2 pb-2">
+          <form class="mobile-search" onsubmit="event.preventDefault();">
+            <input type="text" class="mobile-search-input" placeholder="Search JagannathaKrupa..." />
+            <button class="mobile-search-btn" type="submit" aria-label="Search">
+              <i class="bi bi-search"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- OFFCANVAS SIDEBAR (mobile menu) -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+      <div class="offcanvas-body">
+        <nav class="mobile-menu">
+          <a class="mobile-link active" href="index.html">Home</a>
+          <a class="mobile-link" href="shop.html">Shop</a>
+          <a class="mobile-link" href="service.html">Services</a>
+          <a class="mobile-link" href="#">Library</a>
+          <a class="mobile-link" href="#">Contact</a>
+        </nav>
+
+        <hr>
+
+        <div class="d-grid gap-2">
+          <a href="#" class="btn btn-outline-dark btn-sm"><i class="bi bi-person me-1"></i> Account</a>
+          <a href="#" class="btn btn-outline-dark btn-sm"><i class="bi bi-heart me-1"></i> Wishlist</a>
+          <a href="cart.html" class="btn btn-brand btn-sm"><i class="bi bi-bag me-1"></i> Cart</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- Mobile Profile Header (visible on mobile only) -->
+  <div class="mobile-profile-header">
+    <div class="mobile-profile-info">
+      <img src="https://i.pravatar.cc/150?img=33" alt="Profile">
+      <div>
+        <h5>Rajesh Kumar</h5>
+        <p>rajesh.kumar@email.com</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Stats (visible on mobile only) -->
+  <div class="mobile-stats">
+    <div class="mobile-stats-row">
+      <div class="mobile-stat-item">
+        <div class="mobile-stat-value">24</div>
+        <div class="mobile-stat-label">Orders</div>
+      </div>
+      <div class="mobile-stat-item">
+        <div class="mobile-stat-value">2</div>
+        <div class="mobile-stat-label">Pending</div>
+      </div>
+      <div class="mobile-stat-item">
+        <div class="mobile-stat-value">12</div>
+        <div class="mobile-stat-label">Wishlist</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Actions (visible on mobile only) -->
+  <div class="quick-actions">
+    <div class="quick-actions-grid">
+      <a href="#" class="quick-action-btn active" onclick="showSection('dashboard'); return false;">
+        <i class="bi bi-speedometer2"></i>
+        <span>Dashboard</span>
+      </a>
+      <a href="#" class="quick-action-btn" onclick="showSection('profile'); return false;">
+        <i class="bi bi-person"></i>
+        <span>Profile</span>
+      </a>
+      <a href="#" class="quick-action-btn" onclick="showSection('orders'); return false;">
+        <i class="bi bi-bag-check"></i>
+        <span>Orders</span>
+      </a>
+      <a href="#" class="quick-action-btn" onclick="showSection('addresses'); return false;">
+        <i class="bi bi-geo-alt"></i>
+        <span>Address</span>
+      </a>
+      <a href="#" class="quick-action-btn" onclick="showSection('wishlist'); return false;">
+        <i class="bi bi-heart"></i>
+        <span>Wishlist</span>
+      </a>
+      <a href="#" class="quick-action-btn" onclick="showSection('security'); return false;">
+        <i class="bi bi-shield-check"></i>
+        <span>Security</span>
+      </a>
+      <a href="#" class="quick-action-btn" onclick="if(confirm('Are you sure you want to logout?')) alert('Logged out successfully!'); return false;">
+        <i class="bi bi-box-arrow-right"></i>
+        <span>Logout</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Profile Section -->
+  <section class="profile-section">
+    <div class="container">
+      <div class="row">
+        <!-- Sidebar -->
+        <div class="col-lg-3">
+          <div class="account-sidebar">
+            <div class="profile-header">
+              <img src="https://i.pravatar.cc/150?img=33" alt="Profile" class="profile-avatar">
+              <h4>Rajesh Kumar</h4>
+              <p>rajesh.kumar@email.com</p>
+            </div>
+            <ul class="account-menu">
+              <li>
+                <a href="#" class="active" onclick="showSection('dashboard'); return false;">
+                  <i class="bi bi-speedometer2"></i> Dashboard
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="showSection('profile'); return false;">
+                  <i class="bi bi-person"></i> Profile Settings
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="showSection('orders'); return false;">
+                  <i class="bi bi-bag-check"></i> My Orders
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="showSection('addresses'); return false;">
+                  <i class="bi bi-geo-alt"></i> Addresses
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="showSection('wishlist'); return false;">
+                  <i class="bi bi-heart"></i> Wishlist
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="showSection('security'); return false;">
+                  <i class="bi bi-shield-check"></i> Security
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="if(confirm('Are you sure you want to logout?')) alert('Logged out successfully!'); return false;">
+                  <i class="bi bi-box-arrow-right"></i> Logout
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="col-lg-9">
+          <!-- Dashboard Section -->
+          <div id="dashboard-section" class="content-section">
+            <div class="content-card">
+              <h3><i class="bi bi-speedometer2"></i> Dashboard</h3>
+              
+              <!-- Stats -->
+              <div class="stats-grid">
+                <div class="stat-card">
+                  <div class="stat-icon">
+                    <i class="bi bi-bag-check"></i>
+                  </div>
+                  <div class="stat-value">24</div>
+                  <div class="stat-label">Total Orders</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-icon">
+                    <i class="bi bi-clock-history"></i>
+                  </div>
+                  <div class="stat-value">2</div>
+                  <div class="stat-label">Pending Orders</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-icon">
+                    <i class="bi bi-heart"></i>
+                  </div>
+                  <div class="stat-value">12</div>
+                  <div class="stat-label">Wishlist Items</div>
+                </div>
+              </div>
+
+              <!-- Recent Orders -->
+              <h5 class="mb-3 fw-bold">Recent Orders</h5>
+              <div class="order-table">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Order ID</th>
+                      <th>Date</th>
+                      <th>Total</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>#ORD-2024-1523</td>
+                      <td>Jan 28, 2026</td>
+                      <td>₹2,450</td>
+                      <td><span class="order-status status-processing">Processing</span></td>
+                      <td><a href="#" class="text-decoration-none fw-semibold">View</a></td>
+                    </tr>
+                    <tr>
+                      <td>#ORD-2024-1489</td>
+                      <td>Jan 15, 2026</td>
+                      <td>₹1,850</td>
+                      <td><span class="order-status status-delivered">Delivered</span></td>
+                      <td><a href="#" class="text-decoration-none fw-semibold">View</a></td>
+                    </tr>
+                    <tr>
+                      <td>#ORD-2024-1456</td>
+                      <td>Jan 05, 2026</td>
+                      <td>₹3,200</td>
+                      <td><span class="order-status status-delivered">Delivered</span></td>
+                      <td><a href="#" class="text-decoration-none fw-semibold">View</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Profile Settings Section -->
+          <div id="profile-section" class="content-section" style="display: none;">
+            <div class="content-card">
+              <h3><i class="bi bi-person"></i> Profile Settings</h3>
+              
+              <div class="avatar-upload text-center mb-4">
+                <img src="https://i.pravatar.cc/150?img=33" alt="Avatar" id="avatarPreview">
+                <label for="avatarInput" class="avatar-upload-btn">
+                  <i class="bi bi-camera"></i>
+                </label>
+                <input type="file" id="avatarInput" accept="image/*" onchange="previewAvatar(event)">
+              </div>
+
+              <form onsubmit="event.preventDefault(); alert('Profile updated successfully!');">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label">First Name *</label>
+                    <input type="text" class="form-control" value="Rajesh" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Last Name *</label>
+                    <input type="text" class="form-control" value="Kumar" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Email *</label>
+                    <input type="email" class="form-control" value="rajesh.kumar@email.com" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Phone *</label>
+                    <input type="tel" class="form-control" value="+91 98765 43210" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Date of Birth</label>
+                    <input type="date" class="form-control" value="1990-05-15">
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Gender</label>
+                    <select class="form-select">
+                      <option value="">Select Gender</option>
+                      <option value="male" selected>Male</option>
+                      <option value="female">Female</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-brand">
+                      <i class="bi bi-check-circle me-2"></i>Save Changes
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Orders Section -->
+          <div id="orders-section" class="content-section" style="display: none;">
+            <div class="content-card">
+              <h3><i class="bi bi-bag-check"></i> My Orders</h3>
+              
+              <div class="order-table">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Order ID</th>
+                      <th>Date</th>
+                      <th>Items</th>
+                      <th>Total</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>#ORD-2024-1523</td>
+                      <td>Jan 28, 2026</td>
+                      <td>3 items</td>
+                      <td>₹2,450</td>
+                      <td><span class="order-status status-processing">Processing</span></td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-brand">View Details</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>#ORD-2024-1489</td>
+                      <td>Jan 15, 2026</td>
+                      <td>2 items</td>
+                      <td>₹1,850</td>
+                      <td><span class="order-status status-delivered">Delivered</span></td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-brand">View Details</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>#ORD-2024-1456</td>
+                      <td>Jan 05, 2026</td>
+                      <td>5 items</td>
+                      <td>₹3,200</td>
+                      <td><span class="order-status status-delivered">Delivered</span></td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-brand">View Details</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>#ORD-2023-1398</td>
+                      <td>Dec 20, 2025</td>
+                      <td>1 item</td>
+                      <td>₹850</td>
+                      <td><span class="order-status status-cancelled">Cancelled</span></td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-brand">View Details</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Addresses Section -->
+          <div id="addresses-section" class="content-section" style="display: none;">
+            <div class="content-card">
+              <h3><i class="bi bi-geo-alt"></i> My Addresses</h3>
+              
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="address-card default">
+                    <span class="address-badge">Default</span>
+                    <h5 class="fw-bold mb-2">Home</h5>
+                    <p class="mb-1"><strong>Rajesh Kumar</strong></p>
+                    <p class="mb-1">Flat 204, Green Valley Apartments</p>
+                    <p class="mb-1">Patia, Bhubaneswar, Odisha</p>
+                    <p class="mb-1">India - 751024</p>
+                    <p class="mb-3"><strong>Phone:</strong> +91 98765 43210</p>
+                    <div class="address-actions">
+                      <button class="btn btn-sm btn-outline-brand">
+                        <i class="bi bi-pencil me-1"></i>Edit
+                      </button>
+                      <button class="btn btn-sm btn-outline-danger">
+                        <i class="bi bi-trash me-1"></i>Delete
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="address-card">
+                    <h5 class="fw-bold mb-2">Office</h5>
+                    <p class="mb-1"><strong>Rajesh Kumar</strong></p>
+                    <p class="mb-1">Tech Park, 3rd Floor</p>
+                    <p class="mb-1">Chandrasekharpur, Bhubaneswar, Odisha</p>
+                    <p class="mb-1">India - 751016</p>
+                    <p class="mb-3"><strong>Phone:</strong> +91 98765 43210</p>
+                    <div class="address-actions">
+                      <button class="btn btn-sm btn-outline-brand" onclick="alert('Set as default address')">
+                        <i class="bi bi-check-circle me-1"></i>Set Default
+                      </button>
+                      <button class="btn btn-sm btn-outline-brand">
+                        <i class="bi bi-pencil me-1"></i>Edit
+                      </button>
+                      <button class="btn btn-sm btn-outline-danger">
+                        <i class="bi bi-trash me-1"></i>Delete
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="address-card" style="border-style: dashed; display: flex; align-items: center; justify-content: center; min-height: 280px; cursor: pointer;" onclick="alert('Add new address form')">
+                    <div class="text-center">
+                      <i class="bi bi-plus-circle" style="font-size: 3rem; color: var(--brand-red);"></i>
+                      <h5 class="mt-3 fw-bold" style="color: var(--brand-red);">Add New Address</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Wishlist Section -->
+          <div id="wishlist-section" class="content-section" style="display: none;">
+            <div class="content-card">
+              <h3><i class="bi bi-heart"></i> My Wishlist</h3>
+              
+              <div class="row g-3">
+                <div class="col-md-4">
+                  <div class="card">
+                    <img src="https://picsum.photos/seed/prod1/400/400" class="card-img-top" alt="Product">
+                    <div class="card-body">
+                      <h6 class="card-title">Brass Lord Jagannath Idol</h6>
+                      <p class="mb-2"><strong>₹1,250</strong></p>
+                      <button class="btn btn-sm btn-brand w-100 mb-2">Add to Cart</button>
+                      <button class="btn btn-sm btn-outline-danger w-100">Remove</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="card">
+                    <img src="https://picsum.photos/seed/prod2/400/400" class="card-img-top" alt="Product">
+                    <div class="card-body">
+                      <h6 class="card-title">Khandua Pata Saree</h6>
+                      <p class="mb-2"><strong>₹3,500</strong></p>
+                      <button class="btn btn-sm btn-brand w-100 mb-2">Add to Cart</button>
+                      <button class="btn btn-sm btn-outline-danger w-100">Remove</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="card">
+                    <img src="https://picsum.photos/seed/prod3/400/400" class="card-img-top" alt="Product">
+                    <div class="card-body">
+                      <h6 class="card-title">Silver Puja Thali Set</h6>
+                      <p class="mb-2"><strong>₹2,800</strong></p>
+                      <button class="btn btn-sm btn-brand w-100 mb-2">Add to Cart</button>
+                      <button class="btn btn-sm btn-outline-danger w-100">Remove</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Security Section -->
+          <div id="security-section" class="content-section" style="display: none;">
+            <div class="content-card">
+              <h3><i class="bi bi-shield-check"></i> Security Settings</h3>
+              
+              <h5 class="mb-3 fw-bold">Change Password</h5>
+              <form onsubmit="event.preventDefault(); alert('Password changed successfully!');">
+                <div class="row g-3 mb-4">
+                  <div class="col-md-6">
+                    <label class="form-label">Current Password *</label>
+                    <input type="password" class="form-control" required>
+                  </div>
+                  <div class="col-md-6"></div>
+                  <div class="col-md-6">
+                    <label class="form-label">New Password *</label>
+                    <input type="password" class="form-control" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Confirm New Password *</label>
+                    <input type="password" class="form-control" required>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-brand">
+                      <i class="bi bi-shield-check me-2"></i>Update Password
+                    </button>
+                  </div>
+                </div>
+              </form>
+
+              <!-- Danger Zone -->
+              <div class="danger-zone">
+                <h4><i class="bi bi-exclamation-triangle"></i> Danger Zone</h4>
+                <p class="text-muted mb-3">Once you delete your account, there is no going back. This action is permanent and cannot be undone. All your data, orders, and wishlist will be permanently deleted.</p>
+                <button class="btn btn-delete" data-bs-toggle="modal" data-bs-target="#deleteAccountModal">
+                  <i class="bi bi-trash me-2"></i>Delete My Account
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Delete Account Modal -->
+  <div class="modal fade" id="deleteAccountModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">
+            <i class="bi bi-exclamation-triangle me-2"></i>Delete Account
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="alert alert-danger mb-3">
+            <i class="bi bi-exclamation-circle me-2"></i>
+            <strong>Warning:</strong> This action cannot be undone!
+          </div>
+          <p>Are you absolutely sure you want to delete your account? This will:</p>
+          <ul>
+            <li>Permanently delete all your personal information</li>
+            <li>Remove all your order history</li>
+            <li>Delete your wishlist and saved addresses</li>
+            <li>Cancel any pending orders</li>
+          </ul>
+          <p class="mb-3">To confirm, please type <strong>DELETE</strong> in the box below:</p>
+          <input type="text" class="form-control" id="deleteConfirmInput" placeholder="Type DELETE to confirm">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-danger" onclick="confirmDelete()">
+            <i class="bi bi-trash me-2"></i>Yes, Delete My Account
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        <!-- Footer -->
+  <footer class="footer pt-5 pb-3">
+    <div class="container">
+      <hr class="my-4">
+      <!-- Footer Links -->
+      <div class="row g-4">
+        <div class="col-lg-3">
+          <a class="navbar-brand d-inline-flex align-items-center gap-2 mb-2" href="#">
+            <span class="brand-mark">J</span>
+            <span class="brand-text">Jagannatha
+              <span class="brand-accent">Krupa</span>
+            </span>
+          </a>
+          <p class="text-muted mb-3">
+            Premium devotional products for daily worship and special occasions.
+          </p>
+          <ul class="footer-links mb-4">
+            <li><a href="#"><i class="bi bi-geo-alt me-1"></i> Bhubaneswar, Odisha</a></li>
+            <li><a href="#"><i class="bi bi-telephone me-1"></i> +91 00000 00000</a></li>
+            <li><a href="#"><i class="bi bi-envelope me-1"></i> support@example.com</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h6 class="footer-title">Our Company</h6>
+          <ul class="footer-links">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h6 class="footer-title">Products</h6>
+          <ul class="footer-links">
+            <li><a href="#">All Products</a></li>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Best Sellers</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-5">
+
+
+          <!-- Newsletter inside Contact Column -->
+          <div class="footer-newsletter-box">
+            <h6 class="footer-title mb-2">Newsletter</h6>
+            <p class="text-muted small mb-3">Get puja updates, festival offers, and new devotional products.</p>
+            <form class="newsletter-form-footer" onsubmit="event.preventDefault();">
+              <input class="form-control" type="email" placeholder="Your email" required />
+              <button class="btn btn-danger" type="submit">
+                <i class="bi bi-send"></i>
+              </button>
+            </form>
+          </div>
+          <div class="d-flex gap-2 mt-4">
+            <a class="footer-icon" href="#"><i class="bi bi-facebook"></i></a>
+            <a class="footer-icon" href="#"><i class="bi bi-instagram"></i></a>
+            <a class="footer-icon" href="#"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-4">
+
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 small text-muted">
+        <div>© 2026 JagannathaKrupa. All rights reserved.</div>
+        <div class="d-flex align-items-center gap-3">
+          <a class="text-muted" href="#">Privacy</a>
+          <a class="text-muted" href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Show/Hide Sections
+    function showSection(sectionName) {
+      // Hide all sections
+      document.querySelectorAll('.content-section').forEach(section => {
+        section.style.display = 'none';
+      });
+
+      // Remove active class from all menu items (desktop)
+      document.querySelectorAll('.account-menu a').forEach(link => {
+        link.classList.remove('active');
+      });
+
+      // Remove active class from quick actions (mobile)
+      document.querySelectorAll('.quick-action-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+
+      // Show selected section
+      document.getElementById(sectionName + '-section').style.display = 'block';
+
+      // Add active class to clicked menu item (desktop)
+      if (event.target.closest('.account-menu')) {
+        event.target.closest('a').classList.add('active');
+      }
+
+      // Add active class to clicked quick action (mobile)
+      if (event.target.closest('.quick-action-btn')) {
+        event.target.closest('a').classList.add('active');
+      }
+
+      // Scroll to top on mobile
+      if (window.innerWidth <= 991) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+
+    // Avatar Preview
+    function previewAvatar(event) {
+      const reader = new FileReader();
+      reader.onload = function() {
+        document.getElementById('avatarPreview').src = reader.result;
+      };
+      reader.readAsDataURL(event.target.files[0]);
+    }
+
+    // Confirm Delete Account
+    function confirmDelete() {
+      const confirmInput = document.getElementById('deleteConfirmInput').value;
+      if (confirmInput === 'DELETE') {
+        alert('Account deleted successfully. You will be redirected to the homepage.');
+        // Close modal
+        const modal = bootstrap.Modal.getInstance(document.getElementById('deleteAccountModal'));
+        modal.hide();
+        // Redirect to homepage after 2 seconds
+        setTimeout(() => {
+          window.location.href = 'index.html';
+        }, 2000);
+      } else {
+        alert('Please type DELETE exactly to confirm account deletion.');
+      }
+    }
+  </script>
+</body>
+
+</html>

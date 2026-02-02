@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Reviews - JagannathaKrupa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+    <!-- Topbar -->
+    <div class="topbar py-2 d-none d-lg-block">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between gap-3">
+                <div class="topbar-left small">
+                    <span class="me-3"><i class="bi bi-telephone me-1"></i> +91 00000 00000</span>
+                    <span><i class="bi bi-envelope me-1"></i> support@example.com</span>
+                </div>
+                <div class="topbar-right d-flex align-items-center gap-3 small">
+                    <a class="topbar-link" href="#">Tracking Order</a>
+                    <a class="topbar-link" href="#">My Account</a>
+                    <div class="d-flex align-items-center gap-2">
+
+                        <!-- Social Icons -->
+                        <a class="topbar-icon" href="#"><i class="bi bi-facebook"></i></a>
+                        <a class="topbar-icon" href="#"><i class="bi bi-instagram"></i></a>
+                        <a class="topbar-icon" href="#"><i class="bi bi-youtube"></i></a>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header sticky-top">
+        <nav class="navbar navbar-expand-lg bg-white border-bottom py-2 py-lg-3">
+            <div class="container">
+
+                <!-- MOBILE TOP ROW -->
+                <div class="mobile-top d-flex d-lg-none w-100 align-items-center justify-content-between gap-2">
+                    <button class="navbar-toggler nav-toggler-mini" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Brand -->
+                    <a class="navbar-brand d-flex align-items-center gap-2 m-0 mobile-brand" href="#">
+                        <span class="brand-mark">J</span>
+                        <span class="brand-text text-truncate">Jagannatha<span class="brand-accent">Krupa</span></span>
+                    </a>
+
+                    <!-- Icons -->
+                    <div class="d-flex align-items-center gap-2 mobile-icons">
+                        <div class="dropdown">
+                            <a class="icon-btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="bi bi-translate"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end language-dropdown">
+                                <li><a class="dropdown-item" href="#">En</a></li>
+                                <li><a class="dropdown-item" href="#">हिंदी</a></li>
+                                <li><a class="dropdown-item" href="#">ଓଡ଼ିଆ</a></li>
+                            </ul>
+                        </div>
+                        <a class="icon-btn position-relative" href="cart.html" aria-label="Cart">
+                            <i class="bi bi-bag"></i>
+                            <span class="badge rounded-pill text-bg-dark icon-badge">2</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- DESKTOP HEADER -->
+                <a class="navbar-brand d-none d-lg-flex align-items-center gap-2" href="#">
+                    <span class="brand-mark">J</span>
+                    <span class="brand-text">Jagannatha<span class="brand-accent">Krupa</span></span>
+                </a>
+
+                <div class="collapse navbar-collapse d-none d-lg-flex" id="desktopNav">
+                    <ul class="navbar-nav mx-lg-auto mb-2 mb-lg-0 gap-lg-2">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+
+                        <!-- SHOP DROPDOWN -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Shop
+                            </a>
+                            <div class="dropdown-menu shop-mega-menu-compact">
+                                <div class="mega-menu-wrapper">
+                                    <div class="row g-0">
+                                        <!-- Left Side: Categories List -->
+                                        <div class="col-5">
+                                            <div class="mega-menu-section">
+                                                <h6 class="mega-menu-title">SHOP BY CATEGORY</h6>
+                                                <ul class="mega-menu-categories">
+                                                    <li>
+                                                        <a href="#" class="category-link">
+                                                            <i class="bi bi-hand-thumbs-up"></i>
+                                                            <span>Handcraft</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="category-link">
+                                                            <i class="bi bi-threads"></i>
+                                                            <span>Handlooms</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="category-link">
+                                                            <i class="bi bi-gift"></i>
+                                                            <span>Dry Prashad</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="category-link">
+                                                            <i class="bi bi-flag"></i>
+                                                            <span>Flag Hosting Booking</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="category-link">
+                                                            <i class="bi bi-airplane"></i>
+                                                            <span>Travel and Hotel Bookings</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <!-- Right Side: Featured Products (Only 2) -->
+                                        <div class="col-7">
+                                            <div class="mega-menu-section border-start">
+                                                <h6 class="mega-menu-title">FEATURED PRODUCTS</h6>
+                                                <div class="row g-3">
+                                                    <!-- Product Card 1 -->
+                                                    <div class="col-6">
+                                                        <a href="#" class="mega-product-card">
+                                                            <div class="mega-product-image">
+                                                                <img src="https://images.unsplash.com/photo-1610375461246-83df859d849d?w=300&h=300&fit=crop"
+                                                                    alt="Ganesh Statue">
+                                                            </div>
+                                                            <h6 class="mega-product-title">Ganesh Statue</h6>
+                                                        </a>
+                                                    </div>
+
+                                                    <!-- Product Card 2 -->
+                                                    <div class="col-6">
+                                                        <a href="#" class="mega-product-card">
+                                                            <div class="mega-product-image">
+                                                                <img src="https://images.unsplash.com/photo-1604608672516-f1b9b1a0b3c5?w=300&h=300&fit=crop"
+                                                                    alt="Buddha Figurine">
+                                                            </div>
+                                                            <h6 class="mega-product-title">Buddha Figurine</h6>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- View All Button -->
+                                                <div class="text-center mt-3">
+                                                    <a href="shop.html" class="btn-view-all-compact">
+                                                        See All Products
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Library</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    </ul>
+
+                    <div class="d-none d-lg-flex align-items-center gap-2">
+                        <div class="header-search d-none d-lg-flex">
+                            <i class="bi bi-search"></i>
+                            <input class="form-control form-control-sm" type="text" placeholder="Search..." />
+                        </div>
+
+                        <a class="icon-btn" href="#" aria-label="Account"><i class="bi bi-person"></i></a>
+                        <a class="icon-btn" href="#" aria-label="Wishlist"><i class="bi bi-heart"></i></a>
+                        <a class="icon-btn position-relative" href="cart.html" aria-label="Cart">
+                            <i class="bi bi-bag"></i>
+                            <span class="badge rounded-pill text-bg-dark icon-badge">2</span>
+                        </a>
+                        <div class="dropdown">
+                            <a class="icon-btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="bi bi-translate"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end language-dropdown">
+                                <li><a class="dropdown-item" href="#">En</a></li>
+                                <li><a class="dropdown-item" href="#">हिंदी</a></li>
+                                <li><a class="dropdown-item" href="#">ଓଡ଼ିଆ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- MOBILE SEARCH ROW -->
+            <div class="d-lg-none w-100 px-0">
+                <div class="container pt-2 pb-2">
+                    <form class="mobile-search" onsubmit="event.preventDefault();">
+                        <input type="text" class="mobile-search-input" placeholder="Search JagannathaKrupa..." />
+                        <button class="mobile-search-btn" type="submit" aria-label="Search">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <!-- OFFCANVAS SIDEBAR (mobile menu) -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body">
+                <nav class="mobile-menu">
+                    <a class="mobile-link active" href="index.html">Home</a>
+                    <a class="mobile-link" href="shop.html">Shop</a>
+                    <a class="mobile-link" href="service.html">Services</a>
+                    <a class="mobile-link" href="#">Library</a>
+                    <a class="mobile-link" href="#">Contact</a>
+                </nav>
+
+                <hr>
+
+                <div class="d-grid gap-2">
+                    <a href="#" class="btn btn-outline-dark btn-sm"><i class="bi bi-person me-1"></i> Account</a>
+                    <a href="#" class="btn btn-outline-dark btn-sm"><i class="bi bi-heart me-1"></i> Wishlist</a>
+                    <a href="cart.html" class="btn btn-brand btn-sm"><i class="bi bi-bag me-1"></i> Cart</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<section class="full-review">
+    <!-- Page Header -->
+    <div class="reviews-header">
+        <div class="container">
+            <div class="product-info">
+                <img src="https://via.placeholder.com/100" alt="Product" class="product-image">
+                <div class="product-details">
+                    <h1>Brass Diya Oil Lamp Set - Traditional Design</h1>
+                    <div class="product-meta">
+                        <div class="product-rating">
+                            <span class="stars">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-half"></i>
+                            </span>
+                            <span class="rating-number">4.5</span>
+                        </div>
+                        <span class="review-count">Based on 248 reviews</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container content-section">
+        <div class="row">
+            <!-- Left Column: Filters & Summary -->
+            <div class="col-lg-4">
+                <!-- Rating Summary -->
+                <div class="rating-summary-card">
+                    <div class="overall-rating">
+                        <div class="rating-big">4.5</div>
+                        <div class="rating-stars-large">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                        </div>
+                        <div class="rating-text">Based on 248 reviews</div>
+                    </div>
+
+                    <!-- Rating Breakdown -->
+                    <div class="rating-breakdown">
+                        <div class="rating-breakdown-row">
+                            <div class="rating-label">
+                                5 <i class="bi bi-star-fill"></i>
+                            </div>
+                            <div class="rating-bar-wrapper">
+                                <div class="rating-bar" style="width: 72%"></div>
+                            </div>
+                            <div class="rating-percent">72%</div>
+                        </div>
+                        <div class="rating-breakdown-row">
+                            <div class="rating-label">
+                                4 <i class="bi bi-star-fill"></i>
+                            </div>
+                            <div class="rating-bar-wrapper">
+                                <div class="rating-bar" style="width: 18%"></div>
+                            </div>
+                            <div class="rating-percent">18%</div>
+                        </div>
+                        <div class="rating-breakdown-row">
+                            <div class="rating-label">
+                                3 <i class="bi bi-star-fill"></i>
+                            </div>
+                            <div class="rating-bar-wrapper">
+                                <div class="rating-bar" style="width: 6%"></div>
+                            </div>
+                            <div class="rating-percent">6%</div>
+                        </div>
+                        <div class="rating-breakdown-row">
+                            <div class="rating-label">
+                                2 <i class="bi bi-star-fill"></i>
+                            </div>
+                            <div class="rating-bar-wrapper">
+                                <div class="rating-bar" style="width: 2%"></div>
+                            </div>
+                            <div class="rating-percent">2%</div>
+                        </div>
+                        <div class="rating-breakdown-row">
+                            <div class="rating-label">
+                                1 <i class="bi bi-star-fill"></i>
+                            </div>
+                            <div class="rating-bar-wrapper">
+                                <div class="rating-bar" style="width: 2%"></div>
+                            </div>
+                            <div class="rating-percent">2%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Write Review Button -->
+                <a href="#" class="write-review-btn w-100 justify-content-center">
+                    <i class="bi bi-pencil-square"></i>
+                    Write a Review
+                </a>
+            </div>
+
+            <!-- Right Column: Reviews -->
+            <div class="col-lg-8">
+                <!-- Filter & Sort -->
+                <div class="filter-sort-section">
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">All Reviews</button>
+                        <button class="filter-btn" data-filter="5">5 Stars</button>
+                        <button class="filter-btn" data-filter="4">4 Stars</button>
+                        <button class="filter-btn" data-filter="3">3 Stars</button>
+                        <button class="filter-btn" data-filter="verified">Verified Only</button>
+                        <button class="filter-btn" data-filter="images">With Images</button>
+                    </div>
+                    <div class="sort-dropdown">
+                        <label class="sort-label">Sort by:</label>
+                        <select class="sort-select">
+                            <option value="recent">Most Recent</option>
+                            <option value="helpful">Most Helpful</option>
+                            <option value="highest">Highest Rating</option>
+                            <option value="lowest">Lowest Rating</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Reviews List -->
+                <div id="reviewsList">
+                    <!-- Review 1 -->
+                    <div class="review-card" data-rating="5" data-verified="true" data-has-images="true">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">R</div>
+                                <div class="reviewer-details">
+                                    <h4>Ramesh Kumar</h4>
+                                    <div class="reviewer-meta">
+                                        <span class="verified-badge">
+                                            <i class="bi bi-patch-check-fill"></i>
+                                            Verified Purchase
+                                        </span>
+                                        <span class="review-date">December 15, 2025</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review-rating">
+                                <div class="review-stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="review-title">Excellent quality and beautiful design!</h3>
+                        <p class="review-text">
+                            Absolutely love these brass diyas! The craftsmanship is exceptional and they look stunning
+                            during our daily puja. The weight feels premium and the finish is flawless. Been using them
+                            for a month now and they still shine like new. Highly recommend for anyone looking for
+                            authentic traditional diyas.
+                        </p>
+                        <div class="review-images">
+                            <img src="https://via.placeholder.com/100" alt="Review image" class="review-image">
+                            <img src="https://via.placeholder.com/100" alt="Review image" class="review-image">
+                            <img src="https://via.placeholder.com/100" alt="Review image" class="review-image">
+                        </div>
+                        <div class="review-footer">
+                            <div class="helpful-section">
+                                <span class="helpful-text">Helpful?</span>
+                                <button class="helpful-btn">
+                                    <i class="bi bi-hand-thumbs-up"></i>
+                                    Yes (24)
+                                </button>
+                                <button class="helpful-btn">
+                                    <i class="bi bi-hand-thumbs-down"></i>
+                                    No (2)
+                                </button>
+                            </div>
+                            <a href="#" class="report-btn">
+                                <i class="bi bi-flag"></i>
+                                Report
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="review-card" data-rating="5" data-verified="true" data-has-images="false">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">P</div>
+                                <div class="reviewer-details">
+                                    <h4>Priya Sharma</h4>
+                                    <div class="reviewer-meta">
+                                        <span class="verified-badge">
+                                            <i class="bi bi-patch-check-fill"></i>
+                                            Verified Purchase
+                                        </span>
+                                        <span class="review-date">December 10, 2025</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review-rating">
+                                <div class="review-stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="review-title">Perfect for festivals and daily worship</h3>
+                        <p class="review-text">
+                            These diyas exceeded my expectations! Perfect size, beautiful traditional design, and the
+                            brass quality is top-notch. Used them during Diwali and received so many compliments. The
+                            packaging was also very secure. Will definitely buy more as gifts.
+                        </p>
+                        <div class="review-footer">
+                            <div class="helpful-section">
+                                <span class="helpful-text">Helpful?</span>
+                                <button class="helpful-btn">
+                                    <i class="bi bi-hand-thumbs-up"></i>
+                                    Yes (18)
+                                </button>
+                                <button class="helpful-btn">
+                                    <i class="bi bi-hand-thumbs-down"></i>
+                                    No (1)
+                                </button>
+                            </div>
+                            <a href="#" class="report-btn">
+                                <i class="bi bi-flag"></i>
+                                Report
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="review-card" data-rating="4" data-verified="true" data-has-images="true">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">A</div>
+                                <div class="reviewer-details">
+                                    <h4>Anita Desai</h4>
+                                    <div class="reviewer-meta">
+                                        <span class="verified-badge">
+                                            <i class="bi bi-patch-check-fill"></i>
+                                            Verified Purchase
+                                        </span>
+                                        <span class="review-date">December 5, 2025</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review-rating">
+                                <div class="review-stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="review-title">Good quality, slightly smaller than expected</h3>
+                        <p class="review-text">
+                            The diyas are beautiful and well-made. The brass quality is excellent and they polish
+                            nicely. However, they're a bit smaller than I anticipated from the product photos. Still
+                            very happy with the purchase and would recommend, just be aware of the actual size.
+                        </p>
+                        <div class="review-images">
+                            <img src="https://via.placeholder.com/100" alt="Review image" class="review-image">
+                        </div>
+                        <div class="review-footer">
+                            <div class="helpful-section">
+                                <span class="helpful-text">Helpful?</span>
+                                <button class="helpful-btn">
+                                    <i class="bi bi-hand-thumbs-up"></i>
+                                    Yes (12)
+                                </button>
+                                <button class="helpful-btn">
+                                    <i class="bi bi-hand-thumbs-down"></i>
+                                    No (3)
+                                </button>
+                            </div>
+                            <a href="#" class="report-btn">
+                                <i class="bi bi-flag"></i>
+                                Report
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Review 4 -->
+                    <div class="review-card" data-rating="5" data-verified="false" data-has-images="false">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">S</div>
+                                <div class="reviewer-details">
+                                    <h4>Suresh Patel</h4>
+                                    <div class="reviewer-meta">
+                                        <span class="review-date">November 28, 2025</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review-rating">
+                                <div class="review-stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="review-title">Traditional and authentic</h3>
+                        <p class="review-text">
+                            Wonderful product! These diyas bring a traditional touch to our temple room. The design is
+                            authentic and the quality of brass is excellent. Great value for money.
+                        </p>
+                        <div class="review-footer">
+                            <div class="helpful-section">
+                                <span class="helpful-text">Helpful?</span>
+                                <button class="helpful-btn">
+                                    <i class="bi bi-hand-thumbs-up"></i>
+                                    Yes (8)
+                                </button>
+                                <button class="helpful-btn">
+                                    <i class="bi bi-hand-thumbs-down"></i>
+                                    No (0)
+                                </button>
+                            </div>
+                            <a href="#" class="report-btn">
+                                <i class="bi bi-flag"></i>
+                                Report
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Review 5 -->
+                    <div class="review-card" data-rating="3" data-verified="true" data-has-images="false">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">M</div>
+                                <div class="reviewer-details">
+                                    <h4>Meera Iyer</h4>
+                                    <div class="reviewer-meta">
+                                        <span class="verified-badge">
+                                            <i class="bi bi-patch-check-fill"></i>
+                                            Verified Purchase
+                                        </span>
+                                        <span class="review-date">November 20, 2025</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review-rating">
+                                <div class="review-stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="review-title">Average quality for the price</h3>
+                        <p class="review-text">
+                            The diyas are okay but I expected better quality for this price range. They work fine but
+                            the finish could be better. One of the diyas had a small dent. Usable but not exceptional.
+                        </p>
+                        <div class="review-footer">
+                            <div class="helpful-section">
+                                <span class="helpful-text">Helpful?</span>
+                                <button class="helpful-btn">
+                                    <i class="bi bi-hand-thumbs-up"></i>
+                                    Yes (6)
+                                </button>
+                                <button class="helpful-btn">
+                                    <i class="bi bi-hand-thumbs-down"></i>
+                                    No (4)
+                                </button>
+                            </div>
+                            <a href="#" class="report-btn">
+                                <i class="bi bi-flag"></i>
+                                Report
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Load More -->
+                <div class="load-more-section">
+                    <button class="load-more-btn">Load More Reviews</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Footer -->
+    <footer class="footer pt-5 pb-3">
+        <div class="container">
+            <hr class="my-4">
+            <!-- Footer Links -->
+            <div class="row g-4">
+                <div class="col-lg-3">
+                    <a class="navbar-brand d-inline-flex align-items-center gap-2 mb-2" href="#">
+                        <span class="brand-mark">J</span>
+                        <span class="brand-text">Jagannatha
+                            <span class="brand-accent">Krupa</span>
+                        </span>
+                    </a>
+                    <p class="text-muted mb-3">
+                        Premium devotional products for daily worship and special occasions.
+                    </p>
+                    <ul class="footer-links mb-4">
+                        <li><a href="#"><i class="bi bi-geo-alt me-1"></i> Bhubaneswar, Odisha</a></li>
+                        <li><a href="#"><i class="bi bi-telephone me-1"></i> +91 00000 00000</a></li>
+                        <li><a href="#"><i class="bi bi-envelope me-1"></i> support@example.com</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-2">
+                    <h6 class="footer-title">Our Company</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-2">
+                    <h6 class="footer-title">Products</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">All Products</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Best Sellers</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-5">
+
+
+                    <!-- Newsletter inside Contact Column -->
+                    <div class="footer-newsletter-box">
+                        <h6 class="footer-title mb-2">Newsletter</h6>
+                        <p class="text-muted small mb-3">Get puja updates, festival offers, and new devotional products.
+                        </p>
+                        <form class="newsletter-form-footer" onsubmit="event.preventDefault();">
+                            <input class="form-control" type="email" placeholder="Your email" required />
+                            <button class="btn btn-danger" type="submit">
+                                <i class="bi bi-send"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="d-flex gap-2 mt-4">
+                        <a class="footer-icon" href="#"><i class="bi bi-facebook"></i></a>
+                        <a class="footer-icon" href="#"><i class="bi bi-instagram"></i></a>
+                        <a class="footer-icon" href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4">
+
+            <div
+                class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 small text-muted">
+                <div>© 2026 JagannathaKrupa. All rights reserved.</div>
+                <div class="d-flex align-items-center gap-3">
+                    <a class="text-muted" href="#">Privacy</a>
+                    <a class="text-muted" href="#">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Filter functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const reviewCards = document.querySelectorAll('.review-card');
+        const reviewsList = document.getElementById('reviewsList');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function () {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+
+                const filter = this.dataset.filter;
+
+                reviewCards.forEach(card => {
+                    let show = false;
+
+                    if (filter === 'all') {
+                        show = true;
+                    } else if (filter === 'verified') {
+                        show = card.dataset.verified === 'true';
+                    } else if (filter === 'images') {
+                        show = card.dataset.hasImages === 'true';
+                    } else {
+                        show = card.dataset.rating === filter;
+                    }
+
+                    card.style.display = show ? 'block' : 'none';
+                });
+
+                // Show empty state if no reviews match filter
+                const visibleReviews = Array.from(reviewCards).filter(card => card.style.display !== 'none');
+                if (visibleReviews.length === 0) {
+                    if (!document.querySelector('.empty-state')) {
+                        const emptyState = document.createElement('div');
+                        emptyState.className = 'empty-state';
+                        emptyState.innerHTML = `
+                            <i class="bi bi-search"></i>
+                            <h3>No Reviews Found</h3>
+                            <p>Try adjusting your filters to see more reviews.</p>
+                        `;
+                        reviewsList.appendChild(emptyState);
+                    }
+                } else {
+                    const emptyState = document.querySelector('.empty-state');
+                    if (emptyState) {
+                        emptyState.remove();
+                    }
+                }
+            });
+        });
+
+        // Helpful button functionality
+        document.querySelectorAll('.helpful-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                this.classList.toggle('active');
+            });
+        });
+
+        // Sort functionality
+        document.querySelector('.sort-select').addEventListener('change', function () {
+            console.log('Sorting by:', this.value);
+            // Add sorting logic here
+        });
+
+        // Load more functionality
+        document.querySelector('.load-more-btn').addEventListener('click', function () {
+            console.log('Loading more reviews...');
+            // Add load more logic here
+        });
+
+        // Review image click
+        document.querySelectorAll('.review-image').forEach(img => {
+            img.addEventListener('click', function () {
+                // Open image in modal/lightbox
+                console.log('Opening image:', this.src);
+            });
+        });
+    </script>
+</body>
+
+</html>
