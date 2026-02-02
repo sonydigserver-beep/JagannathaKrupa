@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders - JagannathaKrupa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <!-- Topbar -->
+  <div class="topbar py-2 d-none d-lg-block">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-between gap-3">
+        <div class="topbar-left small">
+          <span class="me-3"><i class="bi bi-telephone me-1"></i> +91 00000 00000</span>
+          <span><i class="bi bi-envelope me-1"></i> support@example.com</span>
+        </div>
+        <div class="topbar-right d-flex align-items-center gap-3 small">
+          <a class="topbar-link" href="#">Tracking Order</a>
+          <a class="topbar-link" href="#">My Account</a>
+          <div class="d-flex align-items-center gap-2">
+
+            <!-- Social Icons -->
+            <a class="topbar-icon" href="#"><i class="bi bi-facebook"></i></a>
+            <a class="topbar-icon" href="#"><i class="bi bi-instagram"></i></a>
+            <a class="topbar-icon" href="#"><i class="bi bi-youtube"></i></a>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg bg-white border-bottom py-2 py-lg-3">
+      <div class="container">
+
+        <!-- MOBILE TOP ROW -->
+        <div class="mobile-top d-flex d-lg-none w-100 align-items-center justify-content-between gap-2">
+          <button class="navbar-toggler nav-toggler-mini" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Brand -->
+          <a class="navbar-brand d-flex align-items-center gap-2 m-0 mobile-brand" href="#">
+            <span class="brand-mark">J</span>
+            <span class="brand-text text-truncate">Jagannatha<span class="brand-accent">Krupa</span></span>
+          </a>
+
+          <!-- Icons -->
+          <div class="d-flex align-items-center gap-2 mobile-icons">
+            <div class="dropdown">
+              <a class="icon-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end language-dropdown">
+                <li><a class="dropdown-item" href="#">En</a></li>
+                <li><a class="dropdown-item" href="#">हिंदी</a></li>
+                <li><a class="dropdown-item" href="#">ଓଡ଼ିଆ</a></li>
+              </ul>
+            </div>
+            <a class="icon-btn position-relative" href="cart.html" aria-label="Cart">
+              <i class="bi bi-bag"></i>
+              <span class="badge rounded-pill text-bg-dark icon-badge">2</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- DESKTOP HEADER -->
+        <a class="navbar-brand d-none d-lg-flex align-items-center gap-2" href="#">
+          <span class="brand-mark">J</span>
+          <span class="brand-text">Jagannatha<span class="brand-accent">Krupa</span></span>
+        </a>
+
+        <div class="collapse navbar-collapse d-none d-lg-flex" id="desktopNav">
+          <ul class="navbar-nav mx-lg-auto mb-2 mb-lg-0 gap-lg-2">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+
+            <!-- SHOP DROPDOWN -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Shop
+              </a>
+              <div class="dropdown-menu shop-mega-menu-compact">
+                <div class="mega-menu-wrapper">
+                  <div class="row g-0">
+                    <!-- Left Side: Categories List -->
+                    <div class="col-5">
+                      <div class="mega-menu-section">
+                        <h6 class="mega-menu-title">SHOP BY CATEGORY</h6>
+                        <ul class="mega-menu-categories">
+                          <li>
+                            <a href="#" class="category-link">
+                              <i class="bi bi-hand-thumbs-up"></i>
+                              <span>Handcraft</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="category-link">
+                              <i class="bi bi-threads"></i>
+                              <span>Handlooms</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="category-link">
+                              <i class="bi bi-gift"></i>
+                              <span>Dry Prashad</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="category-link">
+                              <i class="bi bi-flag"></i>
+                              <span>Flag Hosting Booking</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="category-link">
+                              <i class="bi bi-airplane"></i>
+                              <span>Travel and Hotel Bookings</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <!-- Right Side: Featured Products (Only 2) -->
+                    <div class="col-7">
+                      <div class="mega-menu-section border-start">
+                        <h6 class="mega-menu-title">FEATURED PRODUCTS</h6>
+                        <div class="row g-3">
+                          <!-- Product Card 1 -->
+                          <div class="col-6">
+                            <a href="#" class="mega-product-card">
+                              <div class="mega-product-image">
+                                <img
+                                  src="https://images.unsplash.com/photo-1610375461246-83df859d849d?w=300&h=300&fit=crop"
+                                  alt="Ganesh Statue">
+                              </div>
+                              <h6 class="mega-product-title">Ganesh Statue</h6>
+                            </a>
+                          </div>
+
+                          <!-- Product Card 2 -->
+                          <div class="col-6">
+                            <a href="#" class="mega-product-card">
+                              <div class="mega-product-image">
+                                <img
+                                  src="https://images.unsplash.com/photo-1604608672516-f1b9b1a0b3c5?w=300&h=300&fit=crop"
+                                  alt="Buddha Figurine">
+                              </div>
+                              <h6 class="mega-product-title">Buddha Figurine</h6>
+                            </a>
+                          </div>
+                        </div>
+
+                        <!-- View All Button -->
+                        <div class="text-center mt-3">
+                          <a href="shop.html" class="btn-view-all-compact">
+                            See All Products
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+         
+            <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Library</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          </ul>
+
+          <div class="d-none d-lg-flex align-items-center gap-2">
+            <div class="header-search d-none d-lg-flex">
+              <i class="bi bi-search"></i>
+              <input class="form-control form-control-sm" type="text" placeholder="Search..." />
+            </div>
+
+            <a class="icon-btn" href="#" aria-label="Account"><i class="bi bi-person"></i></a>
+            <a class="icon-btn" href="#" aria-label="Wishlist"><i class="bi bi-heart"></i></a>
+            <a class="icon-btn position-relative" href="cart.html" aria-label="Cart">
+              <i class="bi bi-bag"></i>
+              <span class="badge rounded-pill text-bg-dark icon-badge">2</span>
+            </a>
+            <div class="dropdown">
+              <a class="icon-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end language-dropdown">
+                <li><a class="dropdown-item" href="#">En</a></li>
+                <li><a class="dropdown-item" href="#">हिंदी</a></li>
+                <li><a class="dropdown-item" href="#">ଓଡ଼ିଆ</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- MOBILE SEARCH ROW -->
+      <div class="d-lg-none w-100 px-0">
+        <div class="container pt-2 pb-2">
+          <form class="mobile-search" onsubmit="event.preventDefault();">
+            <input type="text" class="mobile-search-input" placeholder="Search JagannathaKrupa..." />
+            <button class="mobile-search-btn" type="submit" aria-label="Search">
+              <i class="bi bi-search"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- OFFCANVAS SIDEBAR (mobile menu) -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+      <div class="offcanvas-body">
+        <nav class="mobile-menu">
+          <a class="mobile-link active" href="index.html">Home</a>
+          <a class="mobile-link" href="shop.html">Shop</a>
+          <a class="mobile-link" href="service.html">Services</a>
+          <a class="mobile-link" href="#">Library</a>
+          <a class="mobile-link" href="#">Contact</a>
+        </nav>
+
+        <hr>
+
+        <div class="d-grid gap-2">
+          <a href="#" class="btn btn-outline-dark btn-sm"><i class="bi bi-person me-1"></i> Account</a>
+          <a href="#" class="btn btn-outline-dark btn-sm"><i class="bi bi-heart me-1"></i> Wishlist</a>
+          <a href="cart.html" class="btn btn-brand btn-sm"><i class="bi bi-bag me-1"></i> Cart</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+    <!-- Main Content -->
+    <section class="order-history  py-4">
+        <div class="container">
+
+            <!-- Filter Tabs -->
+            <div class="orders-filter-tabs">
+                <button class="order-tab active" data-status="all">
+                    All Orders
+                    <span class="tab-count">6</span>
+                </button>
+                <button class="order-tab" data-status="processing">
+                    Processing
+                    <span class="tab-count">2</span>
+                </button>
+                <button class="order-tab" data-status="shipped">
+                    Shipped
+                    <span class="tab-count">1</span>
+                </button>
+                <button class="order-tab" data-status="delivered">
+                    Delivered
+                    <span class="tab-count">2</span>
+                </button>
+                <button class="order-tab" data-status="cancelled">
+                    Cancelled
+                    <span class="tab-count">1</span>
+                </button>
+            </div>
+
+            <!-- Search & Sort Controls -->
+            <div class="orders-controls">
+                <div class="orders-search">
+                    <i class="bi bi-search"></i>
+                    <input type="text" id="orderSearch" placeholder="Search by order ID or product name...">
+                </div>
+                <div class="orders-sort">
+                    <select id="orderSort">
+                        <option value="newest">Newest First</option>
+                        <option value="oldest">Oldest First</option>
+                        <option value="highest">Highest Amount</option>
+                        <option value="lowest">Lowest Amount</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Orders List -->
+            <div id="ordersList">
+
+                <!-- Order 1 -->
+                <div class="order-card" data-status="delivered" data-date="2025-01-28" data-amount="3999">
+                    <div class="order-header">
+                        <div class="order-id-date">
+                            <div class="order-id">
+                                <i class="bi bi-bag-check-fill"></i>
+                                Order #JK2025-1028
+                            </div>
+                            <div class="order-date">
+                                <i class="bi bi-calendar3"></i>
+                                January 28, 2025
+                            </div>
+                        </div>
+                        <div class="order-status-badge status-delivered">
+                            <i class="bi bi-check-circle-fill"></i> Delivered
+                        </div>
+                    </div>
+                    <div class="order-body">
+                        <div class="order-items">
+                            <div class="order-item">
+                                <div class="item-image">
+                                    <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=200&h=200&fit=crop" alt="Lord Jagannath Idol">
+                                </div>
+                                <div class="item-details">
+                                    <div class="item-name">Lord Jagannath Wooden Idol (12 inch)</div>
+                                    <div class="item-meta">
+                                        <span><i class="bi bi-box"></i> Qty: 1</span>
+                                        <span><i class="bi bi-palette"></i> Natural Wood</span>
+                                        <span><i class="bi bi-rulers"></i> 12 inch</span>
+                                    </div>
+                                </div>
+                                <div class="item-price">₹3,999</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-footer">
+                        <div class="order-total">
+                            <span class="total-label">Total Amount</span>
+                            <span class="total-amount">₹3,999</span>
+                        </div>
+                        <div class="order-actions">
+                            <a href="#" class="btn-order btn-order-primary">
+                                <i class="bi bi-arrow-repeat"></i> Reorder
+                            </a>
+                            <a href="#" class="btn-order btn-order-secondary">
+                                <i class="bi bi-file-earmark-text"></i> Invoice
+                            </a>
+                            <a href="#" class="btn-order btn-order-secondary">
+                                <i class="bi bi-eye"></i> Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order 2 -->
+                <div class="order-card" data-status="shipped" data-date="2025-01-30" data-amount="2499">
+                    <div class="order-header">
+                        <div class="order-id-date">
+                            <div class="order-id">
+                                <i class="bi bi-bag-check-fill"></i>
+                                Order #JK2025-1030
+                            </div>
+                            <div class="order-date">
+                                <i class="bi bi-calendar3"></i>
+                                January 30, 2025
+                            </div>
+                        </div>
+                        <div class="order-status-badge status-shipped">
+                            <i class="bi bi-truck"></i> Shipped
+                        </div>
+                    </div>
+                    <div class="order-body">
+                        <div class="order-items">
+                            <div class="order-item">
+                                <div class="item-image">
+                                    <img src="https://images.unsplash.com/photo-1576859779350-37d911602983?w=200&h=200&fit=crop" alt="Bhagavad Gita">
+                                </div>
+                                <div class="item-details">
+                                    <div class="item-name">Bhagavad Gita - Deluxe Edition with Commentary</div>
+                                    <div class="item-meta">
+                                        <span><i class="bi bi-box"></i> Qty: 2</span>
+                                        <span><i class="bi bi-book"></i> Hardcover</span>
+                                        <span><i class="bi bi-translate"></i> English & Sanskrit</span>
+                                    </div>
+                                </div>
+                                <div class="item-price">₹2,499</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-footer">
+                        <div class="order-total">
+                            <span class="total-label">Total Amount</span>
+                            <span class="total-amount">₹2,499</span>
+                        </div>
+                        <div class="order-actions">
+                            <a href="#" class="btn-order btn-order-primary">
+                                <i class="bi bi-geo-alt"></i> Track Order
+                            </a>
+                            <a href="#" class="btn-order btn-order-secondary">
+                                <i class="bi bi-eye"></i> Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order 3 -->
+                <div class="order-card" data-status="processing" data-date="2025-02-01" data-amount="5499">
+                    <div class="order-header">
+                        <div class="order-id-date">
+                            <div class="order-id">
+                                <i class="bi bi-bag-check-fill"></i>
+                                Order #JK2025-2001
+                            </div>
+                            <div class="order-date">
+                                <i class="bi bi-calendar3"></i>
+                                February 01, 2025
+                            </div>
+                        </div>
+                        <div class="order-status-badge status-processing">
+                            <i class="bi bi-clock-history"></i> Processing
+                        </div>
+                    </div>
+                    <div class="order-body">
+                        <div class="order-items">
+                            <div class="order-item">
+                                <div class="item-image">
+                                    <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=200&h=200&fit=crop" alt="Puja Thali">
+                                </div>
+                                <div class="item-details">
+                                    <div class="item-name">Premium Brass Puja Thali Set (7 Pieces)</div>
+                                    <div class="item-meta">
+                                        <span><i class="bi bi-box"></i> Qty: 1</span>
+                                        <span><i class="bi bi-gem"></i> Brass</span>
+                                        <span><i class="bi bi-award"></i> Handcrafted</span>
+                                    </div>
+                                </div>
+                                <div class="item-price">₹2,799</div>
+                            </div>
+                            <div class="order-item">
+                                <div class="item-image">
+                                    <img src="https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=200&h=200&fit=crop" alt="Incense Sticks">
+                                </div>
+                                <div class="item-details">
+                                    <div class="item-name">Premium Incense Sticks - Variety Pack (10 Fragrances)</div>
+                                    <div class="item-meta">
+                                        <span><i class="bi bi-box"></i> Qty: 3</span>
+                                        <span><i class="bi bi-flower1"></i> Natural</span>
+                                        <span><i class="bi bi-gift"></i> Gift Boxed</span>
+                                    </div>
+                                </div>
+                                <div class="item-price">₹2,700</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-footer">
+                        <div class="order-total">
+                            <span class="total-label">Total Amount</span>
+                            <span class="total-amount">₹5,499</span>
+                        </div>
+                        <div class="order-actions">
+                            <a href="#" class="btn-order btn-order-primary">
+                                <i class="bi bi-x-circle"></i> Cancel Order
+                            </a>
+                            <a href="#" class="btn-order btn-order-secondary">
+                                <i class="bi bi-eye"></i> Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order 4 -->
+                <div class="order-card" data-status="delivered" data-date="2025-01-15" data-amount="1299">
+                    <div class="order-header">
+                        <div class="order-id-date">
+                            <div class="order-id">
+                                <i class="bi bi-bag-check-fill"></i>
+                                Order #JK2025-0115
+                            </div>
+                            <div class="order-date">
+                                <i class="bi bi-calendar3"></i>
+                                January 15, 2025
+                            </div>
+                        </div>
+                        <div class="order-status-badge status-delivered">
+                            <i class="bi bi-check-circle-fill"></i> Delivered
+                        </div>
+                    </div>
+                    <div class="order-body">
+                        <div class="order-items">
+                            <div class="order-item">
+                                <div class="item-image">
+                                    <img src="https://images.unsplash.com/photo-1609156969919-50ea3f8b4c8b?w=200&h=200&fit=crop" alt="Rudraksha Mala">
+                                </div>
+                                <div class="item-details">
+                                    <div class="item-name">Authentic Rudraksha Mala (108 Beads)</div>
+                                    <div class="item-meta">
+                                        <span><i class="bi bi-box"></i> Qty: 1</span>
+                                        <span><i class="bi bi-gem"></i> 5 Mukhi</span>
+                                        <span><i class="bi bi-shield-check"></i> Certified</span>
+                                    </div>
+                                </div>
+                                <div class="item-price">₹1,299</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-footer">
+                        <div class="order-total">
+                            <span class="total-label">Total Amount</span>
+                            <span class="total-amount">₹1,299</span>
+                        </div>
+                        <div class="order-actions">
+                            <a href="#" class="btn-order btn-order-primary">
+                                <i class="bi bi-star"></i> Write Review
+                            </a>
+                            <a href="#" class="btn-order btn-order-secondary">
+                                <i class="bi bi-arrow-repeat"></i> Reorder
+                            </a>
+                            <a href="#" class="btn-order btn-order-secondary">
+                                <i class="bi bi-eye"></i> Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order 5 -->
+                <div class="order-card" data-status="cancelled" data-date="2025-01-10" data-amount="899">
+                    <div class="order-header">
+                        <div class="order-id-date">
+                            <div class="order-id">
+                                <i class="bi bi-bag-check-fill"></i>
+                                Order #JK2025-0110
+                            </div>
+                            <div class="order-date">
+                                <i class="bi bi-calendar3"></i>
+                                January 10, 2025
+                            </div>
+                        </div>
+                        <div class="order-status-badge status-cancelled">
+                            <i class="bi bi-x-circle-fill"></i> Cancelled
+                        </div>
+                    </div>
+                    <div class="order-body">
+                        <div class="order-items">
+                            <div class="order-item">
+                                <div class="item-image">
+                                    <img src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?w=200&h=200&fit=crop" alt="Prayer Beads">
+                                </div>
+                                <div class="item-details">
+                                    <div class="item-name">Tulsi Mala Prayer Beads with Counter</div>
+                                    <div class="item-meta">
+                                        <span><i class="bi bi-box"></i> Qty: 2</span>
+                                        <span><i class="bi bi-flower1"></i> Tulsi Wood</span>
+                                        <span><i class="bi bi-calculator"></i> With Counter</span>
+                                    </div>
+                                </div>
+                                <div class="item-price">₹899</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-footer">
+                        <div class="order-total">
+                            <span class="total-label">Total Amount</span>
+                            <span class="total-amount">₹899</span>
+                        </div>
+                        <div class="order-actions">
+                            <a href="#" class="btn-order btn-order-primary">
+                                <i class="bi bi-arrow-repeat"></i> Reorder
+                            </a>
+                            <a href="#" class="btn-order btn-order-secondary">
+                                <i class="bi bi-eye"></i> Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order 6 -->
+                <div class="order-card" data-status="processing" data-date="2025-02-02" data-amount="7999">
+                    <div class="order-header">
+                        <div class="order-id-date">
+                            <div class="order-id">
+                                <i class="bi bi-bag-check-fill"></i>
+                                Order #JK2025-2002
+                            </div>
+                            <div class="order-date">
+                                <i class="bi bi-calendar3"></i>
+                                February 02, 2025
+                            </div>
+                        </div>
+                        <div class="order-status-badge status-processing">
+                            <i class="bi bi-clock-history"></i> Processing
+                        </div>
+                    </div>
+                    <div class="order-body">
+                        <div class="order-items">
+                            <div class="order-item">
+                                <div class="item-image">
+                                    <img src="https://images.unsplash.com/photo-1599519013761-adb970fd7a7b?w=200&h=200&fit=crop" alt="Temple Bell">
+                                </div>
+                                <div class="item-details">
+                                    <div class="item-name">Large Brass Temple Bell with Chain (Traditional Design)</div>
+                                    <div class="item-meta">
+                                        <span><i class="bi bi-box"></i> Qty: 1</span>
+                                        <span><i class="bi bi-gem"></i> Pure Brass</span>
+                                        <span><i class="bi bi-soundwave"></i> Premium Sound</span>
+                                    </div>
+                                </div>
+                                <div class="item-price">₹7,999</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-footer">
+                        <div class="order-total">
+                            <span class="total-label">Total Amount</span>
+                            <span class="total-amount">₹7,999</span>
+                        </div>
+                        <div class="order-actions">
+                            <a href="#" class="btn-order btn-order-primary">
+                                <i class="bi bi-x-circle"></i> Cancel Order
+                            </a>
+                            <a href="#" class="btn-order btn-order-secondary">
+                                <i class="bi bi-eye"></i> Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Empty State (hidden by default) -->
+            <div class="orders-empty" id="ordersEmpty" style="display: none;">
+                <i class="bi bi-inbox"></i>
+                <h3>No Orders Found</h3>
+                <p>You haven't placed any orders yet or no orders match your filters.</p>
+                <a href="#" class="btn-shop-now">
+                    <i class="bi bi-shop"></i> Start Shopping
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+  <!-- Footer -->
+  <footer class="footer pt-5 pb-3">
+    <div class="container">
+      <hr class="my-4">
+      <!-- Footer Links -->
+      <div class="row g-4">
+        <div class="col-lg-3">
+          <a class="navbar-brand d-inline-flex align-items-center gap-2 mb-2" href="#">
+            <span class="brand-mark">J</span>
+            <span class="brand-text">Jagannatha
+              <span class="brand-accent">Krupa</span>
+            </span>
+          </a>
+          <p class="text-muted mb-3">
+            Premium devotional products for daily worship and special occasions.
+          </p>
+          <ul class="footer-links mb-4">
+            <li><a href="#"><i class="bi bi-geo-alt me-1"></i> Bhubaneswar, Odisha</a></li>
+            <li><a href="#"><i class="bi bi-telephone me-1"></i> +91 00000 00000</a></li>
+            <li><a href="#"><i class="bi bi-envelope me-1"></i> support@example.com</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h6 class="footer-title">Our Company</h6>
+          <ul class="footer-links">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h6 class="footer-title">Products</h6>
+          <ul class="footer-links">
+            <li><a href="#">All Products</a></li>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Best Sellers</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-5">
+
+
+          <!-- Newsletter inside Contact Column -->
+          <div class="footer-newsletter-box">
+            <h6 class="footer-title mb-2">Newsletter</h6>
+            <p class="text-muted small mb-3">Get puja updates, festival offers, and new devotional products.</p>
+            <form class="newsletter-form-footer" onsubmit="event.preventDefault();">
+              <input class="form-control" type="email" placeholder="Your email" required />
+              <button class="btn btn-danger" type="submit">
+                <i class="bi bi-send"></i>
+              </button>
+            </form>
+          </div>
+          <div class="d-flex gap-2 mt-4">
+            <a class="footer-icon" href="#"><i class="bi bi-facebook"></i></a>
+            <a class="footer-icon" href="#"><i class="bi bi-instagram"></i></a>
+            <a class="footer-icon" href="#"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-4">
+
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 small text-muted">
+        <div>© 2026 JagannathaKrupa. All rights reserved.</div>
+        <div class="d-flex align-items-center gap-3">
+          <a class="text-muted" href="#">Privacy</a>
+          <a class="text-muted" href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // ===================== FILTER & SEARCH FUNCTIONALITY =====================
+        
+        // Tab Filter
+        document.querySelectorAll('.order-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Update active tab
+                document.querySelectorAll('.order-tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                const status = this.dataset.status;
+                filterOrders();
+            });
+        });
+
+        // Search
+        document.getElementById('orderSearch').addEventListener('input', filterOrders);
+
+        // Sort
+        document.getElementById('orderSort').addEventListener('change', sortOrders);
+
+        function filterOrders() {
+            const activeTab = document.querySelector('.order-tab.active').dataset.status;
+            const searchTerm = document.getElementById('orderSearch').value.toLowerCase();
+            const orders = document.querySelectorAll('.order-card');
+            let visibleCount = 0;
+
+            orders.forEach(order => {
+                const status = order.dataset.status;
+                const orderText = order.textContent.toLowerCase();
+                
+                let showByStatus = activeTab === 'all' || status === activeTab;
+                let showBySearch = searchTerm === '' || orderText.includes(searchTerm);
+                
+                if (showByStatus && showBySearch) {
+                    order.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    order.style.display = 'none';
+                }
+            });
+
+            // Show empty state if no orders visible
+            document.getElementById('ordersEmpty').style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+
+        function sortOrders() {
+            const sortValue = document.getElementById('orderSort').value;
+            const container = document.getElementById('ordersList');
+            const orders = Array.from(document.querySelectorAll('.order-card'));
+
+            orders.sort((a, b) => {
+                switch(sortValue) {
+                    case 'newest':
+                        return new Date(b.dataset.date) - new Date(a.dataset.date);
+                    case 'oldest':
+                        return new Date(a.dataset.date) - new Date(b.dataset.date);
+                    case 'highest':
+                        return parseInt(b.dataset.amount) - parseInt(a.dataset.amount);
+                    case 'lowest':
+                        return parseInt(a.dataset.amount) - parseInt(b.dataset.amount);
+                    default:
+                        return 0;
+                }
+            });
+
+            // Re-append in sorted order
+            orders.forEach(order => container.appendChild(order));
+        }
+
+        // Initialize with default sort
+        sortOrders();
+    </script>
+</body>
+
+</html>
