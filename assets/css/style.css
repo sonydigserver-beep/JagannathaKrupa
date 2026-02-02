@@ -7469,7 +7469,7 @@ input[type="range"]::-moz-range-thumb {
   padding: 32px 28px;
 }
 
-.form-label {
+/* .form-label {
   color: var(--dark);
   font-weight: 500;
   font-size: 14px;
@@ -7493,7 +7493,7 @@ input[type="range"]::-moz-range-thumb {
   border-color: var(--brand-red);
   box-shadow: 0 0 0 4px rgba(227, 6, 19, 0.1);
   outline: none;
-}
+} */
 
 .phone-input-group {
   display: flex;
