@@ -1,231 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Jagannatha Krupa</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Library - JagannathaKrupa</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <style>
-  
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&family=Crimson+Pro:wght@400;600;700;900&display=swap"
+        rel="stylesheet">
 
-        /* Contact Info Cards */
-        .contact-info-card {
-            background: white;
-            border: 1px solid #e9ecef;
-            border-radius: 12px;
-            padding: 2rem;
-            text-align: center;
-            transition: all 0.3s ease;
-            height: 100%;
-        }
-
-        .contact-info-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border-color: var(--brand-red);
-        }
-
-        .contact-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, var(--brand-red) 0%, #a00410 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-        }
-
-        .contact-icon i {
-            font-size: 2rem;
-            color: white;
-        }
-
-        .contact-info-card h5 {
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--brand-dark);
-        }
-
-        .contact-info-card p {
-            color: var(--text-muted);
-            margin-bottom: 0;
-            font-size: 0.95rem;
-        }
-
-        .contact-info-card a {
-            color: var(--brand-red);
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .contact-info-card a:hover {
-            text-decoration: underline;
-        }
-
-        /* Contact Form */
-        .contact-form-wrapper {
-            background: white;
-            border-radius: 12px;
-            padding: 2.5rem;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-        }
-
-        .contact-form-wrapper h3 {
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            color: var(--brand-dark);
-        }
-
-
-
-        .btn-brand {
-            background: linear-gradient(135deg, var(--brand-red) 0%, #a00410 100%);
-            color: white;
-            border: none;
-            padding: 0.875rem 2.5rem;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .btn-brand:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(227, 6, 19, 0.3);
-            color: white;
-        }
-
-        /* Map Section */
-        .map-wrapper {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            margin-bottom: 3rem;
-        }
-
-        .map-wrapper iframe {
-            width: 100%;
-            height: 450px;
-            border: 0;
-        }
-
-        /* Working Hours */
-        .working-hours {
-            background: var(--bg-soft);
-            border-radius: 12px;
-            padding: 2rem;
-            margin-top: 2rem;
-        }
-
-        .working-hours h4 {
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            color: var(--brand-dark);
-        }
-
-        .hours-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.75rem 0;
-            border-bottom: 1px solid #dee2e6;
-        }
-
-        .hours-item:last-child {
-            border-bottom: none;
-        }
-
-        .hours-day {
-            font-weight: 600;
-            color: var(--brand-dark);
-        }
-
-        .hours-time {
-            color: var(--text-muted);
-        }
-
-        .hours-time.closed {
-            color: var(--brand-red);
-        }
-
-        /* Social Connect */
-        .social-connect {
-            background: linear-gradient(135deg, rgba(227, 6, 19, 0.05) 0%, rgba(227, 6, 19, 0.1) 100%);
-            border-radius: 12px;
-            padding: 2rem;
-            text-align: center;
-            margin-top: 2rem;
-        }
-
-        .social-connect h4 {
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--brand-dark);
-        }
-
-        .social-connect p {
-            color: var(--text-muted);
-            margin-bottom: 1.5rem;
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-        }
-
-        .social-icon {
-            width: 50px;
-            height: 50px;
-            background: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--brand-red);
-            font-size: 1.5rem;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-        }
-
-        .social-icon:hover {
-            background: var(--brand-red);
-            color: white;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(227, 6, 19, 0.3);
-        }
-
-
-        /* Section Padding */
-        .section-pad {
-            padding: 3rem 0;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .page-header {
-                padding: 3rem 0 2rem;
-            }
-
-            .contact-form-wrapper {
-                padding: 1.5rem;
-            }
-
-            .map-wrapper iframe {
-                height: 300px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
@@ -271,7 +65,8 @@
                     <!-- Brand -->
                     <a class="navbar-brand d-flex align-items-center gap-2 m-0 mobile-brand" href="#">
                         <span class="brand-mark">J</span>
-                        <span class="brand-text text-truncate">Jagannatha<span class="brand-accent">Krupa</span></span>
+                        <span class="brand-text text-truncate">Jagannatha<span
+                                class="brand-accent">Krupa</span></span>
                     </a>
 
                     <!-- Icons -->
@@ -283,8 +78,8 @@
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end language-dropdown">
                                 <li><a class="dropdown-item" href="#">En</a></li>
-                                <li><a class="dropdown-item" href="#">हिंदी</a></li>
-                                <li><a class="dropdown-item" href="#">ଓଡ଼ିଆ</a></li>
+                                <li><a class="dropdown-item" href="#">हिन्दी</a></li>
+                                <li><a class="dropdown-item" href="#">ଓଡ଼િஆ</a></li>
                             </ul>
                         </div>
                         <a class="icon-btn position-relative" href="cart.html" aria-label="Cart">
@@ -394,7 +189,7 @@
                         </li>
 
                         <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="library.html">Library</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="library.html">Library</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
                     </ul>
 
@@ -417,8 +212,8 @@
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end language-dropdown">
                                 <li><a class="dropdown-item" href="#">En</a></li>
-                                <li><a class="dropdown-item" href="#">हिंदी</a></li>
-                                <li><a class="dropdown-item" href="#">ଓଡ଼ିଆ</a></li>
+                                <li><a class="dropdown-item" href="#">हिन्दी</a></li>
+                                <li><a class="dropdown-item" href="#">ଓଡ଼ଇଆ</a></li>
                             </ul>
                         </div>
                     </div>
@@ -451,7 +246,7 @@
                     <a class="mobile-link" href="index.html">Home</a>
                     <a class="mobile-link" href="shop.html">Shop</a>
                     <a class="mobile-link" href="service.html">Services</a>
-                    <a class="mobile-link" href="library.html">Library</a>
+                    <a class="mobile-link active" href="library.html">Library</a>
                     <a class="mobile-link" href="contact-us.html">Contact</a>
                 </nav>
 
@@ -467,109 +262,252 @@
         </div>
     </header>
 
-    <!-- Contact Info Cards -->
+    <section class="breadcrumb-wrap py-3">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-lite">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Library</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+
+
+    <!-- Library Overview -->
     <section class="section-pad">
         <div class="container">
-            <div class="row g-4 mb-5">
-                <div class="col-md-4">
 
-                    <!-- Social Connect -->
-                    <div class="social-connect">
-                        <h4>Connect With Us</h4>
-                        <p>Follow us on social media for updates and offers</p>
-                        <div class="social-icons">
-                            <a href="#" class="social-icon" title="Facebook">
-                                <i class="bi bi-facebook"></i>
-                            </a>
-                            <a href="#" class="social-icon" title="Instagram">
-                                <i class="bi bi-instagram"></i>
-                            </a>
-                            <a href="#" class="social-icon" title="YouTube">
-                                <i class="bi bi-youtube"></i>
-                            </a>
-                            <a href="#" class="social-icon" title="WhatsApp">
-                                <i class="bi bi-whatsapp"></i>
-                            </a>
-                        </div>
-                    </div>
+
+            <div class="section-head">
+                <div>
+                    <p class="section-kicker">Divine recitations</p>
+                    <h3 class="section-title">Jagannath <span class="text-accent">Devotional Content</span></h3>
                 </div>
-
-                <div class="col-md-4">
-                    <div class="contact-info-card">
-                        <div class="contact-icon">
-                            <i class="bi bi-telephone-fill"></i>
-                        </div>
-                        <h5>Call Us</h5>
-                        <p><a href="tel:+919876543210">+91 98765 43210</a></p>
-                        <p><a href="tel:+919876543211">+91 98765 43211</a></p>
-                        <p class="mt-2 small">Mon - Sat: 9:00 AM - 8:00 PM</p>
+                <div class="d-flex flex-column flex-lg-row gap-2">
+                    <div class="input-group input-group-sm">
+                        <span class="input-group-text bg-white"><i class="bi bi-search"></i></span>
+                        <input class="form-control" type="text" placeholder="Search chants, mantras, aartis" />
                     </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="contact-info-card">
-                        <div class="contact-icon">
-                            <i class="bi bi-envelope-fill"></i>
-                        </div>
-                        <h5>Email Us</h5>
-                        <p><a href="mailto:support@jaganathakrupa.com">support@jaganathakrupa.com</a></p>
-                        <p><a href="mailto:info@jaganathakrupa.com">info@jaganathakrupa.com</a></p>
-                        <p class="mt-2 small">We reply within 24 hours</p>
-                    </div>
+                    <button class="btn btn-outline-dark btn-sm" type="button">
+                        <i class="bi bi-sliders me-1"></i> Filter
+                    </button>
                 </div>
             </div>
 
-            <!-- Contact Form & Info -->
-            <div class="row g-4 justify-content-center">
-                <div class="col-lg-8">
-                    <div class="contact-form-wrapper">
-                        <h3>Send us a Message</h3>
-                        <p class="text-muted mb-4">Have a question or need assistance? Fill out the form below and we'll
-                            get back to you as soon as possible.</p>
+            <ul class="nav nav-pills flex-wrap gap-2 mb-4">
+                <li class="nav-item"><a class="nav-link active" href="library.html">All</a></li>
+                <li class="nav-item"><a class="nav-link" href="songs.html">Songs</a></li>
+                <li class="nav-item"><a class="nav-link" href="chalisa.html">Chalisa</a></li>
+                <li class="nav-item"><a class="nav-link" href="mantras.html">Mantras</a></li>
+                <li class="nav-item"><a class="nav-link" href="song-player.html">Aartis</a></li>
+                <li class="nav-item"><a class="nav-link" href="ashtakam.html">Stotras</a></li>
+                <li class="nav-item"><a class="nav-link" href="song-player.html">Podcasts</a></li>
+            </ul>
 
-                        <form
-                            onsubmit="event.preventDefault(); alert('Thank you for contacting us! We will get back to you soon.');">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <label class="form-label">Your Name *</label>
-                                    <input type="text" class="form-control" placeholder="Enter your name" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label">Your Email *</label>
-                                    <input type="email" class="form-control" placeholder="Enter your email" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label">Phone Number</label>
-                                    <input type="tel" class="form-control" placeholder="Enter your phone">
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label">Subject *</label>
-                                    <select class="form-select" required>
-                                        <option value="">Select a subject</option>
-                                        <option value="general">General Inquiry</option>
-                                        <option value="product">Product Question</option>
-                                        <option value="order">Order Support</option>
-                                        <option value="bulk">Bulk Order Request</option>
-                                        <option value="feedback">Feedback</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label">Your Message *</label>
-                                    <textarea class="form-control" placeholder="Write your message here..."
-                                        required></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <button type="submit" class="btn btn-brand">
-                                        <i class="bi bi-send me-2"></i>Send Message
-                                    </button>
-                                </div>
+            <div class="row g-3 g-lg-4">
+                <!-- Songs Category (Audio) -->
+                <div class="col-md-6 col-lg-4">
+                    <a class="blog-card" href="songs.html">
+                        <div class="blog-thumb">
+                            <img src="assets/img/hero1.png" alt="Jagannath Devotional Songs">
+                            <div class="category-overlay">
+                                <i class="bi bi-music-note-beamed"></i>
                             </div>
-                        </form>
-                    </div>
+                        </div>
+                        <div class="blog-body">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="badge bg-danger">
+                                    <i class="bi bi-headphones me-1"></i> Audio
+                                </span>
+                                <span class="text-muted small">35 Songs</span>
+                            </div>
+                            <h6 class="blog-title">Jagannath Devotional Songs</h6>
+                            <p class="blog-excerpt">Bhajans, aartis, and festival kirtans dedicated to Lord Jagannath.
+                            </p>
+                            <span class="blog-link">Listen now <i class="bi bi-arrow-right ms-1"></i></span>
+                        </div>
+                    </a>
                 </div>
 
+                <!-- Chalisa Category (Lyrics) -->
+                <div class="col-md-6 col-lg-4">
+                    <a class="blog-card" href="chalisa.html">
+                        <div class="blog-thumb">
+                            <img src="assets/img/istockphoto-1069137628-612x612.jpg" alt="Jagannath Chalisa">
+                            <div class="category-overlay">
+                                <i class="bi bi-journal-text"></i>
+                            </div>
+                        </div>
+                        <div class="blog-body">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="badge bg-warning text-dark">
+                                    <i class="bi bi-file-text me-1"></i> Lyrics
+                                </span>
+                                <span class="text-muted small">5 Chalisas</span>
+                            </div>
+                            <h6 class="blog-title">Chalisa</h6>
+                            <p class="blog-excerpt">40 sacred verses with Hindi, English, and Odia translations.</p>
+                            <span class="blog-link">Read now <i class="bi bi-arrow-right ms-1"></i></span>
+                        </div>
+                    </a>
+                </div>
 
+                <!-- Mantras Category (Lyrics) -->
+                <div class="col-md-6 col-lg-4">
+                    <a class="blog-card" href="mantras.html">
+                        <div class="blog-thumb">
+                            <img src="assets/img/hero2.png" alt="Jagannath Mantras">
+                            <div class="category-overlay">
+                                <i class="bi bi-journal-text"></i>
+                            </div>
+                        </div>
+                        <div class="blog-body">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="badge bg-warning text-dark">
+                                    <i class="bi bi-file-text me-1"></i> Lyrics
+                                </span>
+                                <span class="text-muted small">20 Mantras</span>
+                            </div>
+                            <h6 class="blog-title">Mantras</h6>
+                            <p class="blog-excerpt">Beej Mantra, Gayatri Mantra, and protective chants with meanings.
+                            </p>
+                            <span class="blog-link">Read now <i class="bi bi-arrow-right ms-1"></i></span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Aartis -->
+                <div class="col-md-6 col-lg-4">
+                    <a class="blog-card" href="song-player.html">
+                        <div class="blog-thumb">
+                            <img src="assets/img/ratha-collage.png" alt="Aartis and Kirtans">
+                            <div class="category-overlay">
+                                <i class="bi bi-music-note-list"></i>
+                            </div>
+                        </div>
+                        <div class="blog-body">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="badge bg-danger">
+                                    <i class="bi bi-headphones me-1"></i> Audio
+                                </span>
+                                <span class="text-muted small">12 Aartis</span>
+                            </div>
+                            <h6 class="blog-title">Aartis & Kirtans</h6>
+                            <p class="blog-excerpt">Morning and evening aartis with temple-style rhythms.</p>
+                            <span class="blog-link">Listen now <i class="bi bi-arrow-right ms-1"></i></span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Stotras -->
+                <div class="col-md-6 col-lg-4">
+                    <a class="blog-card" href="ashtakam.html">
+                        <div class="blog-thumb">
+                            <img src="assets/img/2b3gx8h.jpg" alt="Stotras and Ashtakams">
+                            <div class="category-overlay">
+                                <i class="bi bi-book"></i>
+                            </div>
+                        </div>
+                        <div class="blog-body">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="badge bg-warning text-dark">
+                                    <i class="bi bi-file-text me-1"></i> Lyrics
+                                </span>
+                                <span class="text-muted small">9 Stotras</span>
+                            </div>
+                            <h6 class="blog-title">Stotras & Ashtakams</h6>
+                            <p class="blog-excerpt">Classical praise hymns with transliteration and meaning.</p>
+                            <span class="blog-link">Read now <i class="bi bi-arrow-right ms-1"></i></span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Podcasts -->
+                <div class="col-md-6 col-lg-4">
+                    <a class="blog-card" href="song-player.html">
+                        <div class="blog-thumb">
+                            <img src="assets/img/hero1.png" alt="Devotional Podcasts">
+                            <div class="category-overlay">
+                                <i class="bi bi-mic"></i>
+                            </div>
+                        </div>
+                        <div class="blog-body">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="badge bg-danger">
+                                    <i class="bi bi-headphones me-1"></i> Audio
+                                </span>
+                                <span class="text-muted small">8 Episodes</span>
+                            </div>
+                            <h6 class="blog-title">Jagannath Podcasts</h6>
+                            <p class="blog-excerpt">Stories, festivals, and teachings from Puri with expert guests.</p>
+                            <span class="blog-link">Listen now <i class="bi bi-arrow-right ms-1"></i></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Recitations -->
+    <section class="section-pad pt-0">
+        <div class="container">
+            <div class="section-head">
+                <div>
+                    <p class="section-kicker">Most loved</p>
+                    <h3 class="section-title">Popular <span class="text-accent">Recitations</span></h3>
+                </div>
+                <a href="library.html" class="btn btn-outline-dark btn-sm">View full list</a>
+            </div>
+
+            <div class="row g-3 g-lg-4">
+                <div class="col-lg-7">
+                    <div class="list-group">
+                        <a href="jagannath-ashtakam.html" class="list-group-item list-group-item-action d-flex justify-content-between">
+                            <div>
+                                <div class="fw-semibold">Jagannath Ashtakam</div>
+                                <small class="text-muted">Sanskrit, transliteration, meaning</small>
+                            </div>
+                            <span class="badge text-bg-danger align-self-center">7 min</span>
+                        </a>
+                        <a href="song-player.html" class="list-group-item list-group-item-action d-flex justify-content-between">
+                            <div>
+                                <div class="fw-semibold">Sri Jagannath Aarti</div>
+                                <small class="text-muted">Evening aarti with lyrics</small>
+                            </div>
+                            <span class="badge text-bg-danger align-self-center">5 min</span>
+                        </a>
+                        <a href="mantras.html" class="list-group-item list-group-item-action d-flex justify-content-between">
+                            <div>
+                                <div class="fw-semibold">Gayatri Mantra</div>
+                                <small class="text-muted">Pronunciation + benefits</small>
+                            </div>
+                            <span class="badge text-bg-warning text-dark align-self-center">Text</span>
+                        </a>
+                        <a href="mantras.html" class="list-group-item list-group-item-action d-flex justify-content-between">
+                            <div>
+                                <div class="fw-semibold">Jagannath Beej Mantra</div>
+                                <small class="text-muted">Seed mantra for daily chanting</small>
+                            </div>
+                            <span class="badge text-bg-warning text-dark align-self-center">Text</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="p-4 border rounded-4 h-100">
+                        <h5 class="fw-bold mb-2">Create Your Playlist</h5>
+                        <p class="text-muted">
+                            Save your favorite chants and build a daily ritual flow. Each list syncs across devices.
+                        </p>
+                        <ul class="list-unstyled d-grid gap-2 text-muted small mb-3">
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i> Morning and evening sets</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i> Auto-scroll lyrics</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i> One-tap temple aarti</li>
+                        </ul>
+                        <a href="song-player.html" class="btn btn-brand">Start a playlist</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -617,7 +555,6 @@
 
                 <div class="col-lg-5">
 
-
                     <!-- Newsletter inside Contact Column -->
                     <div class="footer-newsletter-box">
                         <h6 class="footer-title mb-2">Newsletter</h6>
@@ -640,8 +577,7 @@
 
             <hr class="my-4">
 
-            <div
-                class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 small text-muted">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 small text-muted">
                 <div>© 2026 JagannathaKrupa. All rights reserved.</div>
                 <div class="d-flex align-items-center gap-3">
                     <a class="text-muted" href="#">Privacy</a>
@@ -652,8 +588,8 @@
     </footer>
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
-

@@ -1,231 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Jagannatha Krupa</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Devotional Songs - JagannathaKrupa</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <style>
-  
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&family=Crimson+Pro:wght@400;600;700;900&display=swap"
+        rel="stylesheet">
 
-        /* Contact Info Cards */
-        .contact-info-card {
-            background: white;
-            border: 1px solid #e9ecef;
-            border-radius: 12px;
-            padding: 2rem;
-            text-align: center;
-            transition: all 0.3s ease;
-            height: 100%;
-        }
-
-        .contact-info-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border-color: var(--brand-red);
-        }
-
-        .contact-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, var(--brand-red) 0%, #a00410 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-        }
-
-        .contact-icon i {
-            font-size: 2rem;
-            color: white;
-        }
-
-        .contact-info-card h5 {
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--brand-dark);
-        }
-
-        .contact-info-card p {
-            color: var(--text-muted);
-            margin-bottom: 0;
-            font-size: 0.95rem;
-        }
-
-        .contact-info-card a {
-            color: var(--brand-red);
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .contact-info-card a:hover {
-            text-decoration: underline;
-        }
-
-        /* Contact Form */
-        .contact-form-wrapper {
-            background: white;
-            border-radius: 12px;
-            padding: 2.5rem;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-        }
-
-        .contact-form-wrapper h3 {
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            color: var(--brand-dark);
-        }
-
-
-
-        .btn-brand {
-            background: linear-gradient(135deg, var(--brand-red) 0%, #a00410 100%);
-            color: white;
-            border: none;
-            padding: 0.875rem 2.5rem;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .btn-brand:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(227, 6, 19, 0.3);
-            color: white;
-        }
-
-        /* Map Section */
-        .map-wrapper {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            margin-bottom: 3rem;
-        }
-
-        .map-wrapper iframe {
-            width: 100%;
-            height: 450px;
-            border: 0;
-        }
-
-        /* Working Hours */
-        .working-hours {
-            background: var(--bg-soft);
-            border-radius: 12px;
-            padding: 2rem;
-            margin-top: 2rem;
-        }
-
-        .working-hours h4 {
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            color: var(--brand-dark);
-        }
-
-        .hours-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.75rem 0;
-            border-bottom: 1px solid #dee2e6;
-        }
-
-        .hours-item:last-child {
-            border-bottom: none;
-        }
-
-        .hours-day {
-            font-weight: 600;
-            color: var(--brand-dark);
-        }
-
-        .hours-time {
-            color: var(--text-muted);
-        }
-
-        .hours-time.closed {
-            color: var(--brand-red);
-        }
-
-        /* Social Connect */
-        .social-connect {
-            background: linear-gradient(135deg, rgba(227, 6, 19, 0.05) 0%, rgba(227, 6, 19, 0.1) 100%);
-            border-radius: 12px;
-            padding: 2rem;
-            text-align: center;
-            margin-top: 2rem;
-        }
-
-        .social-connect h4 {
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--brand-dark);
-        }
-
-        .social-connect p {
-            color: var(--text-muted);
-            margin-bottom: 1.5rem;
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-        }
-
-        .social-icon {
-            width: 50px;
-            height: 50px;
-            background: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--brand-red);
-            font-size: 1.5rem;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-        }
-
-        .social-icon:hover {
-            background: var(--brand-red);
-            color: white;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(227, 6, 19, 0.3);
-        }
-
-
-        /* Section Padding */
-        .section-pad {
-            padding: 3rem 0;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .page-header {
-                padding: 3rem 0 2rem;
-            }
-
-            .contact-form-wrapper {
-                padding: 1.5rem;
-            }
-
-            .map-wrapper iframe {
-                height: 300px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
@@ -242,14 +36,10 @@
                     <a class="topbar-link" href="my-orders.html">Tracking Order</a>
                     <a class="topbar-link" href="profile.html">My Account</a>
                     <div class="d-flex align-items-center gap-2">
-
-                        <!-- Social Icons -->
                         <a class="topbar-icon" href="#"><i class="bi bi-facebook"></i></a>
                         <a class="topbar-icon" href="#"><i class="bi bi-instagram"></i></a>
                         <a class="topbar-icon" href="#"><i class="bi bi-youtube"></i></a>
-
                     </div>
-
                 </div>
             </div>
         </div>
@@ -271,7 +61,8 @@
                     <!-- Brand -->
                     <a class="navbar-brand d-flex align-items-center gap-2 m-0 mobile-brand" href="#">
                         <span class="brand-mark">J</span>
-                        <span class="brand-text text-truncate">Jagannatha<span class="brand-accent">Krupa</span></span>
+                        <span class="brand-text text-truncate">Jagannatha<span
+                                class="brand-accent">Krupa</span></span>
                     </a>
 
                     <!-- Icons -->
@@ -283,8 +74,8 @@
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end language-dropdown">
                                 <li><a class="dropdown-item" href="#">En</a></li>
-                                <li><a class="dropdown-item" href="#">हिंदी</a></li>
-                                <li><a class="dropdown-item" href="#">ଓଡ଼ିଆ</a></li>
+                                <li><a class="dropdown-item" href="#">Hindi</a></li>
+                                <li><a class="dropdown-item" href="#">Odia</a></li>
                             </ul>
                         </div>
                         <a class="icon-btn position-relative" href="cart.html" aria-label="Cart">
@@ -313,7 +104,6 @@
                             <div class="dropdown-menu shop-mega-menu-compact">
                                 <div class="mega-menu-wrapper">
                                     <div class="row g-0">
-                                        <!-- Left Side: Categories List -->
                                         <div class="col-5">
                                             <div class="mega-menu-section">
                                                 <h6 class="mega-menu-title">SHOP BY CATEGORY</h6>
@@ -352,12 +142,10 @@
                                             </div>
                                         </div>
 
-                                        <!-- Right Side: Featured Products (Only 2) -->
                                         <div class="col-7">
                                             <div class="mega-menu-section border-start">
                                                 <h6 class="mega-menu-title">FEATURED PRODUCTS</h6>
                                                 <div class="row g-3">
-                                                    <!-- Product Card 1 -->
                                                     <div class="col-6">
                                                         <a href="#" class="mega-product-card">
                                                             <div class="mega-product-image">
@@ -367,8 +155,6 @@
                                                             <h6 class="mega-product-title">Ganesh Statue</h6>
                                                         </a>
                                                     </div>
-
-                                                    <!-- Product Card 2 -->
                                                     <div class="col-6">
                                                         <a href="#" class="mega-product-card">
                                                             <div class="mega-product-image">
@@ -379,12 +165,8 @@
                                                         </a>
                                                     </div>
                                                 </div>
-
-                                                <!-- View All Button -->
                                                 <div class="text-center mt-3">
-                                                    <a href="shop.html" class="btn-view-all-compact">
-                                                        See All Products
-                                                    </a>
+                                                    <a href="shop.html" class="btn-view-all-compact">See All Products</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -417,8 +199,8 @@
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end language-dropdown">
                                 <li><a class="dropdown-item" href="#">En</a></li>
-                                <li><a class="dropdown-item" href="#">हिंदी</a></li>
-                                <li><a class="dropdown-item" href="#">ଓଡ଼ିଆ</a></li>
+                                <li><a class="dropdown-item" href="#">Hindi</a></li>
+                                <li><a class="dropdown-item" href="#">Odia</a></li>
                             </ul>
                         </div>
                     </div>
@@ -467,109 +249,220 @@
         </div>
     </header>
 
-    <!-- Contact Info Cards -->
+    <section class="breadcrumb-wrap py-3">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-lite">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="library.html">Library</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Songs</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+
+    <!-- Devotional Songs -->
     <section class="section-pad">
         <div class="container">
-            <div class="row g-4 mb-5">
-                <div class="col-md-4">
-
-                    <!-- Social Connect -->
-                    <div class="social-connect">
-                        <h4>Connect With Us</h4>
-                        <p>Follow us on social media for updates and offers</p>
-                        <div class="social-icons">
-                            <a href="#" class="social-icon" title="Facebook">
-                                <i class="bi bi-facebook"></i>
-                            </a>
-                            <a href="#" class="social-icon" title="Instagram">
-                                <i class="bi bi-instagram"></i>
-                            </a>
-                            <a href="#" class="social-icon" title="YouTube">
-                                <i class="bi bi-youtube"></i>
-                            </a>
-                            <a href="#" class="social-icon" title="WhatsApp">
-                                <i class="bi bi-whatsapp"></i>
-                            </a>
-                        </div>
-                    </div>
+            <div class="section-head">
+                <div>
+                    <p class="section-kicker">Melodic devotion</p>
+                    <h3 class="section-title">Devotional <span class="text-accent">Songs</span></h3>
                 </div>
-
-                <div class="col-md-4">
-                    <div class="contact-info-card">
-                        <div class="contact-icon">
-                            <i class="bi bi-telephone-fill"></i>
-                        </div>
-                        <h5>Call Us</h5>
-                        <p><a href="tel:+919876543210">+91 98765 43210</a></p>
-                        <p><a href="tel:+919876543211">+91 98765 43211</a></p>
-                        <p class="mt-2 small">Mon - Sat: 9:00 AM - 8:00 PM</p>
+                <div class="d-flex flex-column flex-lg-row gap-2">
+                    <div class="input-group input-group-sm">
+                        <span class="input-group-text bg-white"><i class="bi bi-search"></i></span>
+                        <input class="form-control" type="text" placeholder="Search songs" />
                     </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="contact-info-card">
-                        <div class="contact-icon">
-                            <i class="bi bi-envelope-fill"></i>
-                        </div>
-                        <h5>Email Us</h5>
-                        <p><a href="mailto:support@jaganathakrupa.com">support@jaganathakrupa.com</a></p>
-                        <p><a href="mailto:info@jaganathakrupa.com">info@jaganathakrupa.com</a></p>
-                        <p class="mt-2 small">We reply within 24 hours</p>
-                    </div>
+                    <button class="btn btn-outline-dark btn-sm" type="button">
+                        <i class="bi bi-sliders me-1"></i> Filter
+                    </button>
                 </div>
             </div>
 
-            <!-- Contact Form & Info -->
-            <div class="row g-4 justify-content-center">
-                <div class="col-lg-8">
-                    <div class="contact-form-wrapper">
-                        <h3>Send us a Message</h3>
-                        <p class="text-muted mb-4">Have a question or need assistance? Fill out the form below and we'll
-                            get back to you as soon as possible.</p>
-
-                        <form
-                            onsubmit="event.preventDefault(); alert('Thank you for contacting us! We will get back to you soon.');">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <label class="form-label">Your Name *</label>
-                                    <input type="text" class="form-control" placeholder="Enter your name" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label">Your Email *</label>
-                                    <input type="email" class="form-control" placeholder="Enter your email" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label">Phone Number</label>
-                                    <input type="tel" class="form-control" placeholder="Enter your phone">
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label">Subject *</label>
-                                    <select class="form-select" required>
-                                        <option value="">Select a subject</option>
-                                        <option value="general">General Inquiry</option>
-                                        <option value="product">Product Question</option>
-                                        <option value="order">Order Support</option>
-                                        <option value="bulk">Bulk Order Request</option>
-                                        <option value="feedback">Feedback</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label">Your Message *</label>
-                                    <textarea class="form-control" placeholder="Write your message here..."
-                                        required></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <button type="submit" class="btn btn-brand">
-                                        <i class="bi bi-send me-2"></i>Send Message
-                                    </button>
-                                </div>
+            <div class="row g-3 g-lg-4">
+                <div class="col-md-6 col-lg-4">
+                    <a class="blog-card" href="song-player.html">
+                        <div class="blog-thumb">
+                            <img src="assets/img/hero1.png" alt="Jagannath Bhajans">
+                            <div class="category-overlay">
+                                <i class="bi bi-music-note-beamed"></i>
                             </div>
-                        </form>
-                    </div>
+                        </div>
+                        <div class="blog-body">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="badge bg-danger">
+                                    <i class="bi bi-headphones me-1"></i> Audio
+                                </span>
+                                <span class="text-muted small">12 Tracks</span>
+                            </div>
+                            <h6 class="blog-title">Jagannath Bhajans</h6>
+                            <p class="blog-excerpt">Temple-style bhajans for morning and evening practice.</p>
+                            <span class="blog-link">Listen now <i class="bi bi-arrow-right ms-1"></i></span>
+                        </div>
+                    </a>
                 </div>
 
+                <div class="col-md-6 col-lg-4">
+                    <a class="blog-card" href="#">
+                        <div class="blog-thumb">
+                            <img src="assets/img/hero2.png" alt="Ratha Yatra Kirtans">
+                            <div class="category-overlay">
+                                <i class="bi bi-music-note-list"></i>
+                            </div>
+                        </div>
+                        <div class="blog-body">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="badge bg-danger">
+                                    <i class="bi bi-headphones me-1"></i> Audio
+                                </span>
+                                <span class="text-muted small">8 Tracks</span>
+                            </div>
+                            <h6 class="blog-title">Ratha Yatra Kirtans</h6>
+                            <p class="blog-excerpt">Festival rhythms and chants from Puri.</p>
+                            <span class="blog-link">Listen now <i class="bi bi-arrow-right ms-1"></i></span>
+                        </div>
+                    </a>
+                </div>
 
+                <div class="col-md-6 col-lg-4">
+                    <a class="blog-card" href="#">
+                        <div class="blog-thumb">
+                            <img src="assets/img/ratha-collage.png" alt="Aarti Songs">
+                            <div class="category-overlay">
+                                <i class="bi bi-music-note"></i>
+                            </div>
+                        </div>
+                        <div class="blog-body">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="badge bg-danger">
+                                    <i class="bi bi-headphones me-1"></i> Audio
+                                </span>
+                                <span class="text-muted small">6 Tracks</span>
+                            </div>
+                            <h6 class="blog-title">Aarti Songs</h6>
+                            <p class="blog-excerpt">Morning and evening aartis with soothing melodies.</p>
+                            <span class="blog-link">Listen now <i class="bi bi-arrow-right ms-1"></i></span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <a class="blog-card" href="#">
+                        <div class="blog-thumb">
+                            <img src="assets/img/2b3gx8h.jpg" alt="Odia Devotional Hits">
+                            <div class="category-overlay">
+                                <i class="bi bi-music-note-beamed"></i>
+                            </div>
+                        </div>
+                        <div class="blog-body">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="badge bg-danger">
+                                    <i class="bi bi-headphones me-1"></i> Audio
+                                </span>
+                                <span class="text-muted small">10 Tracks</span>
+                            </div>
+                            <h6 class="blog-title">Odia Devotional Hits</h6>
+                            <p class="blog-excerpt">Popular Odia bhajans with lyrical clarity.</p>
+                            <span class="blog-link">Listen now <i class="bi bi-arrow-right ms-1"></i></span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <a class="blog-card" href="#">
+                        <div class="blog-thumb">
+                            <img src="assets/img/istockphoto-1069137628-612x612.jpg" alt="Meditative Chants">
+                            <div class="category-overlay">
+                                <i class="bi bi-music-note"></i>
+                            </div>
+                        </div>
+                        <div class="blog-body">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="badge bg-danger">
+                                    <i class="bi bi-headphones me-1"></i> Audio
+                                </span>
+                                <span class="text-muted small">5 Tracks</span>
+                            </div>
+                            <h6 class="blog-title">Meditative Chants</h6>
+                            <p class="blog-excerpt">Slow, calming chants for quiet focus.</p>
+                            <span class="blog-link">Listen now <i class="bi bi-arrow-right ms-1"></i></span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <a class="blog-card" href="#">
+                        <div class="blog-thumb">
+                            <img src="assets/img/hero1.png" alt="Temple Evening Set">
+                            <div class="category-overlay">
+                                <i class="bi bi-music-note-list"></i>
+                            </div>
+                        </div>
+                        <div class="blog-body">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="badge bg-danger">
+                                    <i class="bi bi-headphones me-1"></i> Audio
+                                </span>
+                                <span class="text-muted small">7 Tracks</span>
+                            </div>
+                            <h6 class="blog-title">Temple Evening Set</h6>
+                            <p class="blog-excerpt">A curated flow for dusk and nightly worship.</p>
+                            <span class="blog-link">Listen now <i class="bi bi-arrow-right ms-1"></i></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-pad pt-0">
+        <div class="container">
+            <div class="row g-3 g-lg-4">
+                <div class="col-lg-7">
+                    <div class="section-head">
+                        <div>
+                            <p class="section-kicker">Listening guide</p>
+                            <h3 class="section-title">How to <span class="text-accent">Listen</span></h3>
+                        </div>
+                    </div>
+                    <div class="list-group">
+                        <div class="list-group-item">
+                            <div class="fw-semibold">1. Set the mood</div>
+                            <div class="text-muted small">Light a diya and find a quiet corner.</div>
+                        </div>
+                        <div class="list-group-item">
+                            <div class="fw-semibold">2. Choose your flow</div>
+                            <div class="text-muted small">Pick morning, evening, or meditation sets.</div>
+                        </div>
+                        <div class="list-group-item">
+                            <div class="fw-semibold">3. Breathe with the rhythm</div>
+                            <div class="text-muted small">Let the melody guide your focus.</div>
+                        </div>
+                        <div class="list-group-item">
+                            <div class="fw-semibold">4. Close with gratitude</div>
+                            <div class="text-muted small">Offer thanks and a short prayer.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="info-card">
+                        <div class="info-card-content">
+                            <div class="info-card-icon">
+                                <i class="bi bi-headphones"></i>
+                            </div>
+                            <h3 class="info-card-title">Download Playlist</h3>
+                            <p class="mb-3">Offline listening for temple visits and travel.</p>
+                            <a href="#" class="btn btn-light">Download ZIP</a>
+                        </div>
+                    </div>
+                    <div class="p-4 border rounded-4">
+                        <h5 class="fw-bold mb-2">Need live kirtan?</h5>
+                        <p class="text-muted">Join weekly devotional gatherings online.</p>
+                        <a href="#" class="btn btn-brand">Join kirtan</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -578,7 +471,6 @@
     <footer class="footer pt-5 pb-3">
         <div class="container">
             <hr class="my-4">
-            <!-- Footer Links -->
             <div class="row g-4">
                 <div class="col-lg-3">
                     <a class="navbar-brand d-inline-flex align-items-center gap-2 mb-2" href="#">
@@ -616,9 +508,6 @@
                 </div>
 
                 <div class="col-lg-5">
-
-
-                    <!-- Newsletter inside Contact Column -->
                     <div class="footer-newsletter-box">
                         <h6 class="footer-title mb-2">Newsletter</h6>
                         <p class="text-muted small mb-3">Get puja updates, festival offers, and new devotional products.
@@ -640,9 +529,8 @@
 
             <hr class="my-4">
 
-            <div
-                class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 small text-muted">
-                <div>© 2026 JagannathaKrupa. All rights reserved.</div>
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 small text-muted">
+                <div>(c) 2026 JagannathaKrupa. All rights reserved.</div>
                 <div class="d-flex align-items-center gap-3">
                     <a class="text-muted" href="#">Privacy</a>
                     <a class="text-muted" href="#">Terms</a>
@@ -652,7 +540,8 @@
     </footer>
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

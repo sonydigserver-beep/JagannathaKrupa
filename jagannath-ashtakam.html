@@ -1,0 +1,810 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jagannath Ashtakam - JagannathaKrupa</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Crimson+Pro:wght@400;600;700;900&family=Noto+Sans+Oriya:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <style>
+        /* ---- ASHTAKAM HERO ---- */
+        .chalisa-hero {
+            position: relative;
+            background: linear-gradient(135deg, rgba(26,12,58,0.84) 0%, rgba(71,28,120,0.7) 50%, rgba(30,12,58,0.9) 100%),
+                        url("assets/img/ratha-collage.png") center/cover no-repeat;
+            color: #fff;
+            border-radius: 24px;
+            overflow: hidden;
+            padding: 48px 40px 40px;
+            margin-bottom: 8px;
+        }
+        .chalisa-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 60% 50% at 80% 30%, rgba(212,160,60,0.18) 0%, transparent 70%),
+                radial-gradient(ellipse 40% 40% at 15% 70%, rgba(180,80,30,0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .chalisa-hero > * { position: relative; z-index: 1; }
+
+        .chalisa-hero .om-symbol {
+            font-size: 3rem;
+            opacity: 0.18;
+            position: absolute;
+            top: 24px; right: 36px;
+            font-family: serif;
+            color: #d4a03c;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .chalisa-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            margin-bottom: 6px;
+        }
+        .chalisa-hero h1 .accent { color: #d4a03c; }
+        .chalisa-hero .subtitle {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.05rem;
+            opacity: 0.82;
+            margin-bottom: 24px;
+        }
+
+        /* Meta pills row */
+        .meta-pills { display: flex; flex-wrap: wrap; gap: 10px; }
+        .meta-pill {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.18);
+            backdrop-filter: blur(6px);
+            border-radius: 50px;
+            padding: 7px 16px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            display: flex; align-items: center; gap: 6px;
+        }
+        .meta-pill i { opacity: 0.75; }
+
+        /* Action bar below hero */
+        .action-bar {
+            display: flex; gap: 10px; flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .action-bar .btn {
+            border-radius: 50px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            padding: 7px 18px;
+        }
+        .btn-gold {
+            background: linear-gradient(135deg, #d4a03c, #b8842a);
+            color: #fff !important;
+            border: none;
+        }
+        .btn-gold:hover { filter: brightness(1.1); }
+
+        /* ---- STICKY PROGRESS / SECTION NAV ---- */
+        .chalisa-nav {
+            position: sticky;
+            top: 68px;
+            z-index: 100;
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #eee;
+            padding: 10px 0;
+            margin-bottom: 28px;
+        }
+        .chalisa-nav .nav-pills .nav-link {
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #555;
+            padding: 5px 14px;
+            transition: all .2s;
+        }
+        .chalisa-nav .nav-pills .nav-link:hover { background: #f3ece3; color: #5a2d0c; }
+        .chalisa-nav .nav-pills .nav-link.active { background: #5a2d0c; color: #fff; }
+
+        /* ---- INTRO CARD ---- */
+        .intro-card {
+            background: linear-gradient(135deg, #fdf6ee, #fff8f0);
+            border: 1px solid #f0ddd0;
+            border-radius: 20px;
+            padding: 28px 30px;
+            margin-bottom: 32px;
+        }
+        .intro-card .intro-icon {
+            width: 48px; height: 48px;
+            background: linear-gradient(135deg, #d4a03c, #c0892a);
+            border-radius: 14px;
+            display: flex; align-items: center; justify-content: center;
+            color: #fff; font-size: 1.4rem;
+            margin-bottom: 14px;
+        }
+        .intro-card h5 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: #5a2d0c;
+            margin-bottom: 8px;
+        }
+        .intro-card p { color: #6b5040; font-size: 0.92rem; line-height: 1.7; margin: 0; }
+
+        /* ---- SECTION LABEL ---- */
+        .section-label {
+            display: flex; align-items: center; gap: 12px;
+            margin-bottom: 18px; margin-top: 36px;
+        }
+        .section-label:first-of-type { margin-top: 0; }
+        .section-label .label-line {
+            flex: 1; height: 1px;
+            background: linear-gradient(90deg, #d4a03c, transparent);
+        }
+        .section-label .label-line.right {
+            background: linear-gradient(270deg, #d4a03c, transparent);
+        }
+        .section-label span {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #5a2d0c;
+            white-space: nowrap;
+        }
+
+        /* ---- VERSE CARD ---- */
+        .verse-card {
+            background: #fff;
+            border: 1px solid #ede5dc;
+            border-radius: 18px;
+            padding: 22px 22px 20px;
+            margin-bottom: 14px;
+            transition: box-shadow .25s, transform .2s;
+            position: relative;
+            overflow: hidden;
+            scroll-margin-top: 100px;
+        }
+        .verse-card:hover {
+            box-shadow: 0 6px 24px rgba(90,45,12,0.1);
+            transform: translateY(-2px);
+        }
+        .verse-card::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0; bottom: 0;
+            width: 4px;
+            background: linear-gradient(180deg, #d4a03c, #5a2d0c);
+            border-radius: 18px 0 0 18px;
+        }
+
+        .verse-top { display: flex; gap: 14px; align-items: flex-start; }
+        .verse-number {
+            min-width: 34px; height: 34px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #5a2d0c, #3e1f08);
+            color: #fff;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 0.82rem;
+            flex-shrink: 0;
+            box-shadow: 0 3px 8px rgba(90,45,12,0.3);
+        }
+        .verse-content { flex: 1; }
+
+        .odia-line {
+            font-family: 'Noto Sans Oriya', serif;
+            font-size: 1.08rem;
+            font-weight: 600;
+            color: #2c1a10;
+            line-height: 1.7;
+        }
+
+        /* ---- PHALA SHRUTI styling ---- */
+        .doha-card {
+            background: linear-gradient(135deg, #fdf3e8, #fff6ef);
+            border-color: #f0ddd0;
+        }
+        .doha-card::before {
+            background: linear-gradient(180deg, #d4a03c, #d4a03c);
+        }
+
+        /* ---- IMAGE BREAK BANNER ---- */
+        .image-break {
+            border-radius: 20px;
+            overflow: hidden;
+            height: 180px;
+            position: relative;
+            margin: 28px 0;
+        }
+        .image-break img {
+            width: 100%; height: 100%; object-fit: cover;
+        }
+        .image-break .overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(90deg, rgba(26,12,58,0.7), transparent 60%, rgba(26,12,58,0.5));
+            display: flex; align-items: center;
+            padding: 0 28px;
+        }
+        .image-break .overlay p {
+            color: #fff;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-style: italic;
+            max-width: 460px;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* ---- SIDEBAR: Audio / Info ---- */
+        .sidebar-card {
+            background: #fff;
+            border: 1px solid #ede5dc;
+            border-radius: 18px;
+            padding: 22px;
+            margin-bottom: 16px;
+        }
+        .sidebar-card .sc-icon {
+            width: 44px; height: 44px;
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+        .sc-icon.gold { background: linear-gradient(135deg, #d4a03c, #b8842a); color: #fff; }
+        .sc-icon.red  { background: linear-gradient(135deg, #5a2d0c, #3e1f08); color: #fff; }
+
+        .sidebar-card h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600; color: #2c1a10;
+            margin-bottom: 6px;
+        }
+        .sidebar-card p { font-size: 0.85rem; color: #7a6258; margin-bottom: 14px; line-height: 1.55; }
+
+        .jump-list { list-style: none; padding: 0; margin: 0; }
+        .jump-list li + li { border-top: 1px solid #f0e8e0; }
+        .jump-list a {
+            display: flex; align-items: center; gap: 10px;
+            padding: 9px 0;
+            text-decoration: none;
+            color: #4a3020;
+            font-size: 0.84rem;
+            font-weight: 600;
+            transition: color .2s;
+        }
+        .jump-list a:hover { color: #5a2d0c; }
+        .jump-list a i { color: #d4a03c; font-size: 0.9rem; }
+
+        /* ---- CLOSING CARD ---- */
+        .closing-card {
+            background: linear-gradient(135deg, #3e1f08, #5a2d0c);
+            color: #fff;
+            border-radius: 20px;
+            padding: 32px 28px;
+            text-align: center;
+            margin-top: 36px;
+            scroll-margin-top: 100px;
+        }
+        .closing-card h5 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+        }
+        .closing-card p { opacity: 0.82; font-size: 0.9rem; max-width: 520px; margin: 0 auto 18px; line-height: 1.6; }
+        .closing-card .btn {
+            border-radius: 50px;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: #fff;
+            font-weight: 600;
+            font-size: 0.83rem;
+            padding: 8px 20px;
+            margin: 3px;
+            transition: background .2s;
+        }
+        .closing-card .btn:hover { background: rgba(255,255,255,0.25); }
+
+        /* ---- RESPONSIVE ---- */
+        @media (max-width: 576px) {
+            .chalisa-hero { padding: 30px 20px 26px; border-radius: 16px; }
+            .verse-card { padding: 16px 16px 14px; border-radius: 14px; }
+            .image-break { height: 130px; border-radius: 14px; }
+            .image-break .overlay p { font-size: 0.92rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===================== TOPBAR ===================== -->
+<div class="topbar py-2 d-none d-lg-block">
+    <div class="container">
+        <div class="d-flex align-items-center justify-content-between gap-3">
+            <div class="topbar-left small">
+                <span class="me-3"><i class="bi bi-telephone me-1"></i> +91 00000 00000</span>
+                <span><i class="bi bi-envelope me-1"></i> support@example.com</span>
+            </div>
+            <div class="topbar-right d-flex align-items-center gap-3 small">
+                <a class="topbar-link" href="my-orders.html">Tracking Order</a>
+                <a class="topbar-link" href="profile.html">My Account</a>
+                <div class="d-flex align-items-center gap-2">
+                    <a class="topbar-icon" href="#"><i class="bi bi-facebook"></i></a>
+                    <a class="topbar-icon" href="#"><i class="bi bi-instagram"></i></a>
+                    <a class="topbar-icon" href="#"><i class="bi bi-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg bg-white border-bottom py-2 py-lg-3">
+        <div class="container">
+            <div class="mobile-top d-flex d-lg-none w-100 align-items-center justify-content-between gap-2">
+                <button class="navbar-toggler nav-toggler-mini" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand d-flex align-items-center gap-2 m-0 mobile-brand" href="#">
+                    <span class="brand-mark">J</span>
+                    <span class="brand-text text-truncate">Jagannatha<span class="brand-accent">Krupa</span></span>
+                </a>
+                <div class="d-flex align-items-center gap-2 mobile-icons">
+                    <div class="dropdown">
+                        <a class="icon-btn dropdown-toggle" type="button" data-bs-toggle="dropdown"><i class="bi bi-translate"></i></a>
+                        <ul class="dropdown-menu dropdown-menu-end language-dropdown">
+                            <li><a class="dropdown-item" href="#">En</a></li>
+                            <li><a class="dropdown-item" href="#">Hindi</a></li>
+                            <li><a class="dropdown-item" href="#">Odia</a></li>
+                        </ul>
+                    </div>
+                    <a class="icon-btn position-relative" href="cart.html"><i class="bi bi-bag"></i><span class="badge rounded-pill text-bg-dark icon-badge">2</span></a>
+                </div>
+            </div>
+
+            <a class="navbar-brand d-none d-lg-flex align-items-center gap-2" href="index.html">
+                <span class="brand-mark">J</span>
+                <span class="brand-text">Jagannatha<span class="brand-accent">Krupa</span></span>
+            </a>
+
+            <div class="collapse navbar-collapse d-none d-lg-flex" id="desktopNav">
+                <ul class="navbar-nav mx-lg-auto mb-2 mb-lg-0 gap-lg-2">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Shop</a>
+                        <div class="dropdown-menu shop-mega-menu-compact">
+                            <div class="mega-menu-wrapper">
+                                <div class="row g-0">
+                                    <div class="col-5">
+                                        <div class="mega-menu-section">
+                                            <h6 class="mega-menu-title">SHOP BY CATEGORY</h6>
+                                            <ul class="mega-menu-categories">
+                                                <li><a href="#" class="category-link"><i class="bi bi-hand-thumbs-up"></i><span>Handcraft</span></a></li>
+                                                <li><a href="#" class="category-link"><i class="bi bi-threads"></i><span>Handlooms</span></a></li>
+                                                <li><a href="#" class="category-link"><i class="bi bi-gift"></i><span>Dry Prashad</span></a></li>
+                                                <li><a href="#" class="category-link"><i class="bi bi-flag"></i><span>Flag Hosting Booking</span></a></li>
+                                                <li><a href="#" class="category-link"><i class="bi bi-airplane"></i><span>Travel and Hotel Bookings</span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="mega-menu-section border-start">
+                                            <h6 class="mega-menu-title">FEATURED PRODUCTS</h6>
+                                            <div class="row g-3">
+                                                <div class="col-6">
+                                                    <a href="#" class="mega-product-card">
+                                                        <div class="mega-product-image"><img src="https://images.unsplash.com/photo-1610375461246-83df859d849d?w=300&h=300&fit=crop" alt="Ganesh Statue"></div>
+                                                        <h6 class="mega-product-title">Ganesh Statue</h6>
+                                                    </a>
+                                                </div>
+                                                <div class="col-6">
+                                                    <a href="#" class="mega-product-card">
+                                                        <div class="mega-product-image"><img src="https://images.unsplash.com/photo-1604608672516-f1b9b1a0b3c5?w=300&h=300&fit=crop" alt="Buddha Figurine"></div>
+                                                        <h6 class="mega-product-title">Buddha Figurine</h6>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="text-center mt-3">
+                                                <a href="shop.html" class="btn-view-all-compact">See All Products</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="library.html">Library</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
+                </ul>
+
+                <div class="d-none d-lg-flex align-items-center gap-2">
+                    <div class="header-search d-none d-lg-flex">
+                        <i class="bi bi-search"></i>
+                        <input class="form-control form-control-sm" type="text" placeholder="Search..." />
+                    </div>
+                    <a class="icon-btn" href="login.html" aria-label="Account"><i class="bi bi-person"></i></a>
+                    <a class="icon-btn" href="#" aria-label="Wishlist"><i class="bi bi-heart"></i></a>
+                    <a class="icon-btn position-relative" href="cart.html" aria-label="Cart">
+                        <i class="bi bi-bag"></i>
+                        <span class="badge rounded-pill text-bg-dark icon-badge">2</span>
+                    </a>
+                    <div class="dropdown">
+                        <a class="icon-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-translate"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end language-dropdown">
+                            <li><a class="dropdown-item" href="#">En</a></li>
+                            <li><a class="dropdown-item" href="#">Hindi</a></li>
+                            <li><a class="dropdown-item" href="#">Odia</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MOBILE SEARCH ROW -->
+        <div class="d-lg-none w-100 px-0">
+            <div class="container pt-2 pb-2">
+                <form class="mobile-search" onsubmit="event.preventDefault();">
+                    <input type="text" class="mobile-search-input" placeholder="Search JagannathaKrupa..." />
+                    <button class="mobile-search-btn" type="submit" aria-label="Search">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- OFFCANVAS SIDEBAR (mobile menu) -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-body">
+            <nav class="mobile-menu">
+                <a class="mobile-link" href="index.html">Home</a>
+                <a class="mobile-link" href="shop.html">Shop</a>
+                <a class="mobile-link" href="service.html">Services</a>
+                <a class="mobile-link" href="library.html">Library</a>
+                <a class="mobile-link" href="contact-us.html">Contact</a>
+            </nav>
+
+            <hr>
+
+            <div class="d-grid gap-2">
+                <a href="login.html" class="btn btn-outline-dark btn-sm"><i class="bi bi-person me-1"></i> Account</a>
+                <a href="#" class="btn btn-outline-dark btn-sm"><i class="bi bi-heart me-1"></i> Wishlist</a>
+                <a href="cart.html" class="btn btn-brand btn-sm"><i class="bi bi-bag me-1"></i> Cart</a>
+            </div>
+        </div>
+    </div>
+  </header>
+
+  <section class="breadcrumb-wrap py-3">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb breadcrumb-lite">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="library.html">Library</a></li>
+          <li class="breadcrumb-item"><a href="ashtakam.html">Ashtakam</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Jagannath Ashtakam</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+<section class="section-pad">
+    <div class="container">
+        <div class="chalisa-hero">
+            <div class="om-symbol">?</div>
+            <h1>Jagannath <span class="accent">Ashtakam</span></h1>
+            <div class="subtitle">?????????????? � A sacred eight-verse stotra</div>
+
+            <div class="meta-pills">
+                <div class="meta-pill"><i class="bi bi-stars"></i> 8 Verses</div>
+                <div class="meta-pill"><i class="bi bi-feather"></i> Adi Shankaracharya</div>
+                <div class="meta-pill"><i class="bi bi-music-note"></i> Daily Recitation</div>
+                <div class="meta-pill"><i class="bi bi-award"></i> Phala Shruti</div>
+            </div>
+
+            <div class="action-bar">
+                <button class="btn btn-gold"><i class="bi bi-play-circle me-1"></i> Listen Audio</button>
+                <button class="btn btn-outline-light"><i class="bi bi-printer me-1"></i> Print</button>
+                <button class="btn btn-outline-light"><i class="bi bi-bookmark me-1"></i> Save</button>
+            </div>
+        </div>
+
+        <div class="chalisa-nav">
+            <div class="container">
+                <ul class="nav nav-pills justify-content-center gap-2">
+                    <li class="nav-item"><a class="nav-link" href="#overview">Overview</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#v1">Verses 1 � 4</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#v5">Verses 5 � 8</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#phala">Phala Shruti</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#closing">Closing</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <div class="intro-card" id="overview">
+                    <div class="intro-icon"><i class="bi bi-flower3"></i></div>
+                    <h5>About Jagannath Ashtakam</h5>
+                    <p>The Jagannath Ashtakam is a revered hymn of eight verses that celebrates Lord Jagannath of Puri. Each verse glorifies the divine form, compassion, and grace of the Lord, culminating in a prayer for eternal remembrance and liberation.</p>
+                </div>
+
+                <div class="section-label" id="v1">
+                    <div class="label-line"></div>
+                    <span>Verses 1 � 4</span>
+                    <div class="label-line right"></div>
+                </div>
+
+                <div class="verse-card">
+                    <div class="verse-top">
+                        <div class="verse-number">1</div>
+                        <div class="verse-content">
+                            <div class="odia-line">???????-??????? ??????? ?????????<br>???????? ??????? ?????????????? ?<br>??? ???? ???????????? ?????????? ???<br>???????? ?????? ????????? ???? ?? ? 1 ?</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="verse-card">
+                    <div class="verse-top">
+                        <div class="verse-number">2</div>
+                        <div class="verse-content">
+                            <div class="odia-line">???? ????? ????? ????? ????????? ??????<br>?????? ????????? ??????????? ?????? ?<br>??? ????????????????????????????<br>???????? ?????? ????????? ???? ?? ? 2 ?</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="verse-card">
+                    <div class="verse-top">
+                        <div class="verse-number">3</div>
+                        <div class="verse-content">
+                            <div class="odia-line">?????????????? ????????? ????????<br>???? ??????????????? ???????? ????? ?<br>??????? ??????????????? ?????????<br>???????? ?????? ????????? ???? ?? ? 3 ?</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="verse-card">
+                    <div class="verse-top">
+                        <div class="verse-number">4</div>
+                        <div class="verse-content">
+                            <div class="odia-line">???? ????????????? ??? ????????????<br>??????? ??????????? ??????????? ?<br>????????????????? ???????????? ??? ?????<br>???????? ??????  ?????????  ????  ?? ? 4 ?</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-break">
+                    <img src="assets/img/istockphoto-1069137628-612x612.jpg" alt="Jagannath Temple">
+                    <div class="overlay">
+                        <p>�May the Lord of the Universe walk the path of our vision and remain ever in our hearts.�</p>
+                    </div>
+                </div>
+
+                <div class="section-label" id="v5">
+                    <div class="label-line"></div>
+                    <span>Verses 5 � 8</span>
+                    <div class="label-line right"></div>
+                </div>
+
+                <div class="verse-card">
+                    <div class="verse-top">
+                        <div class="verse-number">5</div>
+                        <div class="verse-content">
+                            <div class="odia-line">??????? ?????? ??? ????? ??????????<br>?????? ???????????? ????????????????? ???? ?<br>??????????????????? ???? ??????????<br>???????? ??????  ?????????  ????  ?? ? 5 ?</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="verse-card">
+                    <div class="verse-top">
+                        <div class="verse-number">6</div>
+                        <div class="verse-content">
+                            <div class="odia-line">????????????? ?????-??????????????<br>?????? ???????? ?????-????????-????? ?<br>??????? ????-???-??????????-???<br>???????? ??????  ?????????  ????  ?? ? 6 ?</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="verse-card">
+                    <div class="verse-top">
+                        <div class="verse-number">7</div>
+                        <div class="verse-content">
+                            <div class="odia-line">? ?? ???? ?????? ? ? ??? ???????  ?????<br>? ???????  ??????  ???????-???????  ??????? ?<br>??? ???? ????  ?????-?????  ????????<br>???????? ??????  ?????????  ????  ?? ? 7 ?</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="verse-card">
+                    <div class="verse-top">
+                        <div class="verse-number">8</div>
+                        <div class="verse-content">
+                            <div class="odia-line">??  ????  ??????  ????????????  ??????<br>??  ????  ???????  ??????????  ??????? ?<br>???  ?????????  ?????????  ???????????<br>???????? ??????  ?????????  ????  ?? ? 8 ?</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-label" id="phala">
+                    <div class="label-line"></div>
+                    <span>Phala Shruti</span>
+                    <div class="label-line right"></div>
+                </div>
+
+                <div class="verse-card doha-card">
+                    <div class="verse-top">
+                        <div class="verse-number" style="background:linear-gradient(135deg,#d4a03c,#b8842a);">PS</div>
+                        <div class="verse-content">
+                            <div class="odia-line">?????????????  ??????  ??  ?????  ??????  ????? ?<br>???????  ????????????  ??????????  ?  ?????? ?</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="verse-card doha-card">
+                    <div class="verse-top">
+                        <div class="verse-number" style="background:linear-gradient(135deg,#d4a03c,#b8842a);">IT</div>
+                        <div class="verse-content">
+                            <div class="odia-line">???  ???????  ?????????????????  ?????????????  ?????????</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="closing-card" id="closing">
+                    <h5>?? ???????</h5>
+                    <p>May Lord Jagannath bless you with devotion, clarity, and peace. Recite these eight verses with faith, and may the divine grace guide your path.</p>
+                    <div>
+                        <button class="btn"><i class="bi bi-headphones me-1"></i> Listen Full Audio</button>
+                        <button class="btn"><i class="bi bi-download me-1"></i> Download PDF</button>
+                        <button class="btn"><i class="bi bi-share me-1"></i> Share</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="sidebar-card">
+                    <div class="sc-icon gold"><i class="bi bi-play-circle-fill"></i></div>
+                    <h6>Listen Audio</h6>
+                    <p>Play the guided recitation with accurate Odia pronunciation and devotional music.</p>
+                    <button class="btn btn-gold w-100"><i class="bi bi-play-fill me-1"></i> Play Audio</button>
+                </div>
+
+                <div class="sidebar-card">
+                    <div class="sc-icon red"><i class="bi bi-compass"></i></div>
+                    <h6>Quick Jump</h6>
+                    <ul class="jump-list">
+                        <li><a href="#overview"><i class="bi bi-chevron-right"></i> Overview</a></li>
+                        <li><a href="#v1"><i class="bi bi-chevron-right"></i> Verses 1 � 4</a></li>
+                        <li><a href="#v5"><i class="bi bi-chevron-right"></i> Verses 5 � 8</a></li>
+                        <li><a href="#phala"><i class="bi bi-chevron-right"></i> Phala Shruti</a></li>
+                        <li><a href="#closing"><i class="bi bi-chevron-right"></i> Closing</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-card">
+                    <div class="sc-icon red"><i class="bi bi-info-circle"></i></div>
+                    <h6>About Lord Jagannath</h6>
+                    <p>Lord Jagannath, the Lord of the Universe, is worshipped at Puri alongside Balabhadra and Subhadra. The Ashtakam is a heartfelt prayer to behold his divine form and grace.</p>
+                    <a href="#" class="btn btn-outline-dark btn-sm w-100">Read More</a>
+                </div>
+
+                <div class="sidebar-card">
+                    <div class="sc-icon gold"><i class="bi bi-stars"></i></div>
+                    <h6>Benefits of Recitation</h6>
+                    <ul class="list-unstyled mb-0" style="font-size:0.84rem; color:#6b5040;">
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Brings calm and focus</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Deepens devotion</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Reminds of divine protection</li>
+                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Invokes spiritual clarity</li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-card">
+                    <div class="sc-icon red"><i class="bi bi-music-note-list"></i></div>
+                    <h6>Related Prayers</h6>
+                    <ul class="jump-list">
+                        <li><a href="#"><i class="bi bi-chevron-right"></i> Jagannath Sahasranama</a></li>
+                        <li><a href="#"><i class="bi bi-chevron-right"></i> Jagannath Aarti</a></li>
+                        <li><a href="#"><i class="bi bi-chevron-right"></i> Jagannath Bhajan</a></li>
+                        <li><a href="#"><i class="bi bi-chevron-right"></i> Niladri Vihara</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer pt-5 pb-3">
+    <div class="container">
+        <hr class="my-4">
+        <div class="row g-4">
+            <div class="col-lg-3">
+                <a class="navbar-brand d-inline-flex align-items-center gap-2 mb-2" href="#">
+                    <span class="brand-mark">J</span>
+                    <span class="brand-text">Jagannatha <span class="brand-accent">Krupa</span></span>
+                </a>
+                <p class="text-muted mb-3">Premium devotional products for daily worship and special occasions.</p>
+                <ul class="footer-links mb-4">
+                    <li><a href="#"><i class="bi bi-geo-alt me-1"></i> Bhubaneswar, Odisha</a></li>
+                    <li><a href="#"><i class="bi bi-telephone me-1"></i> +91 00000 00000</a></li>
+                    <li><a href="#"><i class="bi bi-envelope me-1"></i> support@example.com</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-2">
+                <h6 class="footer-title">Our Company</h6>
+                <ul class="footer-links">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-2">
+                <h6 class="footer-title">Products</h6>
+                <ul class="footer-links">
+                    <li><a href="#">All Products</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Best Sellers</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-5">
+                <div class="footer-newsletter-box">
+                    <h6 class="footer-title mb-2">Newsletter</h6>
+                    <p class="text-muted small mb-3">Get puja updates, festival offers, and new devotional products.</p>
+                    <form class="newsletter-form-footer" onsubmit="event.preventDefault();">
+                        <input class="form-control" type="email" placeholder="Your email" required />
+                        <button class="btn btn-danger" type="submit"><i class="bi bi-send"></i></button>
+                    </form>
+                </div>
+                <div class="d-flex gap-2 mt-4">
+                    <a class="footer-icon" href="#"><i class="bi bi-facebook"></i></a>
+                    <a class="footer-icon" href="#"><i class="bi bi-instagram"></i></a>
+                    <a class="footer-icon" href="#"><i class="bi bi-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr class="my-4">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 small text-muted">
+            <div>� 2026 JagannathaKrupa. All rights reserved.</div>
+            <div class="d-flex align-items-center gap-3">
+                <a class="text-muted" href="#">Privacy</a>
+                <a class="text-muted" href="#">Terms</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+<script>
+// Smooth scroll for quick jump links
+document.querySelectorAll('.jump-list a, .chalisa-nav .nav-link').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (!href || !href.startsWith('#')) {
+            return;
+        }
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+</script>
+
+</body>
+</html>
+
