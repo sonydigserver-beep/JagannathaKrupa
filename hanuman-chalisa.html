@@ -1,0 +1,1263 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hanuman Chalisa - JagannathaKrupa</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Crimson+Pro:wght@400;600;700;900&family=Noto+Sans+Oriya:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <style>
+        /* ─── CHALISA HERO ─── */
+        .chalisa-hero {
+            position: relative;
+            background: linear-gradient(135deg, rgba(80,10,10,0.82) 0%, rgba(140,40,20,0.7) 50%, rgba(60,10,10,0.88) 100%),
+                        url("assets/img/ratha-collage.png") center/cover no-repeat;
+            color: #fff;
+            border-radius: 24px;
+            overflow: hidden;
+            padding: 48px 40px 40px;
+            margin-bottom: 8px;
+        }
+        .chalisa-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 60% 50% at 80% 30%, rgba(212,160,60,0.15) 0%, transparent 70%),
+                radial-gradient(ellipse 40% 40% at 15% 70%, rgba(180,80,30,0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .chalisa-hero > * { position: relative; z-index: 1; }
+
+        .chalisa-hero .om-symbol {
+            font-size: 3rem;
+            opacity: 0.18;
+            position: absolute;
+            top: 24px; right: 36px;
+            font-family: serif;
+            color: #d4a03c;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .chalisa-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            margin-bottom: 6px;
+        }
+        .chalisa-hero h1 .accent { color: #d4a03c; }
+        .chalisa-hero .subtitle {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.05rem;
+            opacity: 0.82;
+            margin-bottom: 24px;
+        }
+
+        /* Meta pills row */
+        .meta-pills { display: flex; flex-wrap: wrap; gap: 10px; }
+        .meta-pill {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.18);
+            backdrop-filter: blur(6px);
+            border-radius: 50px;
+            padding: 7px 16px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            display: flex; align-items: center; gap: 6px;
+        }
+        .meta-pill i { opacity: 0.75; }
+
+        /* Action bar below hero */
+        .action-bar {
+            display: flex; gap: 10px; flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .action-bar .btn {
+            border-radius: 50px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            padding: 7px 18px;
+        }
+        .btn-gold {
+            background: linear-gradient(135deg, #d4a03c, #b8842a);
+            color: #fff !important;
+            border: none;
+        }
+        .btn-gold:hover { filter: brightness(1.1); }
+
+        /* ─── STICKY PROGRESS / SECTION NAV ─── */
+        .chalisa-nav {
+            position: sticky;
+            top: 68px;
+            z-index: 100;
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #eee;
+            padding: 10px 0;
+            margin-bottom: 28px;
+        }
+        .chalisa-nav .nav-pills .nav-link {
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #555;
+            padding: 5px 14px;
+            transition: all .2s;
+        }
+        .chalisa-nav .nav-pills .nav-link:hover { background: #f3ece3; color: #8b3a1d; }
+        .chalisa-nav .nav-pills .nav-link.active { background: #8b3a1d; color: #fff; }
+
+        /* ─── INTRO CARD ─── */
+        .intro-card {
+            background: linear-gradient(135deg, #fdf6ee, #fff8f0);
+            border: 1px solid #f0ddd0;
+            border-radius: 20px;
+            padding: 28px 30px;
+            margin-bottom: 32px;
+        }
+        .intro-card .intro-icon {
+            width: 48px; height: 48px;
+            background: linear-gradient(135deg, #d4a03c, #c0892a);
+            border-radius: 14px;
+            display: flex; align-items: center; justify-content: center;
+            color: #fff; font-size: 1.4rem;
+            margin-bottom: 14px;
+        }
+        .intro-card h5 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: #5a2d0c;
+            margin-bottom: 8px;
+        }
+        .intro-card p { color: #6b5040; font-size: 0.92rem; line-height: 1.7; margin: 0; }
+
+        /* ─── SECTION LABEL ─── */
+        .section-label {
+            display: flex; align-items: center; gap: 12px;
+            margin-bottom: 18px; margin-top: 36px;
+        }
+        .section-label:first-of-type { margin-top: 0; }
+        .section-label .label-line {
+            flex: 1; height: 1px;
+            background: linear-gradient(90deg, #d4a03c, transparent);
+        }
+        .section-label .label-line.right {
+            background: linear-gradient(270deg, #d4a03c, transparent);
+        }
+        .section-label span {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #8b3a1d;
+            white-space: nowrap;
+        }
+
+        /* ─── VERSE CARD ─── */
+        .verse-card {
+            background: #fff;
+            border: 1px solid #ede5dc;
+            border-radius: 18px;
+            padding: 22px 22px 20px;
+            margin-bottom: 14px;
+            transition: box-shadow .25s, transform .2s;
+            position: relative;
+            overflow: hidden;
+            scroll-margin-top: 100px;
+        }
+        .verse-card:hover {
+            box-shadow: 0 6px 24px rgba(139,58,29,0.1);
+            transform: translateY(-2px);
+        }
+        /* subtle left accent stripe */
+        .verse-card::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0; bottom: 0;
+            width: 4px;
+            background: linear-gradient(180deg, #d4a03c, #8b3a1d);
+            border-radius: 18px 0 0 18px;
+        }
+
+        .verse-top { display: flex; gap: 14px; align-items: flex-start; }
+        .verse-number {
+            min-width: 34px; height: 34px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #8b3a1d, #6e2d18);
+            color: #fff;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 0.82rem;
+            flex-shrink: 0;
+            box-shadow: 0 3px 8px rgba(139,58,29,0.3);
+        }
+        .verse-content { flex: 1; }
+
+        .odia-line {
+            font-family: 'Noto Sans Oriya', serif;
+            font-size: 1.08rem;
+            font-weight: 600;
+            color: #2c1a10;
+            line-height: 1.7;
+        }
+        .meaning-line {
+            font-size: 0.88rem;
+            color: #7a6258;
+            line-height: 1.6;
+            margin-top: 8px;
+            padding-top: 10px;
+            border-top: 1px dashed #e5d8ce;
+            font-style: italic;
+        }
+        .meaning-line .meaning-label {
+            font-style: normal;
+            font-weight: 700;
+            color: #8b3a1d;
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        /* ─── DOHA special styling ─── */
+        .doha-card {
+            background: linear-gradient(135deg, #fdf3e8, #fff6ef);
+            border-color: #f0ddd0;
+        }
+        .doha-card::before {
+            background: linear-gradient(180deg, #d4a03c, #d4a03c);
+        }
+
+        /* ─── IMAGE BREAK BANNER ─── */
+        .image-break {
+            border-radius: 20px;
+            overflow: hidden;
+            height: 180px;
+            position: relative;
+            margin: 28px 0;
+        }
+        .image-break img {
+            width: 100%; height: 100%; object-fit: cover;
+        }
+        .image-break .overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(90deg, rgba(80,10,10,0.7), transparent 60%, rgba(80,10,10,0.5));
+            display: flex; align-items: center;
+            padding: 0 28px;
+        }
+        .image-break .overlay p {
+            color: #fff;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-style: italic;
+            max-width: 420px;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* ─── SIDEBAR: Audio / Info ─── */
+        .sidebar-card {
+            background: #fff;
+            border: 1px solid #ede5dc;
+            border-radius: 18px;
+            padding: 22px;
+            margin-bottom: 16px;
+        }
+        .sidebar-card .sc-icon {
+            width: 44px; height: 44px;
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+        .sc-icon.gold { background: linear-gradient(135deg, #d4a03c, #b8842a); color: #fff; }
+        .sc-icon.red  { background: linear-gradient(135deg, #8b3a1d, #6e2d18); color: #fff; }
+
+        .sidebar-card h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600; color: #2c1a10;
+            margin-bottom: 6px;
+        }
+        .sidebar-card p { font-size: 0.85rem; color: #7a6258; margin-bottom: 14px; line-height: 1.55; }
+
+        /* Quick-jump list */
+        .jump-list { list-style: none; padding: 0; margin: 0; }
+        .jump-list li + li { border-top: 1px solid #f0e8e0; }
+        .jump-list a {
+            display: flex; align-items: center; gap: 10px;
+            padding: 9px 0;
+            text-decoration: none;
+            color: #4a3020;
+            font-size: 0.84rem;
+            font-weight: 600;
+            transition: color .2s;
+        }
+        .jump-list a:hover { color: #8b3a1d; }
+        .jump-list a i { color: #d4a03c; font-size: 0.9rem; }
+
+        /* ─── CLOSING CARD ─── */
+        .closing-card {
+            background: linear-gradient(135deg, #5a1d0c, #8b3a1d);
+            color: #fff;
+            border-radius: 20px;
+            padding: 32px 28px;
+            text-align: center;
+            margin-top: 36px;
+            scroll-margin-top: 100px;
+        }
+        .closing-card h5 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+        }
+        .closing-card p { opacity: 0.82; font-size: 0.9rem; max-width: 480px; margin: 0 auto 18px; line-height: 1.6; }
+        .closing-card .btn {
+            border-radius: 50px;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: #fff;
+            font-weight: 600;
+            font-size: 0.83rem;
+            padding: 8px 20px;
+            margin: 3px;
+            transition: background .2s;
+        }
+        .closing-card .btn:hover { background: rgba(255,255,255,0.25); }
+
+        /* ─── RESPONSIVE ─── */
+        @media (max-width: 576px) {
+            .chalisa-hero { padding: 30px 20px 26px; border-radius: 16px; }
+            .verse-card { padding: 16px 16px 14px; border-radius: 14px; }
+            .image-break { height: 130px; border-radius: 14px; }
+            .image-break .overlay p { font-size: 0.92rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ════════════════════ TOPBAR ════════════════════ -->
+<div class="topbar py-2 d-none d-lg-block">
+    <div class="container">
+        <div class="d-flex align-items-center justify-content-between gap-3">
+            <div class="topbar-left small">
+                <span class="me-3"><i class="bi bi-telephone me-1"></i> +91 00000 00000</span>
+                <span><i class="bi bi-envelope me-1"></i> support@example.com</span>
+            </div>
+            <div class="topbar-right d-flex align-items-center gap-3 small">
+                <a class="topbar-link" href="my-orders.html">Tracking Order</a>
+                <a class="topbar-link" href="profile.html">My Account</a>
+                <div class="d-flex align-items-center gap-2">
+                    <a class="topbar-icon" href="#"><i class="bi bi-facebook"></i></a>
+                    <a class="topbar-icon" href="#"><i class="bi bi-instagram"></i></a>
+                    <a class="topbar-icon" href="#"><i class="bi bi-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ════════════════════ HEADER ════════════════════ -->
+<header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg bg-white border-bottom py-2 py-lg-3">
+        <div class="container">
+            <div class="mobile-top d-flex d-lg-none w-100 align-items-center justify-content-between gap-2">
+                <button class="navbar-toggler nav-toggler-mini" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand d-flex align-items-center gap-2 m-0 mobile-brand" href="#">
+                    <span class="brand-mark">J</span>
+                    <span class="brand-text text-truncate">Jagannatha<span class="brand-accent">Krupa</span></span>
+                </a>
+                <div class="d-flex align-items-center gap-2 mobile-icons">
+                    <div class="dropdown">
+                        <a class="icon-btn dropdown-toggle" type="button" data-bs-toggle="dropdown"><i class="bi bi-translate"></i></a>
+                        <ul class="dropdown-menu dropdown-menu-end language-dropdown">
+                            <li><a class="dropdown-item" href="#">En</a></li>
+                            <li><a class="dropdown-item" href="#">हिन्दी</a></li>
+                            <li><a class="dropdown-item" href="#">ଓଡ଼ିଆ</a></li>
+                        </ul>
+                    </div>
+                    <a class="icon-btn position-relative" href="cart.html"><i class="bi bi-bag"></i><span class="badge rounded-pill text-bg-dark icon-badge">2</span></a>
+                </div>
+            </div>
+
+            <a class="navbar-brand d-none d-lg-flex align-items-center gap-2" href="#">
+                <span class="brand-mark">J</span>
+                <span class="brand-text">Jagannatha<span class="brand-accent">Krupa</span></span>
+            </a>
+
+            <div class="collapse navbar-collapse d-none d-lg-flex" id="desktopNav">
+                <ul class="navbar-nav mx-lg-auto mb-2 mb-lg-0 gap-lg-2">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Shop</a>
+                        <div class="dropdown-menu shop-mega-menu-compact">
+                            <div class="mega-menu-wrapper">
+                                <div class="row g-0">
+                                    <div class="col-5">
+                                        <div class="mega-menu-section">
+                                            <h6 class="mega-menu-title">SHOP BY CATEGORY</h6>
+                                            <ul class="mega-menu-categories">
+                                                <li><a href="#" class="category-link"><i class="bi bi-hand-thumbs-up"></i><span>Handcraft</span></a></li>
+                                                <li><a href="#" class="category-link"><i class="bi bi-threads"></i><span>Handlooms</span></a></li>
+                                                <li><a href="#" class="category-link"><i class="bi bi-gift"></i><span>Dry Prashad</span></a></li>
+                                                <li><a href="#" class="category-link"><i class="bi bi-flag"></i><span>Flag Hosting Booking</span></a></li>
+                                                <li><a href="#" class="category-link"><i class="bi bi-airplane"></i><span>Travel and Hotel Bookings</span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="mega-menu-section border-start">
+                                            <h6 class="mega-menu-title">FEATURED PRODUCTS</h6>
+                                            <div class="row g-3">
+                                                <div class="col-6">
+                                                    <a href="#" class="mega-product-card">
+                                                        <div class="mega-product-image"><img src="https://images.unsplash.com/photo-1610375461246-83df859d849d?w=300&h=300&fit=crop" alt="Ganesh Statue"></div>
+                                                        <h6 class="mega-product-title">Ganesh Statue</h6>
+                                                    </a>
+                                                </div>
+                                                <div class="col-6">
+                                                    <a href="#" class="mega-product-card">
+                                                        <div class="mega-product-image"><img src="https://images.unsplash.com/photo-1604608672516-f1b9b1a0b3c5?w=300&h=300&fit=crop" alt="Buddha Figurine"></div>
+                                                        <h6 class="mega-product-title">Buddha Figurine</h6>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="text-center mt-3"><a href="shop.html" class="btn-view-all-compact">See All Products</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link " href="library.html">Library</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
+                </ul>
+                <div class="d-none d-lg-flex align-items-center gap-2">
+                    <div class="header-search d-none d-lg-flex">
+                        <i class="bi bi-search"></i>
+                        <input class="form-control form-control-sm" type="text" placeholder="Search..." />
+                    </div>
+                    <a class="icon-btn" href="login.html"><i class="bi bi-person"></i></a>
+                    <a class="icon-btn" href="#"><i class="bi bi-heart"></i></a>
+                    <a class="icon-btn position-relative" href="cart.html"><i class="bi bi-bag"></i><span class="badge rounded-pill text-bg-dark icon-badge">2</span></a>
+                    <div class="dropdown">
+                        <a class="icon-btn dropdown-toggle" type="button" data-bs-toggle="dropdown"><i class="bi bi-translate"></i></a>
+                        <ul class="dropdown-menu dropdown-menu-end language-dropdown">
+                            <li><a class="dropdown-item" href="#">En</a></li>
+                            <li><a class="dropdown-item" href="#">हिन्दी</a></li>
+                            <li><a class="dropdown-item" href="#">ଓଡ଼ିଆ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-lg-none w-100 px-0">
+            <div class="container pt-2 pb-2">
+                <form class="mobile-search" onsubmit="event.preventDefault();">
+                    <input type="text" class="mobile-search-input" placeholder="Search JagannathaKrupa..." />
+                    <button class="mobile-search-btn" type="submit"><i class="bi bi-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <nav class="mobile-menu">
+                <a class="mobile-link" href="index.html">Home</a>
+                <a class="mobile-link" href="shop.html">Shop</a>
+                <a class="mobile-link" href="service.html">Services</a>
+                <a class="mobile-link" href="library.html">Library</a>
+                <a class="mobile-link" href="contact-us.html">Contact</a>
+            </nav>
+            <hr>
+            <div class="d-grid gap-2">
+                <a href="login.html" class="btn btn-outline-dark btn-sm"><i class="bi bi-person me-1"></i> Account</a>
+                <a href="#" class="btn btn-outline-dark btn-sm"><i class="bi bi-heart me-1"></i> Wishlist</a>
+                <a href="cart.html" class="btn btn-brand btn-sm"><i class="bi bi-bag me-1"></i> Cart</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+  <section class="breadcrumb-wrap py-3">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb breadcrumb-lite">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="library.html">Library</a></li>
+          <li class="breadcrumb-item"><a href="chalisa.html">Chalisa</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Hanuman Chalisa</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+<!-- ════════════════════ MAIN CONTENT ════════════════════ -->
+<section class="section-pad pt-4">
+<div class="container">
+<div class="row g-4">
+
+<!-- ── LEFT / MAIN ── -->
+<div class="col-lg-8">
+
+    <!-- HERO CARD -->
+    <div class="chalisa-hero">
+        <span class="om-symbol">ॐ</span>
+        <h1>Hanuman <span class="accent">Chalisa</span></h1>
+        <p class="subtitle">ଶ୍ରୀ ହନୁମାନ୍ ଚାଳିସା — A 40-verse devotional hymn</p>
+        <div class="meta-pills">
+            <span class="meta-pill"><i class="bi bi-person-fill"></i> Goswami Tulsidas</span>
+            <span class="meta-pill"><i class="bi bi-translate"></i> Odia + English</span>
+            <span class="meta-pill"><i class="bi bi-collection"></i> 40 Verses</span>
+            <span class="meta-pill"><i class="bi bi-clock"></i> ~12 min recitation</span>
+        </div>
+        <div class="action-bar">
+            <button class="btn btn-gold"><i class="bi bi-play-circle-fill me-1"></i> Listen Audio</button>
+            <button class="btn btn-outline-light"><i class="bi bi-printer me-1"></i> Print</button>
+            <button class="btn btn-outline-light"><i class="bi bi-bookmark me-1"></i> Save</button>
+            <button class="btn btn-outline-light"><i class="bi bi-share me-1"></i> Share</button>
+        </div>
+    </div>
+
+    <!-- INTRO INFO -->
+    <div class="intro-card">
+        <div class="intro-icon"><i class="bi bi-book-heart"></i></div>
+        <h5>About This Hymn</h5>
+        <p>The Hanuman Chalisa is one of the most sacred devotional hymns in Hinduism, composed by the poet-saint <strong>Goswami Tulsidas</strong> in the 16th century. It contains 40 verses (Chaupayees) praising Lord Hanuman — the embodiment of strength, courage, devotion, and selfless service. Each verse below is presented in <strong>Odia script</strong> alongside its <strong>English meaning</strong> for easy understanding.</p>
+    </div>
+
+    <!-- ═══ DOHA (Opening) ═══ -->
+    <div class="section-label" id="doha-open">
+        <div class="label-line"></div>
+        <span>ଦୋହା — Opening Doha</span>
+        <div class="label-line right"></div>
+    </div>
+
+    <!-- Doha 1 -->
+    <div class="verse-card doha-card">
+        <div class="verse-top">
+            <div class="verse-number" style="background:linear-gradient(135deg,#d4a03c,#b8842a);">D</div>
+            <div class="verse-content">
+                <div class="odia-line">
+                    ଶ୍ରୀଗୁରୁ ଚରଣ ସରୋଜ ରଜ ନିଜ ମନୁ ମୁକୁରୁ ସୁଧାରି ।<br>
+                    ବରନଉଁ ରଘୁବର ବିମଲ ଜସୁ ଜୋ ଦାୟକୁ ଫଲ ଚାରି ॥
+                </div>
+                <div class="meaning-line">
+                    <span class="meaning-label">English Meaning</span>
+                    Having polished the mirror of my heart with the dust of my Guru's lotus feet, I recite the divine fame of Raghuvar (Lord Rama), which bestows the fruit of all four efforts of life.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Doha 2 -->
+    <div class="verse-card doha-card">
+        <div class="verse-top">
+            <div class="verse-number" style="background:linear-gradient(135deg,#d4a03c,#b8842a);">D</div>
+            <div class="verse-content">
+                <div class="odia-line">
+                    ବୁଦ୍ଧିହୀନ ତନୁ ଜାନିକେ ସୁମିରୌ ପବନକୁମାର ।<br>
+                    ବଳ ବୁଦ୍ଧି ବିଦ୍ୟା ଦେହୁ ମୋହିଂ ହରହୁ କଲେସ ବିକାର ॥
+                </div>
+                <div class="meaning-line">
+                    <span class="meaning-label">English Meaning</span>
+                    Fully aware of the deficiency of my intelligence, I concentrate on Pavan Kumar (Hanuman) and humbly pray for strength, intelligence, and knowledge — to relieve me of all pain and distress.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ IMAGE BREAK 1 ═══ -->
+    <div class="image-break">
+        <img src="assets/img/hero1.png" alt="Lord Hanuman">
+        <div class="overlay">
+            <p>"The mighty Hanuman — ocean of wisdom, illuminator of all three worlds."</p>
+        </div>
+    </div>
+
+    <!-- ═══ CHAUPAYEE VERSES 1-10 ═══ -->
+    <div class="section-label" id="v1">
+        <div class="label-line"></div>
+        <span>ଚୌପାଈ — Verses 1 – 10</span>
+        <div class="label-line right"></div>
+    </div>
+
+    <!-- V1 -->
+    <div class="verse-card">
+        <div class="verse-top">
+            <div class="verse-number">1</div>
+            <div class="verse-content">
+                <div class="odia-line">ଜୟ ହନୁମାନ ଜ୍ଞାନ ଗୁନ ସାଗର ।<br>ଜୟ କପୀସ ତିହୁଁ ଲୋକ ଉଜାଗର ॥</div>
+                <div class="meaning-line"><span class="meaning-label">Meaning</span>Victory to thee, O Hanuman! You are the ocean of wisdom and virtue. Hail to you, O Kapisha! You illuminate all three worlds with your glory.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- V2 -->
+    <div class="verse-card">
+        <div class="verse-top">
+            <div class="verse-number">2</div>
+            <div class="verse-content">
+                <div class="odia-line">ରାମ ଦୂତ ଅତୁଲିତ ବଲ ଧାମା ।<br>ଅଂଜନିପୁତ୍ର ପବନସୁତ ନାମା ॥</div>
+                <div class="meaning-line"><span class="meaning-label">Meaning</span>You are the divine messenger of Shri Ram, possessing unmatched strength. Born to Anjani, you are known as Pavansut — the son of the wind god.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- V3 -->
+    <div class="verse-card">
+        <div class="verse-top">
+            <div class="verse-number">3</div>
+            <div class="verse-content">
+                <div class="odia-line">ମହାବୀର ବିକ୍ରମ ବଜରଂଗୀ ।<br>କୁମତି ନିବାର ସୁମତି କେ ସଂଗୀ ॥</div>
+                <div class="meaning-line"><span class="meaning-label">Meaning</span>O Great Warrior, valorous Bajrangi — you are the companion of good thoughts and the remover of evil minds.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- V4 -->
+    <div class="verse-card">
+        <div class="verse-top">
+            <div class="verse-number">4</div>
+            <div class="verse-content">
+                <div class="odia-line">କଂଚନ ବରନ ବିରାଜ ସୁବେସା ।<br>କାନନ କୁଣ୍ଡଳ କୁଚିତ କେସା ॥</div>
+                <div class="meaning-line"><span class="meaning-label">Meaning</span>You are golden in colour and shine in beautiful attire. You wear lovely earrings and have curly, flowing hair.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- V5 -->
+    <div class="verse-card">
+        <div class="verse-top">
+            <div class="verse-number">5</div>
+            <div class="verse-content">
+                <div class="odia-line">ହାଥ ବଜ୍ର ଔ ଧ୍ଵଜା ବିରାଜୈ ।<br>କାଁଧେ ମୁଁଜ ଜନେଊ ସାଜୈ ॥</div>
+                <div class="meaning-line"><span class="meaning-label">Meaning</span>You carry a thunderbolt and a victory flag in your hands. On your shoulder rests the sacred Munja thread (sacred thread of initiation).</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- V6 -->
+    <div class="verse-card">
+        <div class="verse-top">
+            <div class="verse-number">6</div>
+            <div class="verse-content">
+                <div class="odia-line">ଶଂକର ସୁବନ କେସରୀନଂଦନ ।<br>ତେଜ ପ୍ରତାପ ମହା ଜଗ ବଂଦନ ॥</div>
+                <div class="meaning-line"><span class="meaning-label">Meaning</span>As a descendant of Lord Shankar and pride of Kesari, your immense power and glory are revered throughout the universe.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- V7 -->
+    <div class="verse-card">
+        <div class="verse-top">
+            <div class="verse-number">7</div>
+            <div class="verse-content">
+                <div class="odia-line">ବିଦ୍ୟାବାନ ଗୁନୀ ଅତି ଚାତୁର ।<br>ରାମ କାଜ କରିବେ କୋ ଆତୁର ॥</div>
+                <div class="meaning-line"><span class="meaning-label">Meaning</span>You are the repository of all learning, virtuous, and highly skilled. You are always eager and ready to carry out Lord Rama's wishes.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- V8 -->
+    <div class="verse-card">
+        <div class="verse-top">
+            <div class="verse-number">8</div>
+            <div class="verse-content">
+                <div class="odia-line">ପ୍ରଭୁ ଚରିତ୍ର ସୁନିବେ କୋ ରସିୟା ।<br>ରାମ ଲକ୍ଷନ ସୀତା ମନ ବସିୟା ॥</div>
+                <div class="meaning-line"><span class="meaning-label">Meaning</span>You are an ardent listener of Lord Rama's life stories. Your heart is forever filled with Rama, Lakshman, and Sita.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- V9 -->
+    <div class="verse-card">
+        <div class="verse-top">
+            <div class="verse-number">9</div>
+            <div class="verse-content">
+                <div class="odia-line">ସୂକ୍ଷ୍ମ ରୂପ ଧରି ସିୟହିଂ ଦିଖାବା ।<br>ବିକଟ ରୂପ ଧରି ଲଂକ ଜରାବା ॥</div>
+                <div class="meaning-line"><span class="meaning-label">Meaning</span>Assuming the smallest form, you visited Sita. Assuming a gigantic and fearsome form, you burnt down Lanka.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- V10 -->
+    <div class="verse-card">
+        <div class="verse-top">
+            <div class="verse-number">10</div>
+            <div class="verse-content">
+                <div class="odia-line">ଭୀମ ରୂପ ଧରି ଅସୁର ସଁହାରେ ।<br>ରାମଚଂଦ୍ର କେ କାଜ ସଁବାରେ ॥</div>
+                <div class="meaning-line"><span class="meaning-label">Meaning</span>Assuming a terrible form, you destroyed the demons. You completed all the tasks assigned by Lord Ramachandra.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ IMAGE BREAK 2 ═══ -->
+    <div class="image-break">
+        <img src="assets/img/hero2.png" alt="Devotional Scene">
+        <div class="overlay">
+            <p>"He who brought Sanjivani and saved Lakshman's life — the true devotee of Rama."</p>
+        </div>
+    </div>
+
+    <!-- ═══ VERSES 11-20 ═══ -->
+    <div class="section-label" id="v11">
+        <div class="label-line"></div>
+        <span>ଚୌପାଈ — Verses 11 – 20</span>
+        <div class="label-line right"></div>
+    </div>
+
+    <!-- V11 -->
+    <div class="verse-card">
+        <div class="verse-top">
+            <div class="verse-number">11</div>
+            <div class="verse-content">
+                <div class="odia-line">ଲାୟ ସଜୀବନ ଲଖନ ଜିୟାୟେ ।<br>ଶ୍ରୀରଘୁବୀର ହରଷି ଉର ଲାୟେ ॥</div>
+                <div class="meaning-line"><span class="meaning-label">Meaning</span>You brought Sanjivani herb and restored Lakshman back to life. Lord Raghuvir (Rama) embraced you joyfully, overflowing with gratitude.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- V12 -->
+    <div class="verse-card">
+        <div class="verse-top">
+            <div class="verse-number">12</div>
+            <div class="verse-content">
+                <div class="odia-line">ରଘୁପତି କୀନ୍‌ହୀ ବହୁତ ବଡ଼ାଈ ।<br>ତୁମ ମମ ପ୍ରିୟ ଭରତହି ସମ ଭାଈ ॥</div>
+                <div class="meaning-line"><span class="meaning-label">Meaning</span>Raghupati (Lord Rama) praised you greatly and said: "You are as dear to me as my own brother Bharat."</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- V13 -->
+    <div class="verse-card">
+        <div class="verse-top">
+            <div class="verse-number">13</div>
+            <div class="verse-content">
+                <div class="odia-line">ସହସ ବଦନ ତୁମ୍‌ହରୋ ଜସ ଗାଵୟେଂ ।<br>ଅସ କହି ଶ୍ରୀପତି କଂଠ ଲଗଵୟେଁ ॥</div>
+                <div class="meaning-line"><span class="meaning-label">Meaning</span>Even the thousand-headed serpent Adishesha sings of your glory. So Lord Rama embraced you lovingly.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- V14 -->
+    <div class="verse-card">
+        <div class="verse-top">
+            <div class="verse-number">14</div>
+            <div class="verse-content">
+                <div class="odia-line">ସନକାଦିକ ବ୍ରହ୍ମାଦି ମୁନୀସା ।<br>ନାରଦ ସାରଦ ସହିତ ଅହୀସା ॥</div>
+                <div class="meaning-line"><span class="meaning-label">Meaning</span>Sanak and other sages, Brahma, Narad, Saraswati, and Adishesha — all revere your greatness.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- V15 -->
+    <div class="verse-card">
+        <div class="verse-top">
+            <div class="verse-number">15</div>
+            <div class="verse-content">
+                <div class="odia-line">ଜମ କୁବେର ଦିଗପାଲ ଜହାଁ ତେ ।<br>କବି କୋବିଦ କହି ସକେ କହାଁ ତେ ॥</div>
+                <div class="meaning-line"><span class="meaning-label">Meaning</span>Yama, Kubera, the Dikpalas (guardian gods), and even the greatest poets and scholars — none can fully describe your glory.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- V16 -->
+    <div class="verse-card">
+        <div class="verse-top">
+            <div class="verse-number">16</div>
+            <div class="verse-content">
+                <div class="odia-line">ତୁମ ଉପକାର ସୁଗ୍ରୀବହିଂ କୀନ୍ହା ।<br>ରାମ ମିଲାୟ ରାଜ ପଦ ଦୀନ୍ହା ॥</div>
+                <div class="meaning-line"><span class="meaning-label">Meaning</span>You rendered a great service to Sugreeva — you united him with Rama, which restored his royal throne.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- V17 -->
+    <div class="verse-card">
+        <div class="verse-top">
+            <div class="verse-number">17</div>
+            <div class="verse-content">
+                <div class="odia-line">ତୁମ୍‌ହରୋ ମନ୍ତ୍ର ବିଭୀଷନ ମାନା ।<br>ଲଂକେସ୍ଵର ଭଏ ସବ ଜଗ ଜାନା ॥</div>
+                <div class="meaning-line"><span class="meaning-label">Meaning</span>Vibhishan accepted your counsel and guidance. He became the King of Lanka, and the whole world knows this.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- V18 -->
+    <div class="verse-card">
+        <div class="verse-top">
+            <div class="verse-number">18</div>
+            <div class="verse-content">
+                <div class="odia-line">ଜୁଗ ସହସ୍ର ଜୋଜନ ପର ଭାନୂ ।<br>ଲୀଜ୍ୟୋ ତାହି ମଧୁର ଫଲ ଜାନୂ ॥</div>
+                <div class="meaning-line"><span class="meaning-label">Meaning</span>You leapt towards the sun, which lies thousands of Yojanas away, mistaking it for a sweet fruit.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- V19 -->
+    <div class="verse-card">
+        <div class="verse-top">
+            <div class="verse-number">19</div>
+            <div class="verse-content">
+                <div class="odia-line">ପ୍ରଭୁ ମୁଦ୍ରିକା ମେଲି ମୁଖ ମାହୀ ।<br>ଜଲଧି ଲାଘି ଗୟେ ଅଚରଜ ନାହୀ ॥</div>
+                <div class="meaning-line"><span class="meaning-label">Meaning</span>Placing Rama's ring in your mouth, you leapt across the ocean to Lanka. There is no surprise in that feat.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- V20 -->
+    <div class="verse-card">
+        <div class="verse-top">
+            <div class="verse-number">20</div>
+            <div class="verse-content">
+                <div class="odia-line">ଦୁର୍‌ଗମ କାଜ ଜଗତ କେ ଜେତେ ।<br>ସୁଗମ ଅନୁଗ୍ରହ ତୁମ୍‌ହରେ ତେତେ ॥</div>
+                <div class="meaning-line"><span class="meaning-label">Meaning</span>All the difficult tasks in this world become easy when blessed by your grace.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ IMAGE BREAK 3 ═══ -->
+    <div class="image-break">
+        <img src="assets/img/ratha-collage.png" alt="Sacred Imagery">
+        <div class="overlay">
+            <p>"You are the guardian at Rama's door — protector of saints and destroyer of demons."</p>
+        </div>
+    </div>
+
+    <!-- ═══ VERSES 21-30 ═══ -->
+    <div class="section-label" id="v21">
+        <div class="label-line"></div>
+        <span>ଚୌପାଈ — Verses 21 – 30</span>
+        <div class="label-line right"></div>
+    </div>
+
+    <!-- V21 -->
+    <div class="verse-card">
+        <div class="verse-top">
+            <div class="verse-number">21</div>
+            <div class="verse-content">
+                <div class="odia-line">ରାମ ଦୁଆରେ ତୁମ ରଖିବାରେ ।<br>ହୋତ ନ ଆଜ୍ଞା ବିନୁ ପୈସାରେ ॥</div>
+                <div class="meaning-line"><span class="meaning-label">Meaning</span>You are the doorkeeper of Rama's abode. Without your permission, no one can enter.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- V22 -->
+    <div class="verse-card">
+        <div class="verse-top">
+            <div class="verse-number">22</div>
+            <div class="verse-content">
+                <div class="odia-line">ସବ ସୁଖ ଲହୈ ତୁମ୍‌ହାରୀ ସରନା ।<br>ତୁମ ରକ୍ଷକଃ କାହୂ କୋ ଡର ନା ॥</div>
+                <div class="meaning-line"><span class="meaning-label">Meaning</span>All happiness comes to those who take refuge in you. You are the protector — why should anyone be afraid?</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- V23 -->
+    <div class="verse-card">
+        <div class="verse-top">
+            <div class="verse-number">23</div>
+            <div class="verse-content">
+                <div class="odia-line">ଆପନ ତେଜ ସମହାରୋ ଆପୈ ।<br>ତୀନାଂ ଲୋକ ହାଁକ ତେ କାଁପୈ ॥</div>
+                <div class="meaning-line"><span class="meaning-label">Meaning</span>Only you can control your own immense power. All three worlds tremble in awe of your might.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- V24 -->
+    <div class="verse-card">
+        <div class="verse-top">
+            <div class="verse-number">24</div>
+            <div class="verse-content">
+                <div class="odia-line">ଭୂତ ପିସାଚ ନିକଟ ନହିଂ ଆବୈ ।<br>ମହାବୀର ଜବ ନାମ ସୁନାବେ ॥</div>
+                <div class="meaning-line"><span class="meaning-label">Meaning</span>Evil spirits and ghosts do not come near when the name of Mahavir (Hanuman) is spoken.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- V25 -->
+    <div class="verse-card">
+        <div class="verse-top">
+            <div class="verse-number">25</div>
+            <div class="verse-content">
+                <div class="odia-line">ନାସୈ ରୋଗ ହରୈ ସବ ପୀରା ।<br>ଜପତ ନିରଂତର ହନୁମତ ବୀରା ॥</div>
+                <div class="meaning-line"><span class="meaning-label">Meaning</span>Diseases are cured and all suffering vanishes for those who continuously chant the name of brave Hanuman.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- V26 -->
+    <div class="verse-card">
+        <div class="verse-top">
+            <div class="verse-number">26</div>
+            <div class="verse-content">
+                <div class="odia-line">ସଂକଟ ତେ ହନୁମାନ ଛୁଡ଼ାବେ ।<br>ମନ କ୍ରମ ବଚନ ଧ୍ୟାନ ଜୋ ଲାବେ ॥</div>
+                <div class="meaning-line"><span class="meaning-label">Meaning</span>Hanuman liberates those from trouble who devote their mind, actions, and speech to him.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- V27 -->
+    <div class="verse-card">
+        <div class="verse-top">
+            <div class="verse-number">27</div>
+            <div class="verse-content">
+                <div class="odia-line">ସବ ପର ରାମ ତପସ୍ଵୀ ରାଜା ।<br>ତିନ କେ କାଜ ସକଲ ତୁମ ସାଜା ॥</div>
+                <div class="meaning-line"><span class="meaning-label">Meaning</span>Rama is the supreme King and Lord of all. You complete all tasks for his devotees.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- V28 -->
+    <div class="verse-card">
+        <div class="verse-top">
+            <div class="verse-number">28</div>
+            <div class="verse-content">
+                <div class="odia-line">ଔର ମନୋରଥ ଜୋ କୋଈ ଭାବେ ।<br>ସୋଈ ଅମିତ ଜୀବନ ଫଲ ପାୱଏ ॥</div>
+                <div class="meaning-line"><span class="meaning-label">Meaning</span>Whoever brings their wishes and prayers to you will receive unlimited blessings in life.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- V29 -->
+    <div class="verse-card">
+        <div class="verse-top">
+            <div class="verse-number">29</div>
+            <div class="verse-content">
+                <div class="odia-line">ଚାରୋ ଯୁଗ ପରତାପ ତୁମ୍‌ହାରା ।<br>ହୈ ପରସିଦ୍ଧ ଜଗତ ଉଜିୟାରା ॥</div>
+                <div class="meaning-line"><span class="meaning-label">Meaning</span>Your glory spans all four yugas (cosmic ages). Your fame illuminates the entire world.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- V30 -->
+    <div class="verse-card">
+        <div class="verse-top">
+            <div class="verse-number">30</div>
+            <div class="verse-content">
+                <div class="odia-line">ସାଧୁ ସଂତ କେ ତୁମ ରଖିବାରେ ।<br>ଅସୁର ନିକଂଦନ ରାମ ଦୁଲାରେ ॥</div>
+                <div class="meaning-line"><span class="meaning-label">Meaning</span>You are the guardian of all saints and righteous people. Destroyer of demons, you are the beloved of Lord Rama.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ IMAGE BREAK 4 ═══ -->
+    <div class="image-break">
+        <img src="assets/img/istockphoto-1069137628-612x612.jpg" alt="Sacred Hanuman">
+        <div class="overlay">
+            <p>"Bestower of eight siddhis and nine nidhis — a boon granted by Mother Sita herself."</p>
+        </div>
+    </div>
+
+    <!-- ═══ VERSES 31-40 ═══ -->
+    <div class="section-label" id="v31">
+        <div class="label-line"></div>
+        <span>ଚୌପାଈ — Verses 31 – 40</span>
+        <div class="label-line right"></div>
+    </div>
+
+    <!-- V31 -->
+    <div class="verse-card">
+        <div class="verse-top">
+            <div class="verse-number">31</div>
+            <div class="verse-content">
+                <div class="odia-line">ଅଷ୍ଟ ସିଦ୍ଧି ନୌ ନିଧି କେ ଦାତା ।<br>ଅସ ବର ଦୀନ ଜାନକୀ ମାତା ॥</div>
+                <div class="meaning-line"><span class="meaning-label">Meaning</span>You are the bestower of Eight Siddhis (supernatural powers) and Nine Nidhis (divine treasures). This boon was granted to you by Mother Janaki (Sita).</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- V32 -->
+    <div class="verse-card">
+        <div class="verse-top">
+            <div class="verse-number">32</div>
+            <div class="verse-content">
+                <div class="odia-line">ରାମ ରସାୟନ ତୁମ୍‌ହରେ ପାସା ।<br>ସଦା ରହୋ ରଘୁପତି କେ ଦାସା ॥</div>
+                <div class="meaning-line"><span class="meaning-label">Meaning</span>You possess the sweet devotion of Rama. May you always remain a servant of Lord Raghupati.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- V33 -->
+    <div class="verse-card">
+        <div class="verse-top">
+            <div class="verse-number">33</div>
+            <div class="verse-content">
+                <div class="odia-line">ତୁମ୍‌ହରେ ଭଜନ ରାମ କୋ ପାବୈ ।<br>ଜନମ ଜନମ କେ ଦୁଖ ବିସରାବୈ ॥</div>
+                <div class="meaning-line"><span class="meaning-label">Meaning</span>Through your devotion, one attains Lord Rama himself. The sorrows of many lifetimes are washed away.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- V34 -->
+    <div class="verse-card">
+        <div class="verse-top">
+            <div class="verse-number">34</div>
+            <div class="verse-content">
+                <div class="odia-line">ଅନ୍ତ କାଳ ରଘୁବର ପୁର ଜାଈ ।<br>ଜହାଁ ଜନ୍ମ ହରିଭକ୍ତ କହାଈ ॥</div>
+                <div class="meaning-line"><span class="meaning-label">Meaning</span>At the end of life, by your grace, one will go to the divine abode of Raghavar and be known as a devotee of Hari.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- V35 -->
+    <div class="verse-card">
+        <div class="verse-top">
+            <div class="verse-number">35</div>
+            <div class="verse-content">
+                <div class="odia-line">ଔର ଦେବତା ଚିତ୍ତ ନ ଧରଈ ।<br>ହନୁମତ ସେଈ ସର୍‌ବ ସୁଖ କରଈ ॥</div>
+                <div class="meaning-line"><span class="meaning-label">Meaning</span>Without contemplating other gods, one who serves Hanuman alone receives all happiness in life.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- V36 -->
+    <div class="verse-card">
+        <div class="verse-top">
+            <div class="verse-number">36</div>
+            <div class="verse-content">
+                <div class="odia-line">ସଂକଟ କଟି ମିଟି ସବ ପୀରା ।<br>ଜୋ ସୁମିରେ ହନୁମତ ବଲବୀରା ॥</div>
+                <div class="meaning-line"><span class="meaning-label">Meaning</span>All troubles vanish and every suffering ends for those who remember mighty Hanuman with sincere faith.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- V37 -->
+    <div class="verse-card">
+        <div class="verse-top">
+            <div class="verse-number">37</div>
+            <div class="verse-content">
+                <div class="odia-line">ଜୈ ଜୈ ଜୈ ହନୁମାନ ଗୋସାଈ ।<br>କୃପା କରହୁ ଗୁରୁ ଦେବ କୀ ନାଈ ॥</div>
+                <div class="meaning-line"><span class="meaning-label">Meaning</span>Victory, Victory, Victory to Lord Hanuman Gosai! Shower your mercy upon us, as a Guru does upon his devotee.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- V38 -->
+    <div class="verse-card">
+        <div class="verse-top">
+            <div class="verse-number">38</div>
+            <div class="verse-content">
+                <div class="odia-line">ଜୋ ସତ ବାର ପାଠ କର କୋଈ ।<br>ଛୁଟହି ବଂଦି ମହା ସୁଖ ହୋଈ ॥</div>
+                <div class="meaning-line"><span class="meaning-label">Meaning</span>Whoever recites this Chalisa one hundred times — the chains of bondage shall be broken and great happiness shall be his.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- V39 -->
+    <div class="verse-card">
+        <div class="verse-top">
+            <div class="verse-number">39</div>
+            <div class="verse-content">
+                <div class="odia-line">ଜୋ ୟହ ପଢ଼େଇ ହନୁମାନ ଚଲୀସା ।<br>ହୋୟ ସିଦ୍ଧି ସାଖୀ ଗୌରୀସା ॥</div>
+                <div class="meaning-line"><span class="meaning-label">Meaning</span>Whoever reads this Hanuman Chalisa will attain spiritual powers. Lord Shiva himself is the witness to this truth.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- V40 -->
+    <div class="verse-card doha-card">
+        <div class="verse-top">
+            <div class="verse-number" style="background:linear-gradient(135deg,#d4a03c,#b8842a);">40</div>
+            <div class="verse-content">
+                <div class="odia-line">ତୁଲସୀଦାସ ସଦା ହରି ଚେରା ।<br>କିଜ୍ୟେ ନାଥ ହୃଦୟ ମହଁ ଡେରା ॥</div>
+                <div class="meaning-line"><span class="meaning-label">Meaning</span>Tulsidas says: "O Lord, may I always remain your servant." And: "O Hanuman, please reside in my heart forever."</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ CLOSING DOHA ═══ -->
+    <div class="section-label" id="closing">
+        <div class="label-line"></div>
+        <span>ଦୋହା — Closing Doha</span>
+        <div class="label-line right"></div>
+    </div>
+
+    <div class="verse-card doha-card">
+        <div class="verse-top">
+            <div class="verse-number" style="background:linear-gradient(135deg,#d4a03c,#b8842a);">D</div>
+            <div class="verse-content">
+                <div class="odia-line">
+                    ପବନତନୟ ସଂକଟ ହରନ ମଂଗଲ ମୂରତି ରୂପ ।<br>
+                    ରାମ ଲକ୍ଷନ ସୀତା ସହିତ ହୃଦୟ ବସହୁଁ ସୁର ରୂପ ॥
+                </div>
+                <div class="meaning-line">
+                    <span class="meaning-label">Meaning</span>
+                    O Son of the wind god, remover of all difficulties, you are of auspicious form. May Lord Rama, Lakshman, and Sita reside in our hearts — O King of the Gods.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ CLOSING CARD ═══ -->
+    <div class="closing-card">
+        <h5>ॐ ଜୟ ହନୁମାନ୍</h5>
+        <p>May Lord Hanuman bless you with strength, wisdom, and peace. Recite with faith, and his grace shall always be upon you.</p>
+        <div>
+            <button class="btn"><i class="bi bi-headphones me-1"></i> Listen Full Audio</button>
+            <button class="btn"><i class="bi bi-download me-1"></i> Download PDF</button>
+            <button class="btn"><i class="bi bi-share me-1"></i> Share</button>
+        </div>
+    </div>
+</div>
+
+<!-- ── RIGHT / SIDEBAR ── -->
+<div class="col-lg-4">
+
+    <!-- Audio Card -->
+    <div class="sidebar-card">
+        <div class="sc-icon gold"><i class="bi bi-play-circle-fill"></i></div>
+        <h6>Listen Audio</h6>
+        <p>Play the guided recitation with accurate Odia pronunciation and devotional music.</p>
+        <button class="btn btn-gold w-100"><i class="bi bi-play-fill me-1"></i> Play Audio</button>
+    </div>
+
+    <!-- Quick Jump -->
+    <div class="sidebar-card">
+        <div class="sc-icon red"><i class="bi bi-compass"></i></div>
+        <h6>Quick Jump</h6>
+        <ul class="jump-list">
+            <li><a href="#doha-open"><i class="bi bi-chevron-right"></i> Opening Doha</a></li>
+            <li><a href="#v1"><i class="bi bi-chevron-right"></i> Verses 1 – 10</a></li>
+            <li><a href="#v11"><i class="bi bi-chevron-right"></i> Verses 11 – 20</a></li>
+            <li><a href="#v21"><i class="bi bi-chevron-right"></i> Verses 21 – 30</a></li>
+            <li><a href="#v31"><i class="bi bi-chevron-right"></i> Verses 31 – 40</a></li>
+            <li><a href="#closing"><i class="bi bi-chevron-right"></i> Closing Doha</a></li>
+        </ul>
+    </div>
+
+    <!-- About Hanuman -->
+    <div class="sidebar-card">
+        <div class="sc-icon red"><i class="bi bi-info-circle"></i></div>
+        <h6>About Lord Hanuman</h6>
+        <p>Lord Hanuman — also known as <strong>Mahavir, Bajrangbali</strong>, and <strong>Pavansut</strong> — is the son of the wind god Vayu. He is the embodiment of devotion, strength, and selfless service to Lord Rama.</p>
+        <a href="#" class="btn btn-outline-dark btn-sm w-100">Read More</a>
+    </div>
+
+    <!-- Benefits -->
+    <div class="sidebar-card">
+        <div class="sc-icon gold"><i class="bi bi-stars"></i></div>
+        <h6>Benefits of Recitation</h6>
+        <ul class="list-unstyled mb-0" style="font-size:0.84rem; color:#6b5040;">
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Brings peace of mind</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Removes obstacles & negativity</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Grants courage & strength</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Protects from evil forces</li>
+            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Spiritual upliftment</li>
+        </ul>
+    </div>
+
+    <!-- Related -->
+    <div class="sidebar-card">
+        <div class="sc-icon red"><i class="bi bi-music-note-list"></i></div>
+        <h6>Related Prayers</h6>
+        <ul class="jump-list">
+            <li><a href="#"><i class="bi bi-chevron-right"></i> Hanuman Ashtakam</a></li>
+            <li><a href="#"><i class="bi bi-chevron-right"></i> Sankat Mochana Stotra</a></li>
+            <li><a href="#"><i class="bi bi-chevron-right"></i> Bajrang Baan</a></li>
+            <li><a href="#"><i class="bi bi-chevron-right"></i> Hanuman Suprabhatam</a></li>
+        </ul>
+    </div>
+</div>
+
+</div><!-- /row -->
+</div><!-- /container -->
+</section>
+
+<!-- ════════════════════ FOOTER ════════════════════ -->
+<footer class="footer pt-5 pb-3">
+    <div class="container">
+        <hr class="my-4">
+        <div class="row g-4">
+            <div class="col-lg-3">
+                <a class="navbar-brand d-inline-flex align-items-center gap-2 mb-2" href="#">
+                    <span class="brand-mark">J</span>
+                    <span class="brand-text">Jagannatha <span class="brand-accent">Krupa</span></span>
+                </a>
+                <p class="text-muted mb-3">Premium devotional products for daily worship and special occasions.</p>
+                <ul class="footer-links mb-4">
+                    <li><a href="#"><i class="bi bi-geo-alt me-1"></i> Bhubaneswar, Odisha</a></li>
+                    <li><a href="#"><i class="bi bi-telephone me-1"></i> +91 00000 00000</a></li>
+                    <li><a href="#"><i class="bi bi-envelope me-1"></i> support@example.com</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-2">
+                <h6 class="footer-title">Our Company</h6>
+                <ul class="footer-links">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-2">
+                <h6 class="footer-title">Products</h6>
+                <ul class="footer-links">
+                    <li><a href="#">All Products</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Best Sellers</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-5">
+                <div class="footer-newsletter-box">
+                    <h6 class="footer-title mb-2">Newsletter</h6>
+                    <p class="text-muted small mb-3">Get puja updates, festival offers, and new devotional products.</p>
+                    <form class="newsletter-form-footer" onsubmit="event.preventDefault();">
+                        <input class="form-control" type="email" placeholder="Your email" required />
+                        <button class="btn btn-danger" type="submit"><i class="bi bi-send"></i></button>
+                    </form>
+                </div>
+                <div class="d-flex gap-2 mt-4">
+                    <a class="footer-icon" href="#"><i class="bi bi-facebook"></i></a>
+                    <a class="footer-icon" href="#"><i class="bi bi-instagram"></i></a>
+                    <a class="footer-icon" href="#"><i class="bi bi-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr class="my-4">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 small text-muted">
+            <div>© 2026 JagannathaKrupa. All rights reserved.</div>
+            <div class="d-flex align-items-center gap-3">
+                <a class="text-muted" href="#">Privacy</a>
+                <a class="text-muted" href="#">Terms</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+<script>
+// Smooth scroll for quick jump links
+document.querySelectorAll('.jump-list a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+</script>
+
+</body>
+</html>
+

@@ -3942,6 +3942,51 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
+.breadcrumb-wrap {
+  background: #fff;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.breadcrumb-lite {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: none;
+  border: 0;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.breadcrumb-lite .breadcrumb-item {
+  color: #6c757d;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.breadcrumb-lite .breadcrumb-item a {
+  color: #1f2937;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+}
+
+.breadcrumb-lite .breadcrumb-item a:hover {
+  color: var(--brand-red);
+  border-bottom-color: rgba(220, 53, 69, 0.35);
+}
+
+.breadcrumb-lite .breadcrumb-item.active {
+  color: #6c757d;
+}
+
+.breadcrumb-lite .breadcrumb-item + .breadcrumb-item::before {
+  content: "/";
+  color: #c1c7d0;
+  font-size: 0.95rem;
+  padding: 0 0.6rem;
+}
+
 .page-title {
   font-family: 'Crimson Pro', serif;
   font-size: clamp(2.5rem, 5vw, 4rem);
@@ -3963,7 +4008,7 @@ body {
 
 /* Info Card */
 .info-card {
-  background: linear-gradient(135deg, var(--brand-saffron), var(--brand-gold));
+  background: linear-gradient(135deg, var(--brand-saffron), var(--brand-gold)) !important;
   border-radius: 16px;
   padding: 2rem;
   margin-bottom: 2rem;
