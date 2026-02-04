@@ -2,28 +2,98 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>JagannathaKrupa - Home</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JagannathaKrupa - Home</title>
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
-        rel="stylesheet">
-    <!-- Owl Carousel CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet">
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
-    <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .services-hero {
+      background: radial-gradient(1200px 400px at 15% 10%, #fff4e7 0%, #ffffff 60%);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .services-hero-card {
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .services-hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .section-title {
+      font-family: "Playfair Display", serif;
+    }
+
+    .service-card {
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 16px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      height: 100%;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff4e7;
+      color: #b45309;
+      font-size: 20px;
+    }
+
+    .service-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      background: #ffffff;
+      font-size: 12px;
+    }
+
+    .process-step {
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 14px;
+      padding: 18px;
+      height: 100%;
+    }
+
+    .services-cta {
+      background: linear-gradient(120deg, #111827 0%, #1f2937 60%, #111827 100%);
+      color: #ffffff;
+      border-radius: 18px;
+    }
+  </style>
 </head>
 
 <body>
@@ -191,8 +261,96 @@
                 </div>
               </div>
             </li>
-         
-            <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Services
+              </a>
+              <div class="dropdown-menu shop-mega-menu-compact">
+                <div class="mega-menu-wrapper">
+                  <div class="row g-0">
+                    <!-- Left Side: Services List -->
+                    <div class="col-5">
+                      <div class="mega-menu-section">
+                        <h6 class="mega-menu-title">OUR SERVICES</h6>
+                        <ul class="mega-menu-categories">
+                          <li>
+                            <a href="service.html" class="category-link">
+                              <i class="bi bi-stars"></i>
+                              <span>All Services</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="hotel.html" class="category-link">
+                              <i class="bi bi-building"></i>
+                              <span>Hotel Booking</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="service-details-mandir-darshan.html" class="category-link">
+                              <i class="bi bi-bank"></i>
+                              <span>Mandir Darshan</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="bana.html" class="category-link">
+                              <i class="bi bi-flag"></i>
+                              <span>Bana Hosting</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="service.html" class="category-link">
+                              <i class="bi bi-people"></i>
+                              <span>Pandit Support</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <!-- Right Side: Featured Services (Only 2) -->
+                    <div class="col-7">
+                      <div class="mega-menu-section border-start">
+                        <h6 class="mega-menu-title">FEATURED SERVICES</h6>
+                        <div class="row g-3">
+                          <!-- Service Card 1 -->
+                          <div class="col-6">
+                            <a href="hotel.html" class="mega-product-card">
+                              <div class="mega-product-image">
+                                <img
+                                  src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=300&h=300&fit=crop"
+                                  alt="Hotel Booking">
+                              </div>
+                              <h6 class="mega-product-title">Hotel Booking</h6>
+                            </a>
+                          </div>
+
+                          <!-- Service Card 2 -->
+                          <div class="col-6">
+                            <a href="service-details-mandir-darshan.html" class="mega-product-card">
+                              <div class="mega-product-image">
+                                <img
+                                  src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=300&h=300&fit=crop"
+                                  alt="Mandir Darshan">
+                              </div>
+                              <h6 class="mega-product-title">Mandir Darshan</h6>
+                            </a>
+                          </div>
+                        </div>
+
+                        <!-- View All Button -->
+                        <div class="text-center mt-3">
+                          <a href="service.html" class="btn-view-all-compact">
+                            See All Services
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
             <li class="nav-item"><a class="nav-link" href="library.html">Library</a></li>
             <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
           </ul>
@@ -263,324 +421,303 @@
       </div>
     </div>
   </header>
-    <!-- Service 1: Hotel Booking -->
-    <section class="services-item">
-        <div class="services-item-visual">
-            <div class="services-number-large">01</div>
-            <div class="services-visual-content">
-                <div class="services-icon-large">
-                    <i class="bi bi-building"></i>
-                </div>
-                <div class="services-visual-label">Hotel Booking</div>
-                <div class="services-visual-label-odia">ହୋଟେଲ ବୁକିଂ</div>
+  <main>
+    <section class="services-hero py-5">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6">
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <span class="service-chip"><i class="bi bi-shield-check"></i> Verified Providers</span>
+              <span class="service-chip"><i class="bi bi-headset"></i> 24/7 Support</span>
+              <span class="service-chip"><i class="bi bi-geo-alt"></i> Near Temple</span>
             </div>
-        </div>
-        <div class="services-item-content">
-            <div class="services-deco-line"></div>
-            <div class="services-content-label">Accommodation Services</div>
-            <h2 class="services-content-title">Rest in Comfort</h2>
-            <p class="services-content-description">
-                Find the perfect accommodation near the temple. Our curated selection ensures your physical comfort
-                complements your spiritual journey, with verified properties ranging from budget-friendly options to
-                premium hotels.
+            <h1 class="section-title display-5 mb-3">Services that make your yatra effortless</h1>
+            <p class="text-muted mb-4">
+              Clear choices, simple booking, and trusted assistance for every step of your pilgrimage.
+              Choose a service below to get started.
             </p>
-            <div class="services-features-grid">
-                <div class="services-feature-box">
-                    <div class="services-feature-icon-wrapper">
-                        <i class="bi bi-shield-check"></i>
-                    </div>
-                    <div class="services-feature-title">Verified Properties</div>
-                    <div class="services-feature-desc">Every hotel personally inspected for quality</div>
-                </div>
-                <div class="services-feature-box">
-                    <div class="services-feature-icon-wrapper">
-                        <i class="bi bi-geo-alt-fill"></i>
-                    </div>
-                    <div class="services-feature-title">Prime Locations</div>
-                    <div class="services-feature-desc">Walking distance to temple and key sites</div>
-                </div>
-                <div class="services-feature-box">
-                    <div class="services-feature-icon-wrapper">
-                        <i class="bi bi-currency-rupee"></i>
-                    </div>
-                    <div class="services-feature-title">Best Prices</div>
-                    <div class="services-feature-desc">Guaranteed competitive rates</div>
-                </div>
-                <div class="services-feature-box">
-                    <div class="services-feature-icon-wrapper">
-                        <i class="bi bi-headset"></i>
-                    </div>
-                    <div class="services-feature-title">24/7 Support</div>
-                    <div class="services-feature-desc">Round-the-clock assistance</div>
-                </div>
+            <div class="d-flex flex-wrap gap-2">
+              <a href="service-details-mandir-darshan.html" class="btn btn-dark">
+                Book Mandir Darshan
+              </a>
+              <a href="hotel.html" class="btn btn-outline-dark">
+                Find Hotels
+              </a>
             </div>
-            <a href="hotel.html" class="services-cta-button">
-                <span>Book Your Stay</span>
-                <i class="bi bi-arrow-right"></i>
-            </a>
+          </div>
+          <div class="col-lg-6">
+            <div class="services-hero-card">
+              <img class="services-hero-img"
+                src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1000&h=700&fit=crop"
+                alt="Jagannath Temple">
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Service 2: Mandira Darshan -->
-    <section class="services-item">
-        <div class="services-item-visual">
-            <div class="services-number-large">02</div>
-            <div class="services-visual-content">
-                <div class="services-icon-large">
-                    <i class="bi bi-eye-fill"></i>
-                </div>
-                <div class="services-visual-label">Mandira Darshan</div>
-                <div class="services-visual-label-odia">ମନ୍ଦିର ଦର୍ଶନ</div>
-            </div>
+    <section class="py-5">
+      <div class="container">
+        <div class="d-flex flex-column flex-lg-row align-items-lg-end justify-content-between gap-2 mb-4">
+          <div>
+            <h2 class="section-title mb-1">Explore Services</h2>
+            <p class="text-muted mb-0">Pick what you need, each service is explained in simple steps.</p>
+          </div>
+          <a href="service.html" class="btn btn-outline-dark btn-sm">View All</a>
         </div>
-        <div class="services-item-content">
-            <div class="services-deco-line"></div>
-            <div class="services-content-label">Temple Experience</div>
-            <h2 class="services-content-title">Divine Encounters</h2>
-            <p class="services-content-description">
-                Experience darshan of Lord Jagannath without the wait. Choose from general entry, VIP access, or
-                comprehensive service packages including Mahaprasad, Sukhila Bhoga, and guided Parikrama for a complete
-                temple experience.
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card p-4 h-100">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="service-icon"><i class="bi bi-eye-fill"></i></span>
+                <span class="badge text-bg-dark">Most Popular</span>
+              </div>
+              <h5 class="mb-2">Mandir Darshan</h5>
+              <p class="text-muted small mb-3">
+                Skip the confusion with guided entry, time slots, and complete darshan assistance.
+              </p>
+              <ul class="list-unstyled small text-muted mb-4">
+                <li><i class="bi bi-check2-circle me-2"></i>VIP entry options</li>
+                <li><i class="bi bi-check2-circle me-2"></i>Bhoga and mahaprasad</li>
+                <li><i class="bi bi-check2-circle me-2"></i>Assisted parikrama</li>
+              </ul>
+              <a href="service-details-mandir-darshan.html" class="btn btn-dark w-100">Book Darshan</a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card p-4 h-100">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="service-icon"><i class="bi bi-building"></i></span>
+                <span class="badge text-bg-light border">Trusted</span>
+              </div>
+              <h5 class="mb-2">Hotel Booking</h5>
+              <p class="text-muted small mb-3">
+                Comfortable stays near the temple, verified for cleanliness and convenience.
+              </p>
+              <ul class="list-unstyled small text-muted mb-4">
+                <li><i class="bi bi-check2-circle me-2"></i>Prime locations</li>
+                <li><i class="bi bi-check2-circle me-2"></i>Best rate guarantee</li>
+                <li><i class="bi bi-check2-circle me-2"></i>24/7 support</li>
+              </ul>
+              <a href="hotel.html" class="btn btn-outline-dark w-100">Check Hotels</a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card p-4 h-100">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="service-icon"><i class="bi bi-flag-fill"></i></span>
+                <span class="badge text-bg-light border">Ritual</span>
+              </div>
+              <h5 class="mb-2">Bana Hosting</h5>
+              <p class="text-muted small mb-3">
+                Honor the tradition with official flag hosting at the sacred Nila Chakra.
+              </p>
+              <ul class="list-unstyled small text-muted mb-4">
+                <li><i class="bi bi-check2-circle me-2"></i>Multiple sizes</li>
+                <li><i class="bi bi-check2-circle me-2"></i>Premium materials</li>
+                <li><i class="bi bi-check2-circle me-2"></i>Certificate included</li>
+              </ul>
+              <a href="bana.html" class="btn btn-outline-dark w-100">Book Bana</a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card p-4 h-100">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="service-icon"><i class="bi bi-cup-hot-fill"></i></span>
+                <span class="badge text-bg-light border">Ritual</span>
+              </div>
+              <h5 class="mb-2">Dasha Karma</h5>
+              <p class="text-muted small mb-3">
+                Complete ceremonial support with guidance for each important step.
+              </p>
+              <ul class="list-unstyled small text-muted mb-4">
+                <li><i class="bi bi-check2-circle me-2"></i>Experienced priests</li>
+                <li><i class="bi bi-check2-circle me-2"></i>Traditional arrangements</li>
+                <li><i class="bi bi-check2-circle me-2"></i>Flexible timings</li>
+              </ul>
+              <a href="service.html" class="btn btn-outline-dark w-100">Enquire</a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card p-4 h-100">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="service-icon"><i class="bi bi-person-check-fill"></i></span>
+                <span class="badge text-bg-light border">Service</span>
+              </div>
+              <h5 class="mb-2">Brahman Bhojana</h5>
+              <p class="text-muted small mb-3">
+                Arrange sacred meals with verified brahman families and proper rituals.
+              </p>
+              <ul class="list-unstyled small text-muted mb-4">
+                <li><i class="bi bi-check2-circle me-2"></i>Custom meal plans</li>
+                <li><i class="bi bi-check2-circle me-2"></i>Ritual guidance</li>
+                <li><i class="bi bi-check2-circle me-2"></i>Transparent pricing</li>
+              </ul>
+              <a href="service.html" class="btn btn-outline-dark w-100">Enquire</a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card p-4 h-100">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="service-icon"><i class="bi bi-bus-front-fill"></i></span>
+                <span class="badge text-bg-light border">Travel</span>
+              </div>
+              <h5 class="mb-2">Tour & Travels</h5>
+              <p class="text-muted small mb-3">
+                Comfortable local tours with temple visits, guides, and transport.
+              </p>
+              <ul class="list-unstyled small text-muted mb-4">
+                <li><i class="bi bi-check2-circle me-2"></i>Local itinerary planning</li>
+                <li><i class="bi bi-check2-circle me-2"></i>Pickup and drop</li>
+                <li><i class="bi bi-check2-circle me-2"></i>Trusted drivers</li>
+              </ul>
+              <a href="service.html" class="btn btn-outline-dark w-100">Plan Tour</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="services-cta p-4 p-lg-5">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-8">
+              <h3 class="mb-2">Need help choosing the right service?</h3>
+              <p class="mb-0 text-white-50">Talk to our support team and get a quick recommendation.</p>
+            </div>
+            <div class="col-lg-4 d-flex flex-wrap gap-2 justify-content-lg-end">
+              <a href="contact-us.html" class="btn btn-light">Contact Us</a>
+              <a href="service-details-mandir-darshan.html" class="btn btn-outline-light">Book Darshan</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer pt-5 pb-3">
+    <div class="container">
+      <hr class="my-4">
+      <!-- Footer Links -->
+      <div class="row g-4">
+        <div class="col-lg-3">
+          <a class="navbar-brand d-inline-flex align-items-center gap-2 mb-2" href="#">
+            <span class="brand-mark">J</span>
+            <span class="brand-text">Jagannatha
+              <span class="brand-accent">Krupa</span>
+            </span>
+          </a>
+          <p class="text-muted mb-3">
+            Premium devotional products for daily worship and special occasions.
+          </p>
+          <ul class="footer-links mb-4">
+            <li><a href="#"><i class="bi bi-geo-alt me-1"></i> Bhubaneswar, Odisha</a></li>
+            <li><a href="#"><i class="bi bi-telephone me-1"></i> +91 00000 00000</a></li>
+            <li><a href="#"><i class="bi bi-envelope me-1"></i> support@example.com</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h6 class="footer-title">Our Company</h6>
+          <ul class="footer-links">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h6 class="footer-title">Products</h6>
+          <ul class="footer-links">
+            <li><a href="#">All Products</a></li>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Best Sellers</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-5">
+
+
+          <!-- Newsletter inside Contact Column -->
+          <div class="footer-newsletter-box">
+            <h6 class="footer-title mb-2">Newsletter</h6>
+            <p class="text-muted small mb-3">Get puja updates, festival offers, and new devotional products.
             </p>
-            <div class="services-features-grid">
-                <div class="services-feature-box">
-                    <div class="services-feature-icon-wrapper">
-                        <i class="bi bi-star-fill"></i>
-                    </div>
-                    <div class="services-feature-title">VIP Entry</div>
-                    <div class="services-feature-desc">Skip queues with priority access</div>
-                </div>
-                <div class="services-feature-box">
-                    <div class="services-feature-icon-wrapper">
-                        <i class="bi bi-flower1"></i>
-                    </div>
-                    <div class="services-feature-title">Sacred Offerings</div>
-                    <div class="services-feature-desc">Bhoga and Mahaprasad services</div>
-                </div>
-                <div class="services-feature-box">
-                    <div class="services-feature-icon-wrapper">
-                        <i class="bi bi-arrow-repeat"></i>
-                    </div>
-                    <div class="services-feature-title">Guided Parikrama</div>
-                    <div class="services-feature-desc">Circumambulation with assistance</div>
-                </div>
-                <div class="services-feature-box">
-                    <div class="services-feature-icon-wrapper">
-                        <i class="bi bi-calendar-check"></i>
-                    </div>
-                    <div class="services-feature-title">Easy Booking</div>
-                    <div class="services-feature-desc">Reserve your slot in advance</div>
-                </div>
-            </div>
-            <a href="service-details-mandir-darshan.html" class="services-cta-button">
-                <span>Book Darshan</span>
-                <i class="bi bi-arrow-right"></i>
-            </a>
+            <form class="newsletter-form-footer" onsubmit="event.preventDefault();">
+              <input class="form-control" type="email" placeholder="Your email" required />
+              <button class="btn btn-danger" type="submit">
+                <i class="bi bi-send"></i>
+              </button>
+            </form>
+          </div>
+          <div class="d-flex gap-2 mt-4">
+            <a class="footer-icon" href="#"><i class="bi bi-facebook"></i></a>
+            <a class="footer-icon" href="#"><i class="bi bi-instagram"></i></a>
+            <a class="footer-icon" href="#"><i class="bi bi-youtube"></i></a>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <!-- Service 3: Bana (Flag Hosting) -->
-    <section class="services-item">
-        <div class="services-item-visual">
-            <div class="services-number-large">03</div>
-            <div class="services-visual-content">
-                <div class="services-icon-large">
-                    <i class="bi bi-flag-fill"></i>
-                </div>
-                <div class="services-visual-label">Bana Hosting</div>
-                <div class="services-visual-label-odia">ବାନ ଉତ୍ତୋଳନ</div>
-            </div>
+      <hr class="my-4">
+
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 small text-muted">
+        <div>© 2026 JagannathaKrupa. All rights reserved.</div>
+        <div class="d-flex align-items-center gap-3">
+          <a class="text-muted" href="#">Privacy</a>
+          <a class="text-muted" href="#">Terms</a>
         </div>
-        <div class="services-item-content">
-            <div class="services-deco-line"></div>
-            <div class="services-content-label">Sacred Ritual</div>
-            <h2 class="services-content-title">The Highest Honor</h2>
-            <p class="services-content-description">
-                A rare privilege to host your flag upon the sacred Nila Chakra atop the temple. Choose from multiple
-                flag sizes and premium materials, from cotton to royal silk with gold borders. Includes commemorative
-                certificate.
-            </p>
-            <div class="services-features-grid">
-                <div class="services-feature-box">
-                    <div class="services-feature-icon-wrapper">
-                        <i class="bi bi-trophy-fill"></i>
-                    </div>
-                    <div class="services-feature-title">Nila Chakra</div>
-                    <div class="services-feature-desc">Flag on the sacred blue disc</div>
-                </div>
-                <div class="services-feature-box">
-                    <div class="services-feature-icon-wrapper">
-                        <i class="bi bi-rulers"></i>
-                    </div>
-                    <div class="services-feature-title">Multiple Sizes</div>
-                    <div class="services-feature-desc">3 feet to grand 15-foot banners</div>
-                </div>
-                <div class="services-feature-box">
-                    <div class="services-feature-icon-wrapper">
-                        <i class="bi bi-gem"></i>
-                    </div>
-                    <div class="services-feature-title">Premium Materials</div>
-                    <div class="services-feature-desc">Cotton, silk, and royal silk options</div>
-                </div>
-                <div class="services-feature-box">
-                    <div class="services-feature-icon-wrapper">
-                        <i class="bi bi-award-fill"></i>
-                    </div>
-                    <div class="services-feature-title">Certificate</div>
-                    <div class="services-feature-desc">Official commemoration included</div>
-                </div>
-            </div>
-            <a href="bana.html" class="services-cta-button">
-                <span>Book Bana</span>
-                <i class="bi bi-arrow-right"></i>
-            </a>
-        </div>
-    </section>
+      </div>
+    </div>
+  </footer>
 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <!-- jQuery (required for Owl Carousel) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <!-- Final CTA -->
-    <section class="services-cta-banner">
-        <div class="services-cta-banner-content">
-            <div class="services-cta-banner-text">
-                <h2>Begin Your Journey</h2>
-                <p>Every pilgrimage starts with a single step. Let us guide yours.</p>
-            </div>
-            <div class="services-cta-banner-buttons">
-                <a href="temple-services-improved.html" class="services-btn-white">
-                    <i class="bi bi-calendar-check"></i>
-                    Book Services
-                </a>
-                <a href="#" class="services-btn-outline">
-                    <i class="bi bi-telephone"></i>
-                    Contact Us
-                </a>
-            </div>
-        </div>
-    </section>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Footer -->
-    <footer class="footer pt-5 pb-3">
-        <div class="container">
-            <hr class="my-4">
-            <!-- Footer Links -->
-            <div class="row g-4">
-                <div class="col-lg-3">
-                    <a class="navbar-brand d-inline-flex align-items-center gap-2 mb-2" href="#">
-                        <span class="brand-mark">J</span>
-                        <span class="brand-text">Jagannatha
-                            <span class="brand-accent">Krupa</span>
-                        </span>
-                    </a>
-                    <p class="text-muted mb-3">
-                        Premium devotional products for daily worship and special occasions.
-                    </p>
-                    <ul class="footer-links mb-4">
-                        <li><a href="#"><i class="bi bi-geo-alt me-1"></i> Bhubaneswar, Odisha</a></li>
-                        <li><a href="#"><i class="bi bi-telephone me-1"></i> +91 00000 00000</a></li>
-                        <li><a href="#"><i class="bi bi-envelope me-1"></i> support@example.com</a></li>
-                    </ul>
-                </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-                <div class="col-6 col-lg-2">
-                    <h6 class="footer-title">Our Company</h6>
-                    <ul class="footer-links">
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </div>
+  <!-- Owl Carousel JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
-                <div class="col-6 col-lg-2">
-                    <h6 class="footer-title">Products</h6>
-                    <ul class="footer-links">
-                        <li><a href="#">All Products</a></li>
-                        <li><a href="#">New Arrivals</a></li>
-                        <li><a href="#">Best Sellers</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-5">
-
-
-                    <!-- Newsletter inside Contact Column -->
-                    <div class="footer-newsletter-box">
-                        <h6 class="footer-title mb-2">Newsletter</h6>
-                        <p class="text-muted small mb-3">Get puja updates, festival offers, and new devotional products.
-                        </p>
-                        <form class="newsletter-form-footer" onsubmit="event.preventDefault();">
-                            <input class="form-control" type="email" placeholder="Your email" required />
-                            <button class="btn btn-danger" type="submit">
-                                <i class="bi bi-send"></i>
-                            </button>
-                        </form>
-                    </div>
-                    <div class="d-flex gap-2 mt-4">
-                        <a class="footer-icon" href="#"><i class="bi bi-facebook"></i></a>
-                        <a class="footer-icon" href="#"><i class="bi bi-instagram"></i></a>
-                        <a class="footer-icon" href="#"><i class="bi bi-youtube"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <hr class="my-4">
-
-            <div
-                class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 small text-muted">
-                <div>© 2026 JagannathaKrupa. All rights reserved.</div>
-                <div class="d-flex align-items-center gap-3">
-                    <a class="text-muted" href="#">Privacy</a>
-                    <a class="text-muted" href="#">Terms</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/main.js"></script>
-    <!-- jQuery (required for Owl Carousel) -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Owl Carousel JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
-    <!-- Initialize Testimonials Carousel -->
-    <script>
-        $(document).ready(function () {
-            $('.testimonials-carousel').owlCarousel({
-                loop: true,
-                margin: 20,
-                nav: false,
-                dots: true,
-                autoplay: true,
-                autoplayTimeout: 5000,
-                autoplayHoverPause: true,
-                navText: [
-                    '<i class="bi bi-chevron-left"></i>',
-                    '<i class="bi bi-chevron-right"></i>'
-                ],
-                responsive: {
-                    0: {
-                        items: 1,
-                        margin: 15
-                    },
-                    768: {
-                        items: 2,
-                        margin: 20
-                    },
-                    992: {
-                        items: 3,
-                        margin: 30
-                    }
-                }
-            });
-        });
-    </script>
+  <!-- Initialize Testimonials Carousel -->
+  <script>
+    $(document).ready(function () {
+      $('.testimonials-carousel').owlCarousel({
+        loop: true,
+        margin: 20,
+        nav: false,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+        navText: [
+          '<i class="bi bi-chevron-left"></i>',
+          '<i class="bi bi-chevron-right"></i>'
+        ],
+        responsive: {
+          0: {
+            items: 1,
+            margin: 15
+          },
+          768: {
+            items: 2,
+            margin: 20
+          },
+          992: {
+            items: 3,
+            margin: 30
+          }
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
